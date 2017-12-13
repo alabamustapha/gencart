@@ -1,1 +1,1 @@
-gegeg
+@extends("layouts.admin")
