@@ -17,10 +17,10 @@
         <!-- Custom stylesheet - for your changes -->
         <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
     </head>
-    <body>
+    <body class="home-bg">
+        <!-- <a href="#" class="btn btn-success float-right">Login</a> -->
         <div class="content">
-            <div class="jumbotron jumbotron-fluid">
-                <a href="#" class="btn btn-success float-right">Login</a>
+            <div class="">
 
                 <div class="container">                    
                     <div class="signup-widget round shadow">
@@ -165,7 +165,7 @@
                                 </p>
                             </div>
                             <div class="col-lg-8">    
-                                <img src="{{ asset('images/coupon.jpg')}}" alt="" srcset="">  
+                                <img class="section-img" src="{{ asset('images/mom.jpg')}}" alt="" srcset="">  
                             </div>
                         </div>
                     </div>
