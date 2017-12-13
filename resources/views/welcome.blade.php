@@ -29,7 +29,9 @@
                         </div>
                         <div class="sign-up">
                             <div class="gencart">
-                               <div class="title"> Get your groceries delivered from local stores</div>
+                               <div class="title">  The best way to shop for groceries</div>
+                               <span>Delivered from the stores you love in one hour</span>
+                                
                                 <form class="signup-form" method="">
                                     <div class="form-group row">
                                         <div class="col-lg-10">
@@ -43,27 +45,46 @@
                                 
                                 <div class="signup-or-login">
                                     <ul>
-                                        <li>already have an account? <a href="#">Log in</a></li>
+                                        <li>already have an account? <a href="{{ route('login') }}">Log in</a></li>
                                     </ul>
                                 </div>
 
 
 
                                 <div class="free-message">
-                                    <i class="ic-icon ic-icon-gift"></i>
-                                    <span class="bold">FREE</span>
-                                     delivery on your first order*
+                                    <i class="fa fa-gift"></i>
+                                     First delivery is <span class="bold">free</span> over $10 
                                 </div>
                             </div>
                             
                         </div>
                     </div>
                 </div> <!-- end container -->
+
+                
+                     
+                
+                <div class="links">
+                    <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Active</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+                </div>
             </div>
 
             <!-- grid section -->
 
-            <section class=" section how-it-works">
+            <!-- <section class=" section how-it-works">
                 <div class="section-wrap">
                     <div class="container">
 
@@ -102,16 +123,13 @@
                                 </p>
                             </div>
 
-                            
-                            
-                            
-                        </div> <!-- end row -->
+                        </div>
 
                     </div>
                 </div>
-            </section>
+            </section> -->
 
-            <section class="deals">
+            <!-- <section class="deals">
                 <div class="section-wrap">
                     <div class="container">
                         <div class="row">
@@ -130,10 +148,10 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
 
-            <section class="section browse-product">
+            <!-- <section class="section browse-product">
 
                 <div class="section-wrap">
                     <div class="container">
@@ -152,7 +170,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
 
 
