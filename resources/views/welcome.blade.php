@@ -17,10 +17,10 @@
         <!-- Custom stylesheet - for your changes -->
         <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
     </head>
-    <body>
+    <body class="home-bg">
+        <!-- <a href="#" class="btn btn-success float-right">Login</a> -->
         <div class="content">
-            <div class="jumbotron jumbotron-fluid">
-                <a href="#" class="btn btn-success float-right">Login</a>
+            <div class="">
 
                 <div class="container">                    
                     <div class="signup-widget round shadow">

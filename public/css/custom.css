@@ -12,12 +12,19 @@ body {
 
 }
 
+.home-bg {
+    background-image: url('/images/log-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    margin-top: 60px;
+}
+
 .signup-widget {
     background: rgba(255,255,255,0.95);    
     height: auto;
     width: 540px;
     margin: 0 auto;
-    margin-top: 40px;
     text-align: center;
     position:relative;
     z-index: 2;
