@@ -30,6 +30,7 @@
                         <div class="sign-up">
                             <div class="gencart">
                                <div class="title"> Get your groceries delivered from local stores</div>
+                                
                                 <form class="signup-form" method="">
                                     <div class="form-group row">
                                         <div class="col-lg-10">
@@ -63,7 +64,7 @@
 
             <!-- grid section -->
 
-            <section class=" section how-it-works">
+            <!-- <section class=" section how-it-works">
                 <div class="section-wrap">
                     <div class="container">
 
@@ -102,16 +103,13 @@
                                 </p>
                             </div>
 
-                            
-                            
-                            
-                        </div> <!-- end row -->
+                        </div>
 
                     </div>
                 </div>
-            </section>
+            </section> -->
 
-            <section class="deals">
+            <!-- <section class="deals">
                 <div class="section-wrap">
                     <div class="container">
                         <div class="row">
@@ -130,10 +128,10 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
 
-            <section class="section browse-product">
+            <!-- <section class="section browse-product">
 
                 <div class="section-wrap">
                     <div class="container">
@@ -152,7 +150,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
 
 
