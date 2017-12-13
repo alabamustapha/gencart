@@ -13,74 +13,93 @@
 
         <!-- Bootstrap maxcdn -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- Custom stylesheet - for your changes -->
         <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
     </head>
+
     <body class="home-bg">
         <!-- <a href="#" class="btn btn-success float-right">Login</a> -->
         <div class="content">
-            <div class="">
-
-                <div class="container">                    
-                    <div class="signup-widget round shadow">
-                        <div class="logo">
-                            <h1>LOGO</h1>
-                        </div>
-                        <div class="sign-up">
-                            <div class="gencart">
-                               <div class="title">  The best way to shop for groceries</div>
-                               <span>Delivered from the stores you love in one hour</span>
-                                
-                                <form class="signup-form" method="">
-                                    <div class="form-group row">
-                                        <div class="col-lg-10">
-                                            <input type="text" class="form-control form-control-lg input-zip" placeholder="Enter Zip Code">
-                                        </div>
-                                        <div class="col-lg-10">
-                                            <button type="button" class="btn btn-success btn-lg btn-block">Continue</button>
-                                        </div>
-                                    </div>
-                                </form> 
-                                
-                                <div class="signup-or-login">
-                                    <ul>
-                                        <li>already have an account? <a href="{{ route('login') }}">Log in</a></li>
-                                    </ul>
-                                </div>
-
-
-
-                                <div class="free-message">
-                                    <i class="fa fa-gift"></i>
-                                     First delivery is <span class="bold">free</span> over $10 
-                                </div>
-                            </div>
-                            
-                        </div>
+            <div class="container">                    
+                <div class="signup-widget round shadow">
+                    <div class="logo">
+                        <img src="/images/logo-carrot-icon.png" alt="" srcset="">
                     </div>
-                </div> <!-- end container -->
+                    <div class="sign-up">
+                        <div class="gencart">
+                            <div class="title"> The best way to shop for groceries</div>
+                            <span>Delivered from the stores you love in one hour</span>
+                            
+                            <form class="signup-form" method="">
+                                <div class="form-group row">
+                                    <div class="col-lg-10">
+                                        <input type="text" class="form-control form-control-lg input-zip" placeholder="Enter Zip Code">
+                                    </div>
+                                    <div class="col-lg-10">
+                                        <button type="submit" styele="cursor:pointer" class="btn btn-success btn-lg btn-block">Continue</button>
+                                    </div>
+                                </div>
+                            </form> 
+                            
+                            <div class="signup-or-login">
+                                <ul>
+                                    <li>already have an account? <a href="{{ route('login') }}">Log in</a></li>
+                                </ul>
+                            </div>
 
-                
-                     
-                
-                <div class="links">
-                    <ul class="nav justify-content-center">
+                            <div class="free-message">
+                                <i class="fa fa-gift"></i>
+                                    First delivery is <span class="bold">free</span> over $10 
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div> <!-- end container -->
+            
+                    
+            
+            <div class="links">
+                <ul class="nav justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Active</a>
+                        <a class="nav-link active" href="#">FAQ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#">Help</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
+                        <a class="nav-link" href="#">Privacy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Terms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Become a shopper</a>
                     </li>
                 </ul>
-                </div>
             </div>
+
+            <div class="links">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link " href="#"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#"><i class="fa fa-google-plus"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#"><i class="fa fa-medium"></i></a>
+                    </li>
+                </ul>
+            </div>
+            
 
             <!-- grid section -->
 
