@@ -17,7 +17,7 @@
                             <form class="signup-form" method="">
                                 <div class="form-group row">
                                     <div class="col-lg-10">
-                                        <input type="text" class="form-control form-control-lg input-zip" placeholder="Enter addressto start">
+                                        <input type="text" class="form-control form-control-lg input-zip" placeholder="Enter address to start">
                                     </div>
                                     <div class="col-lg-10">
                                         <button type="submit" style="cursor:pointer" class="btn btn-success btn-lg btn-block">Continue</button>
