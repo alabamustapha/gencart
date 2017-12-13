@@ -17,10 +17,10 @@
                             <form class="signup-form" method="">
                                 <div class="form-group row">
                                     <div class="col-lg-10">
-                                        <input type="text" class="form-control form-control-lg input-zip" placeholder="Enter Zip Code">
+                                        <input type="text" class="form-control form-control-lg input-zip" placeholder="Enter addressto start">
                                     </div>
                                     <div class="col-lg-10">
-                                        <button type="submit" styele="cursor:pointer" class="btn btn-success btn-lg btn-block">Continue</button>
+                                        <button type="submit" style="cursor:pointer" class="btn btn-success btn-lg btn-block">Continue</button>
                                     </div>
                                 </div>
                             </form> 
