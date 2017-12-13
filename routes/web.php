@@ -16,4 +16,13 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 
+<<<<<<< HEAD
 // Route
+=======
+Route::get('/admin', 'AdminController@dashboard')->name('admin_dashboard');
+Route::get('/admin/users', 'AdminController@showUsers')->name('admin_users');
+
+
+
+
+>>>>>>> 7439d2fdcaf50d11fa41fc7de815b372a8b625d6
