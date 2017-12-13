@@ -147,7 +147,7 @@
                                 </p>
                             </div>
                             <div class="col-lg-8">    
-                                <img src="{{ asset('images/coupon.jpg')}}" alt="" srcset="">  
+                                <img class="section-img" src="{{ asset('images/mom.jpg')}}" alt="" srcset="">  
                             </div>
                         </div>
                     </div>
