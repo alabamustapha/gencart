@@ -38,18 +38,17 @@ body {
 }
 
 .shadow {
-    /* box-shadow: 2px -2px 20px rgba(0, 0, 0, .09); */
     box-shadow: 2px 1px 20px #888;
 }
 
 .logo {
-    /* background-image: url();
+    /* background-image: url('/images/logo-carrot-icon.png');
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: 200px; */
+    background-position: center; */
+    
     display: block;
-    height: 100px;
-    width: 200px;
+    width: 100%;
+    height: auto;
     margin: 0px auto;
 }
 
@@ -116,21 +115,7 @@ ul {
     top: 5px;
     right: 5px;
     color: inherit;
-}
-
-.ic-icon-gift:before {
-    content: "\e09e";
-}
-
-[class^="ic-icon-"]:before, [class*=" ic-icon-"]:before {
-    font-family: "ic-icons" !important;
-    font-style: normal !important;
-    font-weight: normal !important;
-    font-variant: normal !important;
-    text-transform: none !important;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    vertical-align: baseline;
 }
 
 .bold {
@@ -186,6 +171,19 @@ ul {
     width: 100%;
     
 }
+<<<<<<< HEAD
+
+.justify-content-center {
+        margin: 30px 0;
+}
+
+.links .nav-link {
+    color: #28a745;
+
+
+}
+=======
+>>>>>>> e2193416e7372d41e8880c7ca00ecf18bc83ba6a
     
 
 
