@@ -48,8 +48,8 @@
                                     </div>
                                 
                                     <div class="form-row">
-                                        <div class="form-group col{{ $errors->has('confirm_password') ? ' has-error' : '' }}">
-                                            <input type="password" class="form-control form-control-md" placeholder="Confirm password" name="confirm_password" required>
+                                        <div class="form-group col{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
+                                            <input type="password" class="form-control form-control-md" placeholder="Confirm password" name="password_confirmation" required>
                                         </div>
                                     </div>
                                 
@@ -96,13 +96,14 @@
           
           $('div#signup-fields').hide();    
           
-          initAutocomplete();
-
-            $('button#next').click(function(e){
+          $('button#next').click(function(e){
                 e.preventDefault();
                 next();
             });
 
+          initAutocomplete();
+
+            
         });
       
       function initAutocomplete() {
@@ -117,9 +118,7 @@
         var input = document.getElementById('pac-input');
         
         var autocomplete = new google.maps.places.Autocomplete(input, options);
-        
-
-        
+                
         // Listen for the event fired when the user selects a prediction and retrieve
         // more details for that place.
         autocomplete.addListener('place_changed', function() {
