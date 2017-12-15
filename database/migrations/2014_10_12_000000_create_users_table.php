@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('address');
 			$table->integer('zipcode')->nullable();
 			$table->string('referral_code')->unique();
-			$table->enum('role', ['customer', 'shopper', 'admin']);
+			$table->enum('role', ['customer', 'shopper', 'admin'])->default('customer');
             $table->rememberToken();
             $table->timestamps();
         });

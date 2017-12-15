@@ -16,7 +16,4 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/admin', 'AdminController@dashboard')->name('admin_dashboard');
-Route::get('/location', function(){
-    return view('location');
-});
 Route::get('/admin/users', 'AdminController@showUsers')->name('admin_users');
