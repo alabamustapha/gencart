@@ -28,7 +28,12 @@
                             </div>
                         </div>
                     </form> 
-                    
+                    <div class="row">
+                        <div class="col-lg-10">
+                            <button type="button" class="btn btn-success btn-lg btn-block">Continue</button>
+                            <button type="button" class="btn btn-success btn-lg btn-block">Continue</button>
+                        </div>
+                    </div>   
                     <div class="signup-or-login">
                         <ul>
                             <li>Don't have an account? <a href="{{ route('home')}}">Signup</a></li>
