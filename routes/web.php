@@ -18,7 +18,4 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/admin', 'AdminController@dashboard')->name('admin_dashboard');
 Route::get('/admin/users', 'AdminController@showUsers')->name('admin_users');
 
-
-Route::get('/store/{storname}', function($storename){
-    return view('store', compact('storename'));
-});
+Route::get('/store', 'CustomerController@index');
