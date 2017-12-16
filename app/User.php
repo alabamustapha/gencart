@@ -9,13 +9,20 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    public $first_name;
+    public $last_name;
+
+    public function __construct(){
+        $this->first_name = array_first(explode(' ', $this->name));
+        $this->last_name = "last";
+    }
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'address'
+        'name', 'email', 'password', 'address', 'phone'
     ];
 
     /**
@@ -26,4 +33,6 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
 }

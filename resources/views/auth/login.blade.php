@@ -17,23 +17,32 @@
                     {{ csrf_field() }}
                         <div class="form-group row">
                             <div class="col-lg-10">
-                                <input type="text" class="form-control form-control-lg input-zip" placeholder="username">
+                                <input type="email" class="form-control form-control-lg input-zip" placeholder="email" name="email" required>
+                                @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                             <div class="col-lg-10">
-                                <input type="password" class="form-control form-control-lg input-zip" placeholder="password">
+                                <input type="password" class="form-control form-control-lg input-zip" placeholder="password" name="password" required>
+                                @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
                             </div>
-                            <input type="hidden" name="remember" value="checked">
                             <div class="col-lg-10">
-                                <button type="button" class="btn btn-success btn-lg btn-block">Continue</button>
+                                <button type="submit" class="btn btn-success btn-lg btn-block">Continue</button>
                             </div>
                         </div>
                     </form> 
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-lg-10">
                             <button type="button" class="btn btn-success btn-lg btn-block">Continue</button>
                             <button type="button" class="btn btn-success btn-lg btn-block">Continue</button>
                         </div>
-                    </div>   
+                    </div>    -->
                     <div class="signup-or-login">
                         <ul>
                             <li>Don't have an account? <a href="{{ route('home')}}">Signup</a></li>
