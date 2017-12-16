@@ -585,3 +585,10 @@ width: 345px;
 .store-featured-product .card-title {
     margin-bottom: .15rem;
 }
+
+.dept-wrapper {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-flow: column nowrap
+    height: 120px;
+}

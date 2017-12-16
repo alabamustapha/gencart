@@ -112,8 +112,8 @@
         <div class="container">
             <div class="jumbotron">
                 <p class="dept-title">Browse Departments</p>
-              <div class="dept_wrapper">
-                    <img src="/images/pantry.jpg" width="150" alt="" srcset="">
+              <div class="dept-wrapper">
+                    <img src="/images/pantry.jpg" alt="" srcset="">
                     <p class="dept-name">pasteries</p>
                 </div>
             </div>
