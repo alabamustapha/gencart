@@ -119,11 +119,7 @@
                 <div class="search-bar primary-nav-search-bar" aria-hidden="false" style="flex-grow: 1;">
                     <form>
                         <span class="twitter-typeahead" style="position: relative; display: inline-block;">
-                            <input type="search" class="tt-input search-field" placeholder="Search Target..." aria-label="Search Target..." aria-hidden="false" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top;">
-                            <!-- <pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre>
-                            <div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;">
-
-                            </div> -->
+                            <input type="search" class="tt-input search-field" placeholder="Search {{$storename }}..." style="position: relative; vertical-align: top;">
                         </span>
                         <button class="search-btn" type="submit" aria-label="start search" style="color: rgb(67, 176, 42);"><i class="fa fa-search"></i></button>
                     </form>
