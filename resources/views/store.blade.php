@@ -3,6 +3,7 @@
 @section('content')
 
 <div class="content">
+
     <div class="container">
         <div class="owl-carousel owl-theme">
 
@@ -27,6 +28,15 @@
             </div>
         </div>
     </div>
+
+
+    <section class="store-featured-product">
+        <div class="container">
+            <div class="jumbotron">
+                
+            </div>
+        </div>
+    </section>
 </div>
 
 @endsection
