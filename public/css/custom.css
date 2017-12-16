@@ -573,3 +573,15 @@ width: 345px;
 .store-featured-product .jumbotron {
     background-color: #fff;
 }
+
+.store-featured-product .card:hover {
+    background-color: #fff;
+}
+.store-featured-product p.card-text {
+    font-size: 16px;
+    line-height: 1.4rem;
+    margin-bottom: .35rem;
+}
+.store-featured-product .card-title {
+    margin-bottom: .15rem;
+}

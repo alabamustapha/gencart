@@ -35,66 +35,92 @@
             <div class="jumbotron">
                 <p class="featured-products">Featured Products</p>
                 <div class="card-columns">
-                        <div class="card text-center">
+                        <div class="card">
                             <a href="#">
-                                <img class="card-img-top card-img-rounded" src="/images/recipe.jpg" alt="">
+                                <img class="card-img-top card-img-rounded text-center" src="/images/recipe.jpg" alt="">
                             </a>
                             <div class="card-body">
-                            <h4 class="card-title">Whole Foods</h4>
-                            <p class="card-text"><small class="text-muted" style="font-size: 13px">Groceries &middot; Organic &middot; Specialty </small></p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h4 class="card-title">$9.5</h4>
+                            <p class="card-text"><small class="text-muted" style="font-size: 13px">dish washer premium </small></p>
+                            <p class="card-text"><small class="text-muted" style="font-size: 13px">57 oz </small></p>
+                            <a href="#" class="btn btn-success">Add</a>
                             </div>
-                        </div>
-                        <div class="card text-center">
+                        </div>             
+                        <div class="card">
                             <a href="#">
-                                <img class="card-img-top card-img-rounded" src="/images/recipe.jpg" alt="">
+                                <img class="card-img-top card-img-rounded text-center" src="/images/recipe.jpg" alt="">
                             </a>
                             <div class="card-body">
-                            <h4 class="card-title">Whole Foods</h4>
-                            <p class="card-text"><small class="text-muted" style="font-size: 13px">Groceries &middot; Organic &middot; Specialty </small></p>
+                            <h4 class="card-title">$9.5</h4>
+                            <p class="card-text"><small class="text-muted" style="font-size: 13px">dish washer premium </small></p>
+                            <p class="card-text"><small class="text-muted" style="font-size: 13px">57 oz </small></p>
+                            <a href="#" class="btn btn-success">Add</a>
                             </div>
-                        </div>
-                        <div class="card text-center">
+                        </div>             
+                        <div class="card">
                             <a href="#">
-                                <img class="card-img-top card-img-rounded" src="/images/recipe.jpg" alt="">
+                                <img class="card-img-top card-img-rounded text-center" src="/images/recipe.jpg" alt="">
                             </a>
                             <div class="card-body">
-                            <h4 class="card-title">Whole Foods</h4>
-                            <p class="card-text"><small class="text-muted" style="font-size: 13px">Groceries &middot; Organic &middot; Specialty </small></p>
+                            <h4 class="card-title">$9.5</h4>
+                            <p class="card-text"><small class="text-muted" style="font-size: 13px">dish washer premium </small></p>
+                            <p class="card-text"><small class="text-muted" style="font-size: 13px">57 oz </small></p>
+                            <a href="#" class="btn btn-success">Add</a>
                             </div>
-                        </div>
-                        <div class="card text-center">
+                        </div>             
+                        <div class="card">
                             <a href="#">
-                                <img class="card-img-top card-img-rounded" src="/images/recipe.jpg" alt="">
+                                <img class="card-img-top card-img-rounded text-center" src="/images/recipe.jpg" alt="">
                             </a>
                             <div class="card-body">
-                            <h4 class="card-title">Whole Foods</h4>
-                            <p class="card-text"><small class="text-muted" style="font-size: 13px">Groceries &middot; Organic &middot; Specialty </small></p>
+                            <h4 class="card-title">$9.5</h4>
+                            <p class="card-text"><small class="text-muted" style="font-size: 13px">dish washer premium </small></p>
+                            <p class="card-text"><small class="text-muted" style="font-size: 13px">57 oz </small></p>
+                            <a href="#" class="btn btn-success">Add</a>
                             </div>
-                        </div>              
-                        <div class="card text-center">
+                        </div>             
+                        <div class="card">
                             <a href="#">
-                                <img class="card-img-top card-img-rounded" src="/images/recipe.jpg" alt="">
+                                <img class="card-img-top card-img-rounded text-center" src="/images/recipe.jpg" alt="">
                             </a>
                             <div class="card-body">
-                            <h4 class="card-title">Whole Foods</h4>
-                            <p class="card-text"><small class="text-muted" style="font-size: 13px">Groceries &middot; Organic &middot; Specialty </small></p>
+                            <h4 class="card-title">$9.5</h4>
+                            <p class="card-text"><small class="text-muted" style="font-size: 13px">dish washer premium </small></p>
+                            <p class="card-text"><small class="text-muted" style="font-size: 13px">57 oz </small></p>
+                            <a href="#" class="btn btn-success">Add</a>
                             </div>
-                        </div>              
-                        <div class="card text-center">
+                        </div>             
+                        <div class="card">
                             <a href="#">
-                                <img class="card-img-top card-img-rounded" src="/images/recipe.jpg" alt="">
+                                <img class="card-img-top card-img-rounded text-center" src="/images/recipe.jpg" alt="">
                             </a>
                             <div class="card-body">
-                            <h4 class="card-title">Whole Foods</h4>
-                            <p class="card-text"><small class="text-muted" style="font-size: 13px">Groceries &middot; Organic &middot; Specialty </small></p>
+                            <h4 class="card-title">$9.5</h4>
+                            <p class="card-text"><small class="text-muted" style="font-size: 13px">dish washer premium </small></p>
+                            <p class="card-text"><small class="text-muted" style="font-size: 13px">57 oz </small></p>
+                            <a href="#" class="btn btn-success">Add</a>
                             </div>
-                        </div>              
-                        
-                    </div>
+                        </div>             
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- end store feature products -->
+
+    <section class="store-department">
+        <div class="container">
+            <div class="jumbotron">
+                <p class="dept-title">Browse Departments</p>
+              <div class="dept_wrapper">
+                    <img src="/images/pantry.jpg" width="150" alt="" srcset="">
+                    <p class="dept-name">pasteries</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 </div>
 
 @endsection
