@@ -565,3 +565,11 @@ width: 345px;
 .disclaimer {
     font-size: 14px;
 }
+
+.featured-products {
+    margin-bottom: 1.25rem;
+}
+
+.store-featured-product .jumbotron {
+    background-color: #fff;
+}
