@@ -21,9 +21,10 @@ body {
 }
 
 .signup-widget {
-    background: rgba(255,255,255,0.95);    
+    background: rgba(255,255,255,0.95);  
+    width:100%;  
+    max-width: 540px;
     height: auto;
-    width: 540px;
     margin: 0 auto;
     text-align: center;
     position:relative;
@@ -60,11 +61,11 @@ body {
 }
 
 .signup-form {
-    margin: 20px auto;
+    margin: 10px auto;
     display: inline-block;
 }
 
-.col-lg-10 {
+.col-lg-10, .col-md-10, .col-sm-10 {
     margin: auto;
 }
 
@@ -589,6 +590,6 @@ width: 345px;
 .dept-wrapper {
     background-color: rgb(255, 255, 255);
     display: flex;
-    flex-flow: column nowrap
+    flex-flow: column nowrap;
     height: 120px;
 }

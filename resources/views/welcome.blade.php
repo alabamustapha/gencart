@@ -13,53 +13,74 @@
                             <span>Delivered from the stores you love in one hour</span>
                             
                             <div class="row">
-                                <div class="col-lg-10">
-                            <form class="form-horizontal signup-form" method="POST" action="{{ route('register') }}">
-                                {{ csrf_field() }}
-                                
-                                <div class="form-group" id="address-search">
-                                    <input type="text" class="form-control form-control-md controls" id="pac-input" placeholder="Enter address to start" name="address" required autofocus>
-                                </div>
-
-                                <div class="signup-details" id="signup-fields">
+                                <div class="col-lg-10 col-md-10 col-sm-10">
+                                    <form class="form-horizontal signup-form" method="POST" action="{{ route('register') }}">
+                                        {{ csrf_field() }}
                                         
-                                    <div class="form-row">
-                                        <div class="form-group col{{ $errors->has('first_name') ? ' has-error' : '' }}">
-                                            <input type="text" class="form-control form-control-md " placeholder="First name" name="first_name" required>
-                                        </div>
+                                        <!-- <div class="form-row"> -->
+                                            
+                                            <div class="col-lg-10 col-md-10 col-sm-10">
+                                                <div class="form-group" id="address-search">
+                                                    <input type="text" class="form-control form-control-md controls" id="pac-input" placeholder="Enter address to start" name="address" required autofocus>   
+                                                </div>
+                                            </div>
+                                        <!-- </div> -->
 
-                                        <div class="form-group col{{ $errors->has('last_name') ? ' has-error' : '' }}">
-                                            <input type="text" class="form-control form-control-md" placeholder="Last name" name="last_name" required>
-                                        </div>
-                                    </div>          
-                                    
-                                    <div class="form-row">
-                                        <div class="form-group col{{ $errors->has('email') ? ' has-error' : '' }}">
-                                            <input type="email" class="form-control form-control-md" placeholder="email" name="email" required>
-                                        </div>
-                                    </div>    
-                                
-                                    <div class="form-row">
-                                        <div class="form-group col{{ $errors->has('password') ? ' has-error' : '' }}">
-                                            <input type="password" class="form-control form-control-md" placeholder="Choose password" name="password" required>
-                                        </div>
-                                    </div>
-                                
-                                    <div class="form-row">
-                                        <div class="form-group col{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-                                            <input type="password" class="form-control form-control-md" placeholder="Confirm password" name="password_confirmation" required>
-                                        </div>
-                                    </div>
-                                
-                                    <button type="submit" style="cursor:pointer" class="btn btn-success btn-lg btn-block"> <i class="fa fa-envelop"> Signup</i></button>
-                                
-                                    <button style="cursor:pointer" class="btn btn-primary btn-lg btn-block"><i class="fa fa-facebook"></i> Facebook</button>    
-                                </div>
+                                        <div class="signup-details" id="signup-fields">
+                                                
+                                            <div class="form-row">
+                                                <div class="col-lg-10 col-md-10 col-sm-10">
+                                                    <div class="form-group col{{ $errors->has('first_name') ? ' has-error' : '' }}">
+                                                        <input type="text" class="form-control form-control-md " placeholder="First name" name="first_name" required>
+                                                    </div>
 
-                                <button style="cursor:pointer" class="btn btn-success btn-lg btn-block" id="next">Continue <i class="fa fa-arrow-right"></i></button>
-                            </form> 
+                                                </div>
+                                                <div class="col-lg-10 col-md-10 col-sm-10">
+                                                    <div class="form-group col{{ $errors->has('last_name') ? ' has-error' : '' }}">
+                                                        <input type="text" class="form-control form-control-md" placeholder="Last name" name="last_name" required>
+                                                    </div>
 
-                                
+                                                </div>
+                                            </div>          
+                                            
+                                            <div class="form-row">
+                                                <div class="col-lg-10 col-md-10 col-sm-10">
+                                                    <div class="form-group col{{ $errors->has('email') ? ' has-error' : '' }}">
+                                                        <input type="email" class="form-control form-control-md" placeholder="email" name="email" required>
+                                                    </div>
+                                                </div>
+                                            </div>    
+                                        
+                                            <div class="form-row">
+                                                <div class="col-lg-10 col-md-10 col-sm-10">
+                                                    <div class="form-group col{{ $errors->has('password') ? ' has-error' : '' }}">
+                                                        <input type="password" class="form-control form-control-md" placeholder="Choose password" name="password" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="form-row">
+                                                <div class="col-lg-10 col-md-10 col-sm-10">
+                                                    <div class="form-group col{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
+                                                        <input type="password" class="form-control form-control-md" placeholder="Confirm password" name="password_confirmation" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-10 col-md-10 col-sm-10">
+
+                                                <button type="submit" style="cursor:pointer" class="btn btn-success btn-lg btn-block"> 
+                                                    <i class="fa fa-envelop"> Signup</i>
+                                                </button>
+                                            
+                                                <button style="cursor:pointer" class="btn btn-primary btn-lg btn-block">
+                                                    <i class="fa fa-facebook"></i> Facebook
+                                                </button>    
+                                            </div>
+                                        </div>
+                                        <button style="cursor:pointer" class="btn btn-success btn-lg btn-block" id="next">Continue <i class="fa fa-arrow-right"></i></button>
+
+                                    </form>                                 
                                 </div>
                             </div>
                             
