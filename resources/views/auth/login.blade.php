@@ -12,6 +12,11 @@
             <div class="gencart">
                 <div class="title"> Get your groceries delivered from local stores</div>
 
+                <div class="row">
+                    <div class="col-lg-10 col-md-10 col-sm-10">
+                        <form class="form-horizontal" method="POST" action="{{ route('login') }}">
+                            {{ csrf_field() }}
+                            <div class="form-group">                               
 
                 <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                     {{ csrf_field() }}
@@ -48,6 +53,13 @@
                             <li>Don't have an account? <a href="{{ route('home')}}">Signup</a></li>
                         </ul>
                     </div>
+                </div>
+                       
+                <div class="signup-or-login">
+                    <ul>
+                        <li>Don't have an account? <a href="{{ route('home')}}">Signup</a></li>
+                    </ul>
+                </div>
 
 
 
