@@ -53,11 +53,197 @@
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Store<span class="sr-only">(Store)</span>
                             </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <div class="dropdown-divider"></div>
-                                </div>
+                            <div id="store-list-dropdown" class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+
+                                <header class="store-lists-header">
+                                    <div class="container">
+                                        <ul class="list-group">
+                                            <li class="list-group-item text-center">
+                                                <h3>Stores in <strong>Medina</strong></h3>
+                                            </li>
+
+                                            <li class="list-group-item">
+                                                Filter by:
+                                                <ul class="nav nav-tabs" id="myTab" role="tablist" style="display: inline-flex;">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">All</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" id="petsupplies-tab" data-toggle="tab" href="#petsupplies" role="tab" aria-controls="petsupplies" aria-selected="false">Pet supplies</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" id="meals-tab" data-toggle="tab" href="#meals" role="tab" aria-controls="meals" aria-selected="false">Meals</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" id="drugstores-tab" data-toggle="tab" href="#drugstores" role="tab" aria-controls="drugstores" aria-selected="false">Drugstores</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" id="groceries-tab" data-toggle="tab" href="#groceries" role="tab" aria-controls="groceries" aria-selected="false">Groceries</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" id="alcohol-tab" data-toggle="tab" href="#alcohol" role="tab" aria-controls="alcohol" aria-selected="false">Alcohol</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="list-group-item" style="background: #f7f7f7;">Recommended stores</li>
+                                        </ul>
+                                    </div>
+                                </header> <!-- store list header ends -->
+
+
+                                <div class="store_overlay"></div>
+
+
+
+
+
+                                <div class="container">
+                                    <div class="tab-content" id="myTabContent">
+                            
+                                        <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+                                            <div class="card-columns">
+                                                <div class="card text-center">
+                                                    <a href="#">
+                                                        <img class="card-img-top card-img-rounded" src="/images/recipe.jpg" alt="">
+                                                    </a>
+                                                    <div class="card-body">
+                                                    <h4 class="card-title">Whole Foods</h4>
+                                                    <p class="card-text"><small class="text-muted" style="font-size: 13px">Groceries &middot; Organic &middot; Specialty </small></p>
+                                                    </div>
+                                                </div>
+                                                <div class="card text-center">
+                                                    <a href="#">
+                                                        <img class="card-img-top card-img-rounded" src="/images/recipe.jpg" alt="">
+                                                    </a>
+                                                    <div class="card-body">
+                                                    <h4 class="card-title">Whole Foods</h4>
+                                                    <p class="card-text"><small class="text-muted" style="font-size: 13px">Groceries &middot; Organic &middot; Specialty </small></p>
+                                                    </div>
+                                                </div>
+                                                <div class="card text-center">
+                                                    <a href="#">
+                                                        <img class="card-img-top card-img-rounded" src="/images/recipe.jpg" alt="">
+                                                    </a>
+                                                    <div class="card-body">
+                                                    <h4 class="card-title">Whole Foods</h4>
+                                                    <p class="card-text"><small class="text-muted" style="font-size: 13px">Groceries &middot; Organic &middot; Specialty </small></p>
+                                                    </div>
+                                                </div>
+                                                <div class="card text-center">
+                                                    <a href="#">
+                                                        <img class="card-img-top card-img-rounded" src="/images/recipe.jpg" alt="">
+                                                    </a>
+                                                    <div class="card-body">
+                                                    <h4 class="card-title">Whole Foods</h4>
+                                                    <p class="card-text"><small class="text-muted" style="font-size: 13px">Groceries &middot; Organic &middot; Specialty </small></p>
+                                                    </div>
+                                                </div>              
+                                                <div class="card text-center">
+                                                    <a href="#">
+                                                        <img class="card-img-top card-img-rounded" src="/images/recipe.jpg" alt="">
+                                                    </a>
+                                                    <div class="card-body">
+                                                    <h4 class="card-title">Whole Foods</h4>
+                                                    <p class="card-text"><small class="text-muted" style="font-size: 13px">Groceries &middot; Organic &middot; Specialty </small></p>
+                                                    </div>
+                                                </div>              
+                                                <div class="card text-center">
+                                                    <a href="#">
+                                                        <img class="card-img-top card-img-rounded" src="/images/recipe.jpg" alt="">
+                                                    </a>
+                                                    <div class="card-body">
+                                                    <h4 class="card-title">Whole Foods</h4>
+                                                    <p class="card-text"><small class="text-muted" style="font-size: 13px">Groceries &middot; Organic &middot; Specialty </small></p>
+                                                    </div>
+                                                </div>              
+                                                
+                                            </div>
+                                            
+                                        </div>
+
+                                        <div class="tab-pane fade" id="petsupplies" role="tabpanel" aria-labelledby="petsupplies-tab">
+                                            <div class="card-columns">
+                                                <div class="card text-center">
+                                                    <a href="#">
+                                                        <img class="card-img-top card-img-rounded" src="/images/recipe.jpg" alt="">
+                                                    </a>
+                                                    <div class="card-body">
+                                                    <h4 class="card-title">Whole Foods</h4>
+                                                    <p class="card-text"><small class="text-muted" style="font-size: 13px">Groceries &middot; Organic &middot; Specialty </small></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+
+                                        <div class="tab-pane fade" id="meals" role="tabpanel" aria-labelledby="meals-tab">
+                                            <div class="card-columns">
+                                                <div class="card text-center">
+                                                    <a href="#">
+                                                        <img class="card-img-top card-img-rounded" src="/images/recipe.jpg" alt="">
+                                                    </a>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">Whole Foods</h4>
+                                                        <p class="card-text"><small class="text-muted" style="font-size: 13px">Groceries &middot; Organic &middot; Specialty </small></p>
+                                                    </div>
+                                                </div>               
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane fade" id="drugstores" role="tabpanel" aria-labelledby="drugstores-tab">
+                                            <div class="card-columns">
+                                                <div class="card text-center">
+                                                    <a href="#">
+                                                        <img class="card-img-top card-img-rounded" src="/images/recipe.jpg" alt="">
+                                                    </a>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">Whole Foods</h4>
+                                                        <p class="card-text"><small class="text-muted" style="font-size: 13px">Groceries &middot; Organic &middot; Specialty </small></p>
+                                                    </div>
+                                                </div>           
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane fade" id="groceries" role="tabpanel" aria-labelledby="groceries-tab">
+                                            <div class="card-columns">
+                                                <div class="card text-center">
+                                                    <a href="#">
+                                                        <img class="card-img-top card-img-rounded" src="/images/recipe.jpg" alt="">
+                                                    </a>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">Whole Foods</h4>
+                                                        <p class="card-text"><small class="text-muted" style="font-size: 13px">Groceries &middot; Organic &middot; Specialty </small></p>
+                                                    </div>
+                                                </div>             
+                                                
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane fade" id="alcohol" role="tabpanel" aria-labelledby="alcohol-tab">
+                                            <div class="card-columns">
+                                                <div class="card text-center">
+                                                    <a href="#">
+                                                        <img class="card-img-top card-img-rounded" src="/images/recipe.jpg" alt="">
+                                                    </a>
+                                                    <div class="card-body">
+                                                    <h4 class="card-title">Whole Foods</h4>
+                                                    <p class="card-text"><small class="text-muted" style="font-size: 13px">Groceries &middot; Organic &middot; Specialty </small></p>
+                                                    </div>
+                                                </div>     
+                                                
+                                            </div>
+                                        </div>
+
+                                    </div> <!-- tab ends here -->
+                                </div> <!-- container ends here -->
+
+
+
+
+                                
+                            </div>
                         </li>
     
                     </ul>
