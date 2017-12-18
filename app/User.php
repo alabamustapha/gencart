@@ -30,4 +30,15 @@ class User extends Authenticatable
     ];
 
 
+    /** 
+     * Return true if is admin
+     * 
+     * @var $this
+    */
+
+    public function isAdmin(){
+        return $this->role == 'admin';
+    }
+
+
 }

@@ -58,5 +58,6 @@ class Kernel extends HttpKernel
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'password-grant' => \App\Http\Middleware\InjectPasswordGrantCredentials::class,
+        'admin' => \App\Http\Middleware\VerifyIsAdmin::class,
     ];
 }
