@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers;
 
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
 
 
 class ApiRegisterController extends Controller
@@ -21,18 +22,6 @@ class ApiRegisterController extends Controller
     |
      */
 
-    use RegistersUsers;
-
-
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('guest');
-    }
 
     /**
      * Get a validator for an incoming registration request.
@@ -79,10 +68,14 @@ class ApiRegisterController extends Controller
      */
     public function register(Request $request)
     {
-        $this->validator($request->all())->validate();
+        
+        if($this->validator($request->all())->fails()){
+            return $this->validator($request->all())->errors()->all();
+        };
 
-        event(new Registered($user = $this->create($request->all())));
+        $user = $this->create($request->all());
 
         return $user;
+
     }
 }

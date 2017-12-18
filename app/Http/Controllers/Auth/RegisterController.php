@@ -6,6 +6,7 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -34,9 +35,10 @@ class RegisterController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Request $request)
     {
         $this->middleware('guest');
+        
     }
 
     /**
@@ -85,10 +87,6 @@ class RegisterController extends Controller
      */
     protected function registered(Request $request, $user)
     {
-        if ($request->wantsJson()) {
-            return $user;
-        }
 
-        return false;
     }
 }
