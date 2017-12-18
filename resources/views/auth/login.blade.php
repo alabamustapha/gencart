@@ -18,24 +18,40 @@
                             {{ csrf_field() }}
                             <div class="form-group">                               
 
-                                <div class="col-lg-10 col-md-10 col-sm-10">
-                                    <input type="text" class="form-control form-control-md input-zip" placeholder="username">
-                                </div>
-
-                                <div class="col-lg-10 col-md-10 col-sm-10">
-                                    <input type="password" class="form-control form-control-md input-zip" placeholder="password">
-                                </div>
-
-                                <input type="hidden" name="remember" value="checked">
-
-                                <div class="col-lg-10 col-md-10 col-sm-10">
-                                    <button type="button" class="btn btn-success btn-lg btn-block">Continue</button>
-                                    <button type="button" class="btn btn-primary btn-lg btn-block">Continue</button>
-                                    <button type="button" class="btn btn-danger btn-lg btn-block">Continue</button>
-                                </div>
+                <form class="form-horizontal" method="POST" action="{{ route('login') }}">
+                    {{ csrf_field() }}
+                        <div class="form-group row">
+                            <div class="col-lg-10">
+                                <input type="email" class="form-control form-control-lg input-zip" placeholder="email" name="email" required>
+                                @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
                             </div>
-                        </form> 
-
+                            <div class="col-lg-10">
+                                <input type="password" class="form-control form-control-lg input-zip" placeholder="password" name="password" required>
+                                @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                            <div class="col-lg-10">
+                                <button type="submit" class="btn btn-success btn-lg btn-block">Continue</button>
+                            </div>
+                        </div>
+                    </form> 
+                    <!-- <div class="row">
+                        <div class="col-lg-10">
+                            <button type="button" class="btn btn-success btn-lg btn-block">Continue</button>
+                            <button type="button" class="btn btn-success btn-lg btn-block">Continue</button>
+                        </div>
+                    </div>    -->
+                    <div class="signup-or-login">
+                        <ul>
+                            <li>Don't have an account? <a href="{{ route('home')}}">Signup</a></li>
+                        </ul>
                     </div>
                 </div>
                        

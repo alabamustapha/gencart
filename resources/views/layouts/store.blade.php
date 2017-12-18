@@ -257,7 +257,7 @@
                             Store<span class="sr-only">(Store)</span>
                             </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Hi, Name</a>
+                                    <a class="dropdown-item" href="#">Hi, {{ auth()->user()->first_name }}</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="#">Your Account</a>
                                     <a class="dropdown-item" href="#">Your Order</a>
@@ -266,11 +266,18 @@
                                     <a class="dropdown-item" href="#">Group Carts</a>
                                     <a class="dropdown-item" href="#"><i class="fa fa-gift"></i> Buy Gift Cards</a>
                                     <a class="dropdown-item" href="#">GenCart Express</a>
-                                    <a class="dropdown-item" href="#">How Instacart Works</a>
+                                    <a class="dropdown-item" href="#">How GenCart Works</a>
                                     <a class="dropdown-item" href="#">Lists and Recipes</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Logout</a>
-                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form> 
                                 </div>
                         </li>
     

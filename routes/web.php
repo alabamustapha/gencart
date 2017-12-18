@@ -18,10 +18,10 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/admin', 'AdminController@dashboard')->name('admin_dashboard');
 Route::get('/admin/users', 'AdminController@showUsers')->name('admin_users');
 
+
 Route::get('/store/welcome', function(){
-    return view('store.welcome');
+        return view('store.welcome');
 });
 
-Route::get('/store/{storname}', function($storename){
-    return view('store', compact('storename'));
-});
+Route::get('/store/{store}', 'StoreController@index');
+

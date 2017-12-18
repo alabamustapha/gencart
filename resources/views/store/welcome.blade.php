@@ -48,7 +48,7 @@
                         <h2>Choose a Store to Begin shopping</h2>
                     </li>
                     <li class="list-group-item text-center">
-                        <h3>Stores in <strong>Medina</strong></h3>
+                        <h3>Stores in <strong>{{ explode(',', auth()->user()->address)[0] }}</strong></h3>
                     </li>
 
                     <li class="list-group-item">
