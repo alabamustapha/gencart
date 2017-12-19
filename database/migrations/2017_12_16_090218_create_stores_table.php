@@ -18,8 +18,8 @@ class CreateStoresTable extends Migration
             $table->string('name');
             $table->string('logo')->nullable();
             $table->string('banner')->nullable();
-            $table->json('zipcode')->nullable();
-            $table->json('addresses')->nullable();
+            $table->text('zipcode')->nullable();
+            $table->text('addresses')->nullable();
             $table->string('phone');
             $table->boolean('status')->default(0);
             $table->unsignedInteger('user_id')->nullable();

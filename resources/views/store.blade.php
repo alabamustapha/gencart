@@ -30,6 +30,72 @@
     </div>
 
 
+    <section class="store-new-arrival">
+        <div class="container">
+            <div class="jumbotron">
+                <p class="featured-products">New Arrivals</p>
+                
+                    <div class="owl-carousel owl-theme">
+
+                        <div>
+                            <img src="{{ asset('images/sameday.jpg') }}" alt="">
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/recipe.jpg') }}" alt="">
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/product.jpg') }}" alt="">
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/time.jpg') }}" alt="">
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/sameday.jpg') }}" alt="">
+                        
+                        </div>
+                        <div>                
+                            <img src="{{ asset('images/sameday.jpg') }}" alt="">
+                        </div>
+                    </div>
+                           
+            </div>
+        </div>
+    </section>
+    <!-- end new arrivals -->
+
+    <section class="store-sales">
+        <div class="container">
+            <div class="jumbotron">
+                <p class="featured-products">Sales</p>
+                    <div class="owl-carousel owl-theme">
+
+                        <div>
+                            <img src="{{ asset('images/sameday.jpg') }}" alt="">
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/recipe.jpg') }}" alt="">
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/product.jpg') }}" alt="">
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/time.jpg') }}" alt="">
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/sameday.jpg') }}" alt="">
+                        
+                        </div>
+                        <div>                
+                            <img src="{{ asset('images/sameday.jpg') }}" alt="">
+                        </div>
+                    </div>
+                           
+            </div>
+        </div>
+    </section>
+    <!-- end new sales -->
+
+
     <section class="store-featured-product">
         <div class="container">
             <div class="jumbotron">
@@ -105,21 +171,100 @@
             </div>
         </div>
     </section>
-
     <!-- end store feature products -->
+
 
     <section class="store-department">
         <div class="container">
             <div class="jumbotron">
                 <p class="dept-title">Browse Departments</p>
-              <div class="dept-wrapper">
-                    <img src="/images/pantry.jpg" alt="" srcset="">
-                    <p class="dept-name">pasteries</p>
+
+
+                <div class="department-cards">
+
+                    <div class="card" style="width: 15rem;">
+                        <div class="card-body">
+                            <h4 class="card-title">Special title treatment</h4>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="/store/rainbow-grocery/departments/pantry">Pantry</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 15rem;">
+                        <div class="card-body">
+                            <h4 class="card-title">Special title treatment</h4>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="">Toiletries</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 15rem;">
+                        <div class="card-body">
+                            <h4 class="card-title">Special title treatment</h4>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="">Beverages</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 15rem;">
+                        <div class="card-body">
+                            <h4 class="card-title">Special title treatment</h4>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="">Deli</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 15rem;">
+                        <div class="card-body">
+                            <h4 class="card-title">Special title treatment</h4>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="">Frozen</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 15rem;">
+                        <div class="card-body">
+                            <h4 class="card-title">Special title treatment</h4>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="">Meat & Seefood</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 15rem;">
+                        <div class="card-body">
+                            <h4 class="card-title">Special title treatment</h4>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="">Diary & Egg</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 15rem;">
+                        <div class="card-body">
+                            <h4 class="card-title">Special title treatment</h4>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+
                 </div>
+
+
+
+                <!-- <div class="dept-list">
+                    <ul class="">
+                        <li><a href="http://">pantry</a></li>
+                        <li><a href="http://">Bakery</a></li>
+                        <li><a href="http://">Dairy &amp; Egg</a></li>
+                        <li><a href="http://">Meat & seefood</a></li>
+                        <li><a href="http://">Deli</a></li>
+                        <li><a href="http://">Frozen</a></li>
+                        <li><a href="http://">pantry</a></li>
+                        <li><a href="http://">Bakery</a></li>
+                        <li><a href="http://">Dairy &amp; Egg</a></li>
+                        <li><a href="http://">Meat & seefood</a></li>
+                        <li><a href="http://">Deli</a></li>
+                        <li><a href="http://">Frozen</a></li>
+                    </ul>
+                </div> -->
+                
             </div>
         </div>
     </section>
 
+    <!-- store department ends -->
 
 </div>
 

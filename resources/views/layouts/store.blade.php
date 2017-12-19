@@ -14,8 +14,11 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 
+    
     <!-- Bootstrap maxcdn -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" 
+    integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" 
+    crossorigin="anonymous">
 
     <!-- font awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -38,7 +41,7 @@
 
         <header class="store-header">
             
-            <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+            <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
                 <a class="navbar-brand" href="#">
                 <img src="{{ asset('images/cart-logo.png')}}" width="57" class="d-inline-block align-middle" alt="">
                 </a>
@@ -93,7 +96,7 @@
                                 </header> <!-- store list header ends -->
 
 
-                                <div class="store_overlay"></div>
+                                <!-- <div class="store_overlay"></div> -->
 
 
 
@@ -243,7 +246,7 @@
 
 
                                 
-                            </div>
+                            </div> <!-- dropdown menu ends -->
                         </li>
     
                     </ul>
@@ -254,7 +257,7 @@
     
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Store<span class="sr-only">(Store)</span>
+                            Account<span class="sr-only">(Account)</span>
                             </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="#">Hi, {{ auth()->user()->first_name }}</a>
@@ -320,7 +323,7 @@
 
         </header>
 
-        <div class="nav-tabs-outer">
+        <div id="nav-tabs-outer" class="nav-tabs-outer">
             <div class="nav-tabs-inner-wrapper">
 
                 <ul class="nav nav-tabs ">
@@ -356,5 +359,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
     <script src="{{ asset('js/bootstrap.min.js')}}"></script>
     <script src="{{ asset('js/main.js')}}"></script>
+
 </body>
 </html>
