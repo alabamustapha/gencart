@@ -1,30 +1,31 @@
 @extends('layouts.auth')     
     @section('content')
 
-        <div class="content">
-            <div class="container">                    
-                <div class="signup-widget round shadow">
-                    <div class="logo">
-                        <img src="/images/cart-logo.png" width="57" alt="" srcset="">
-                    </div>
-                    <div class="sign-up">
-                        <div class="gencart">
-                            <div class="title"> The best way to shop for groceries</div>
-                            <span>Delivered from the stores you love in one hour</span>
+    <div class="content">
+        <div class="container">                    
+            <div class="signup-widget round shadow">
+                <div class="logo">
+                    <img src="/images/cart-logo.png" width="57" alt="" srcset="">
+                </div>
+                    
+                <div class="sign-up">
+                    <div class="gencart">
+                        <div class="title"> The best way to shop for groceries</div>
+                            
+                        <span>Delivered from the stores you love in one hour</span>
                             
                             <div class="row">
-                                <div class="col-lg-10 col-md-10 col-sm-10">
+                                <div class="col">
                                     <form class="form-horizontal signup-form" method="POST" action="{{ route('register') }}">
                                         {{ csrf_field() }}
                                         
-                                        <!-- <div class="form-row"> -->
+                                        <div class="form-row"> 
                                             
-                                            <div class="col-lg-10 col-md-10 col-sm-10">
                                                 <div class="form-group" id="address-search">
                                                     <input type="text" class="form-control form-control-md controls" id="pac-input" placeholder="Enter address to start" name="address" required autofocus>   
                                                 </div>
-                                            </div>
-                                        <!-- </div> -->
+                                            
+                                        </div>
 
                                         <div class="signup-details" id="signup-fields">
                                                 
@@ -99,6 +100,8 @@
                     
                 </div>
             </div>
+        
+        
         </div> <!-- end container -->
         
         @include('layouts.partials.links')
@@ -128,7 +131,7 @@
       function initAutocomplete() {
         
         var options = {
-            types: ['(cities)'],
+            // types: ['(sublocality)'],
             componentRestrictions: {country: 'sa'},
             strictBounds: true
         };
@@ -142,6 +145,8 @@
         // more details for that place.
         autocomplete.addListener('place_changed', function() {
           var place = autocomplete.getPlace();
+
+          console.log(place);
         });
 
       }
