@@ -24,13 +24,19 @@ Route::middleware(['guest'])->group(function () {
 
 
 Route::middleware(['auth'])->group(function () {
+
     Route::get('/store/welcome', function(){
             return view('store.welcome');
     });
 
-    Route::get('/store/{storname}', function($storename){
-        return view('store', compact('storename'));
-    });
+    
+    Route::get('/store/{storname}/storefront', function($storename){
+            return view('store', compact('storename'));
+        })->name('storefront');
+
+        Route::get('/store/{storename}/browse', function($storename){
+                return view('store.browse', compact('storename'));
+        })->name('store-department');
 });
 
 
