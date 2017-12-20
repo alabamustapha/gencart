@@ -23,6 +23,10 @@
     <link href="{{ asset('css/admin/animate.css')}}" rel="stylesheet">
     <link href="{{ asset('css/admin/style.css')}}" rel="stylesheet">
 
+    <!-- jasny -->
+    <link href="{{asset('css/admin/plugins/jasny/jasny-bootstrap.min.css')}} " rel="stylesheet">
+    <link href="{{asset('css/admin/plugins/codemirror/codemirror.css')}} " rel="stylesheet">
+
 </head>
 <body>
 
@@ -72,6 +76,11 @@
     <!-- Custom and plugin javascript -->
     <script src="{{ asset('js/admin/inspinia.js') }}"></script>
     <script src="{{ asset('js/admin/plugins/pace/pace.min.js')}}"></script>
+    <script src="{{ asset('js/admin/plugins/dropzone/dropzone.js')}}"></script>
+
+    <!-- jasny -->
+     <script src="{{asset('js/admin/plugins/jasny/jasny-bootstrap.min.js')}}"></script>
+    
 
     <!-- jQuery UI -->
     <script src="{{ asset('js/admin/plugins/jquery-ui/jquery-ui.min.js')}}"></script>

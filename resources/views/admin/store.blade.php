@@ -1,8 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-
- <div class="row wrapper border-bottom white-bg page-heading">
+   <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-10">
                     <h2>store name</h2>
                     <ol class="breadcrumb">
@@ -10,7 +9,7 @@
                             <a>Home</a>
                         </li>
                         <li>
-                            <a href="{{route('admin.stores')}}">stores</a>
+                            <a href="{{route('admin_stores')}}">stores</a>
                         </li>
                         <li class="active">
                             <a>store name</a>
@@ -25,7 +24,7 @@
                 <div class="row m-b-sm">
                     <div class="col-lg-4">
                         <div class="widget-head-color-box navy-bg no-margins p-md text-center">
-                            <img src="img/a4.jpg" class="img-circle circle-border m-b-xs" alt="logo">
+                            <img src="{{asset('images/admin/a3.jpg')}}" class="img-circle " alt="logo">
                             <div class="m-b-xs">
                                 <h4 class="font-bold no-margins">
                                     store name
@@ -180,6 +179,5 @@
                 </div>
             
             </div>
-
 
 @endsection

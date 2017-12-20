@@ -1,5 +1,6 @@
 @extends('layouts.admin')
 
+
 @section('content')
 
 <div class="row wrapper border-bottom white-bg page-heading">
@@ -7,7 +8,7 @@
                     <h2>Stores</h2>
                     <ol class="breadcrumb">
                         <li>
-                            <a>Home</a>
+                            <a href="index.html">Home</a>
                         </li>
                         <li class="active">
                             <a>stores</a>
@@ -27,7 +28,7 @@
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             </p>
-                            <a href="#" class="btn btn-primary">
+                            <a href="{{route('admin_add_store')}}" class="btn btn-primary">
                             <i class="fa fa-cart-plus"></i>&nbsp; add store</a>
                             <p></p>
                             <div class="row ">
@@ -75,8 +76,8 @@
                                             <td>....</td>
                                             <td>
                                                 <div class="btn-group" role="group" aria-label="...">
-                                                    <a href="{{route('admin_stores_store')}}"  type="button" class="btn btn-default btn-xs"><i class="fa fa-angle-double-right"></i>&nbsp;view</a>
-                                                    <a href="" type="button" class="btn btn-success btn-xs"><i class="fa fa-edit"></i>&nbsp;edit</a>
+                                                    <a href="{{route('admin_store')}}"  type="button" class="btn btn-default btn-xs"><i class="fa fa-angle-double-right"></i>&nbsp;view</a>
+                                                    <a href="{{route('admin_edit_store')}}" type="button" class="btn btn-success btn-xs"><i class="fa fa-edit"></i>&nbsp;edit</a>
                                                     <a href="" type="button" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i>&nbsp;delete</a>
                                                 </div>
                                             </td>

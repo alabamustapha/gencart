@@ -22,13 +22,23 @@ class AdminController extends Controller
     	return view('admin.shoppers');
     }
 
-    public function stores(){
-    	return view('admin.stores');
-    }
+   public function stores(){
+       return view('admin.stores');
+   }
 
-     public function stores_store(){
-    	return view('admin.store');
-    }
+   public function store(){
+       return view('admin.store');
+   }
+
+   public function add_store(){
+       return view('admin.add_store');
+   }
+
+   public function edit_store(){
+       return view('admin.edit_store');
+   }
+   
+
     public function departments(){
     	return view('admin.departments');
     }
@@ -54,4 +64,5 @@ class AdminController extends Controller
     public function settings(){
     	return view('admin.settings');
     }
+
 }
