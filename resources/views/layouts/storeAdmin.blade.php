@@ -30,7 +30,7 @@
     <div id="wrapper">
 
         <!-- Navigation -->
-        @include('layouts.partials.navigation')
+        @include('layouts.partials.storenavigation')
 
         <!-- Page wraper -->
         <div id="page-wrapper" class="gray-bg">
@@ -52,6 +52,7 @@
 
 <script src="{{ asset('/js/admin/jquery-2.1.1.js')}}" ></script>
 <script src="{{ asset('/js/admin/bootstrap.min.js')}}"></script>
+
 
 
 
@@ -91,7 +92,7 @@
     <!-- Toastr -->
     <script src="{{ asset('js/admin/plugins/toastr/toastr.min.js')}}"></script>
 
-    @yield('script')
-
+@yield('script')
+    
 </body>
 </html>
