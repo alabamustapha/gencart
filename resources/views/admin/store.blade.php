@@ -47,6 +47,13 @@
 
                             </div>
                         </div>
+
+                         
+                        <div class="widget-text-box clearfix">
+                            <a href="{{route('admin_edit_store')}}" class="btn btn-success pull-left"><i class="fa fa-edit"></i>&nbsp;edit</a>
+                            <a href="#" class="btn btn-danger pull-right"><i class="fa fa-trash"></i>&nbsp;delete</a>
+                        </div>
+
                     </div>
                     <div class="col-lg-8">
                         <div class="row">
