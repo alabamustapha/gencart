@@ -145,10 +145,27 @@
         // more details for that place.
         autocomplete.addListener('place_changed', function() {
           var place = autocomplete.getPlace();
+          place.address_components.forEach(element => {
+                
+                address_type = element.types ;
+                if(address_type.find(zip_code)){
+                    console.log(element.long_name);
+                    console.log(element.short_name);
+                }
+          });
 
-          console.log(place);
+        //   console.log(place.geometry);
         });
 
+      }
+
+
+      function updateForm(){
+
+      }
+
+      function zip_code(address){
+            return address == 'postal_code';
       }
 
       function next(){

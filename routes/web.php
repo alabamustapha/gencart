@@ -19,31 +19,26 @@ Route::middleware(['guest'])->group(function () {
     Route::get('/', 'HomeController@index')->name('home');
 });
 
-
+Route::get('/store/{storname}', function($storename){
+        return view('store', compact('storename'));
+    });
 
 
 
 Route::middleware(['auth'])->group(function () {
-
-
     Route::get('/store/welcome', function(){
             return view('store.welcome');
     });
 
-    
-    Route::get('/store/{storname}/storefront', function($storename){
-            return view('store', compact('storename'));
-        })->name('storefront');
-
-        Route::get('/store/{storename}/browse', function($storename){
-                return view('store.browse', compact('storename'));
-        })->name('store-department');
+    Route::get('/store/{storname}', function($storename){
+        return view('store', compact('storename'));
+    });
 });
 
 
 
 Route::middleware(['auth', 'admin'])->group(function () {
-    
+
     Route::get('/admin', 'AdminController@dashboard')->name('admin_dashboard');
     Route::get('/admin/users', 'AdminController@showUsers')->name('admin_users');
     Route::get('/admin/customers', 'AdminController@customers')->name('admin_customers');
@@ -57,7 +52,6 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin/new_orders', 'AdminController@new_orders')->name('admin_new_orders');
     Route::get('/admin/statistics', 'AdminController@statistics')->name('admin_statistics');
     Route::get('/admin/settings', 'AdminController@settings')->name('admin_settings');
-
     
 });
 
