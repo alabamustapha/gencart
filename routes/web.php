@@ -29,6 +29,8 @@ Route::get('/store/welcome', function(){
 */
 Route::get('/admin', 'AdminController@dashboard')->name('admin_dashboard');
 Route::get('/admin/customers', 'AdminController@customers')->name('admin_customers');
+Route::get('/admin/shopper/add_shopper', 'AdminController@add_shopper')->name('admin_add_shopper');
+Route::get('/admin/shopper/edit_shopper', 'AdminController@edit_shopper')->name('admin_edit_shopper');
 Route::get('/admin/shoppers' , 'AdminController@shoppers')->name('admin_shoppers');
 Route::get('/admin/stores', 'AdminController@stores')->name('admin_stores');
 Route::get('/admin/stores/add_store', 'AdminController@add_store')->name('admin_add_store');

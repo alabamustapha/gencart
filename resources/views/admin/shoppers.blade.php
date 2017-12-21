@@ -28,7 +28,7 @@
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             </p>
-                            <a href="#" class="btn btn-primary">
+                            <a href="{{route('admin_add_shopper')}}" class="btn btn-primary">
                                 <i class="fa fa-plus"></i>&nbsp; add shopper</a>
                             <p></p>
                             <div class="row ">
