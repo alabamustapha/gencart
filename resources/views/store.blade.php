@@ -241,25 +241,6 @@
 
                 </div>
 
-
-
-                <!-- <div class="dept-list">
-                    <ul class="">
-                        <li><a href="http://">pantry</a></li>
-                        <li><a href="http://">Bakery</a></li>
-                        <li><a href="http://">Dairy &amp; Egg</a></li>
-                        <li><a href="http://">Meat & seefood</a></li>
-                        <li><a href="http://">Deli</a></li>
-                        <li><a href="http://">Frozen</a></li>
-                        <li><a href="http://">pantry</a></li>
-                        <li><a href="http://">Bakery</a></li>
-                        <li><a href="http://">Dairy &amp; Egg</a></li>
-                        <li><a href="http://">Meat & seefood</a></li>
-                        <li><a href="http://">Deli</a></li>
-                        <li><a href="http://">Frozen</a></li>
-                    </ul>
-                </div> -->
-                
             </div>
         </div>
     </section>
@@ -268,4 +249,24 @@
 
 </div>
 
+@endsection
+
+@section('script')
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+                if (scroll > 200) {
+                    
+                    $("#navbar").removeClass('bg-light').css('backgroundColor', '#fff');
+                    // $(".navbar-light .navbar-nav .nav-link").addClass('navbar-link-color');
+                    $('#nav-tabs-outer').addClass('fixed').css('top', '56px');
+            
+                }else {
+                    $('#navbar').addClass('bg-light');
+                    $("#nav-tabs-outer").removeClass('fixed').css('top', '0');
+                }
+            });
+        });
+    </script>
 @endsection

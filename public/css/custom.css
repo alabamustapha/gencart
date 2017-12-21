@@ -541,6 +541,7 @@ input[type="search"]{
 }
 
 .store-department .dept-title {
+    margin-top: 50px;
     margin-bottom: 40px;
     font-weight: 500;
 }
@@ -581,3 +582,8 @@ input[type="search"]{
 .department-cards .card {
     margin-bottom: 2rem;
 }
+
+
+/* .navbar-link-color a {    
+    color: red !important;
+} */

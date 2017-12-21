@@ -25,6 +25,7 @@ Route::middleware(['guest'])->group(function () {
 
 Route::middleware(['auth'])->group(function () {
 
+
     Route::get('/store/welcome', function(){
             return view('store.welcome');
     });
