@@ -25,10 +25,12 @@ class AdminController extends Controller
         return view('admin.edit_shopper');
     }
 
+    public function shopper(){
+    	return view('admin.shopper');
+    }
     public function shoppers(){
     	return view('admin.shoppers');
     }
-
    public function stores(){
        return view('admin.stores');
    }

@@ -25,10 +25,10 @@
                     <div class="col-lg-4">
                         <div class="widget-head-color-box navy-bg no-margins p-md text-center">
                             <img src="{{asset('images/admin/a3.jpg')}}" class="img-circle " alt="logo">
-                            <div class="m-b-xs">
-                                <h4 class="font-bold no-margins">
+                            <div class="m-md">
+                                <h3 class="font-bold no-margins">
                                     store name
-                                </h4>
+                                </h3>
                                 <span><i class="fa fa-map-marker"></i>&nbsp;loaction, saudi arabia</span>
                             </div>
                            
