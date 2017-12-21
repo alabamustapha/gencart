@@ -23,10 +23,6 @@
     <link href="{{ asset('css/admin/animate.css')}}" rel="stylesheet">
     <link href="{{ asset('css/admin/style.css')}}" rel="stylesheet">
 
-    <!-- jasny -->
-    <link href="{{asset('css/admin/plugins/jasny/jasny-bootstrap.min.css')}} " rel="stylesheet">
-    <link href="{{asset('css/admin/plugins/codemirror/codemirror.css')}} " rel="stylesheet">
-
 </head>
 <body>
 
@@ -34,7 +30,7 @@
     <div id="wrapper">
 
         <!-- Navigation -->
-        @include('layouts.partials.navigation')
+        @include('layouts.partials.storenavigation')
 
         <!-- Page wraper -->
         <div id="page-wrapper" class="gray-bg">
@@ -59,6 +55,7 @@
 
 
 
+
     <script src="{{ asset('js/admin/plugins/metisMenu/jquery.metisMenu.js')}}"></script>
     <script src="{{ asset('js/admin/plugins/slimscroll/jquery.slimscroll.min.js')}}"></script>
 
@@ -76,11 +73,6 @@
     <!-- Custom and plugin javascript -->
     <script src="{{ asset('js/admin/inspinia.js') }}"></script>
     <script src="{{ asset('js/admin/plugins/pace/pace.min.js')}}"></script>
-    <script src="{{ asset('js/admin/plugins/dropzone/dropzone.js')}}"></script>
-
-    <!-- jasny -->
-     <script src="{{asset('js/admin/plugins/jasny/jasny-bootstrap.min.js')}}"></script>
-    
 
     <!-- jQuery UI -->
     <script src="{{ asset('js/admin/plugins/jquery-ui/jquery-ui.min.js')}}"></script>
@@ -100,7 +92,7 @@
     <!-- Toastr -->
     <script src="{{ asset('js/admin/plugins/toastr/toastr.min.js')}}"></script>
 
-    @yield('script')
-
+@yield('script')
+    
 </body>
 </html>

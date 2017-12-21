@@ -28,7 +28,7 @@
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             </p>
-                            <a href="#" class="btn btn-primary">
+                            <a href="{{route('admin_add_shopper')}}" class="btn btn-primary">
                                 <i class="fa fa-plus"></i>&nbsp; add shopper</a>
                             <p></p>
                             <div class="row ">
@@ -75,12 +75,14 @@
                                             <td>
                                                 <i class="fa fa-envelop"></i>jimdoeemail@email.com</td>
                                             <td><span class="label label-primary">active</span></td>
+
                                             <td>14 Dec 2017</td>
+                                            <!-- action buttons -->
                                             <td class="text-center">
                                                 <div class="btn-group" role="group" aria-label="...">
-                                                    <a href="" type="button" class="btn btn-default btn-sm">
+                                                    <a href="{{route('admin_shopper')}}" type="button" class="btn btn-default btn-sm">
                                                         <i class="fa fa-angle-double-right"></i>&nbsp;view</a>
-                                                    <a href="" type="button" class="btn btn-success btn-sm">
+                                                    <a href="{{route('admin_edit_shopper')}}" type="button" class="btn btn-success btn-sm">
                                                         <i class="fa fa-edit"></i>&nbsp;edit</a>
                                                     <a href="" type="button" class="btn btn-danger btn-sm">
                                                         <i class="fa fa-trash"></i>&nbsp;delete</a>
