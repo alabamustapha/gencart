@@ -1,67 +1,49 @@
-@extends("layouts.admin")
+@extends('layouts.storeAdmin')
 
 @section('content')
 
-	<div class="wrapper wrapper-content">
+ <div class="wrapper wrapper-content">
 
                 <div class="row">
-                    <div class="col-lg-3">
-                        <div class="ibox float-e-margins">
-                            <div class="ibox-title">
-                                <span class="label label-success pull-right">Monthly</span>
-                                <h5>Sales</h5>
-                            </div>
-                            <div class="ibox-content">
-                                <h1 class="no-margins"><i class="fa fa-dollar"></i>&nbsp;40 886,200</h1>
-                                <div class="stat-percent font-bold text-success">20%
-                                    <i class="fa fa-level-up"></i>
-                                </div>
-                                <small>Total sales</small>
+                    <div class="col-lg-4">
+                    <div class="widget navy-bg p-lg text-center">
+                        <div class="m-b-md">
+                            <i class="fa fa-money fa-4x"></i>
+                            <h1 class="m-xs">
+                                <i class="fa fa-dollar"></i>&nbsp;47,700</h1>
+                            <h3 class="font-bold no-margins">
+                                sales
+                    
+                            </h3>
+                    
+                    
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="widget blue-bg p-lg text-center">
+                            <div class="m-b-md">
+                                <i class="fa fa-shopping-cart fa-4x"></i>
+                                <h1 class="m-xs">47</h1>
+                                <h3 class="font-bold no-margins">
+                                    current orders
+                                </h3>
+                        
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="ibox float-e-margins">
-                            <div class="ibox-title">
-                                <span class="label label-info pull-right">Annual</span>
-                                <h5>Orders</h5>
-                            </div>
-                            <div class="ibox-content">
-                                <h1 class="no-margins"> <i class="fa fa-shopping-bag"></i>  275,800</h1>
-                            <div class="stat-percent font-bold text-info">20%
-                                    <i class="fa fa-level-up"></i>
-                                </div>
-                                <small>orders</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="ibox float-e-margins">
-                            <div class="ibox-title">
-                                <span class="label label-primary pull-right">annual</span>
-                                <h5>users</h5>
-                            </div>
-                            <div class="ibox-content">
-                                <h1 class="no-margins"><i class="fa fa-users"></i>&nbsp;106,120</h1>
-                                <div class="stat-percent font-bold text-navy">44%
-                                    <i class="fa fa-level-up"></i>
-                                </div>
-                                <small>all users</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="ibox float-e-margins">
-                            <div class="ibox-title">
-                                <!-- <span class="label label-danger pull-right">Low value</span> -->
-                                <h5>products</h5>
-                            </div>
-                            <div class="ibox-content">
-                                <h1 class="no-margins"><i class="fa fa-shopping-basket"></i>&nbsp;80,600</h1>
-                                <div class="stat-percent font-bold text-danger">
-                                    
-                                </div>
-                                <small>total products</small>
+                   
+                    <div class="col-lg-4">
+                        <div class="widget blue-bg p-lg text-center">
+                            <div class="m-b-md">
+                                <i class="fa fa-shopping-basket fa-4x"></i>
+                                <h1 class="m-xs">477</h1>
+                                <h3 class="font-bold no-margins">
+                                    stock available
+                        
+                                </h3>
+                        
+                        
                             </div>
                         </div>
                     </div>
@@ -122,12 +104,18 @@
                    
                 </div>
 
+                <div class="footer text-center">
+                
+                    <div>
+                        <strong>Copyright</strong> Example Company &copy; 2014-2017
+                    </div>
+                </div>
             </div>
 
 @endsection
 
 @section('script')
-    <script>
+     <script>
         $(document).ready(function() {
             setTimeout(function() {
                 toastr.options = {
@@ -136,7 +124,7 @@
                     showMethod: 'slideDown',
                     timeOut: 4000
                 };
-                toastr.success('Welcome to Gencart' , 'Admin: John Doe');
+                toastr.success('Welcome to Gencart' , 'store admin: John Doe');
 
             }, 1300);
 
