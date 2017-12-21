@@ -207,6 +207,16 @@
             </li>
 
         </ul>
+
+        <div id="navbar-search" class="search-bar primary-nav-search-bar hidden" aria-hidden="false" style="flex-grow: 1;">
+            <form>
+                <span class="twitter-typeahead" style="position: relative; display: inline-block;">
+                    <input type="search" class="tt-input search-field" placeholder="Search {{$storename }}..." style="position: relative; vertical-align: top;">
+                </span>
+                <button class="search-btn" type="submit" aria-label="start search" style="color: rgb(67, 176, 42);"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a href="#" class="nav-link"><i class="fa fa-map-marker" aria-hidden="true"></i> 94578</a>

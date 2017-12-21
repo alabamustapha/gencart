@@ -259,11 +259,11 @@
                 if (scroll > 200) {
                     
                     $("#navbar").removeClass('bg-light').css('backgroundColor', '#fff');
-                    // $(".navbar-light .navbar-nav .nav-link").addClass('navbar-link-color');
-                    $('#nav-tabs-outer').addClass('fixed').css('top', '56px');
-            
+                    $("#navbar-search").removeClass("hidden");
+                    $('#nav-tabs-outer').addClass('fixed').css('top', '56px');            
                 }else {
                     $('#navbar').addClass('bg-light');
+                    $("#navbar-search").addClass("hidden");
                     $("#nav-tabs-outer").removeClass('fixed').css('top', '0');
                 }
             });
