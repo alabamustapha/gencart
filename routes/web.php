@@ -83,7 +83,13 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin/users', 'AdminController@showUsers')->name('admin_users');
     Route::get('/admin/customers', 'AdminController@customers')->name('admin_customers');
     Route::get('/admin/shoppers', 'AdminController@shoppers')->name('admin_shoppers');
-    Route::get('/admin/stores', 'AdminController@stores')->name('admin_stores');
+    
+    Route::get('/admin/stores', 'StoreController@index')->name('admin_stores');
+    Route::get('/admin/stores/create', 'StoreController@create')->name('admin_create_store');
+    Route::POST('/admin/stores', 'StoreController@store')->name('admin_store_store');
+    
+    
+    
     Route::get('/admin/stores/store', 'AdminController@stores_store')->name('admin_stores_store');
     Route::get('/admin/departments', 'AdminController@departments')->name('admin_departments');
     Route::get('/admin/products', 'AdminController@products')->name('admin_products');
@@ -97,8 +103,8 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin/shopper/edit_shopper', 'AdminController@edit_shopper')->name('admin_edit_shopper');
     Route::get('/admin/shopper' , 'AdminController@shopper')->name('admin_shopper');
     Route::get('/admin/shoppers' , 'AdminController@shoppers')->name('admin_shoppers');
-    Route::get('/admin/stores', 'AdminController@stores')->name('admin_stores');
-    Route::get('/admin/stores/add_store', 'AdminController@add_store')->name('admin_add_store');
+    
+    
     Route::get('/admin/stores/edit_store', 'AdminController@edit_store')->name('admin_edit_store');
     Route::get('/admin/stores/store', 'AdminController@store')->name('admin_store');
     Route::get('/admin/departments' , 'AdminController@departments')->name('admin_departments');

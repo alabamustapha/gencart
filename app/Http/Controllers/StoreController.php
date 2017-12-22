@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Http\Requests;
+use App\Store;
 class StoreController extends Controller
 {
     /**
@@ -13,8 +14,8 @@ class StoreController extends Controller
      */
     public function index()
     {
-        $storename = "My store";
-        return view('store', compact('storename'));
+        $stores = Store::with(['department', 'products', 'shelves'])->get();
+        return view('stores.index', compact('stores'));
     }
 
     /**
@@ -24,7 +25,7 @@ class StoreController extends Controller
      */
     public function create()
     {
-        //
+        return view('stores.create');
     }
 
     /**
@@ -33,9 +34,12 @@ class StoreController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Requests\CreateStoreRequest $request)
     {
-        //
+    
+        $store = Store::create($request->all());
+
+        return back()->with('message', $store->name . ' Added');
     }
 
     /**
@@ -44,9 +48,9 @@ class StoreController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($store)
     {
-        //
+        return view('store.show', compact('store'));
     }
 
     /**
@@ -57,7 +61,7 @@ class StoreController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('store.edit', compact('store'));
     }
 
     /**
@@ -80,6 +84,7 @@ class StoreController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $store->delete();
+        return back()->with('message', 'Store deleted');
     }
 }

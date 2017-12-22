@@ -15,6 +15,8 @@ class CreateAlternativesTable extends Migration
     {
         Schema::create('alternatives', function (Blueprint $table) {
             $table->increments('id');
+			$table->integer('product_id');
+			$table->integer('alternative_product_id');
             $table->timestamps();
         });
     }

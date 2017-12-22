@@ -100,7 +100,7 @@
     <!-- Toastr -->
     <script src="{{ asset('js/admin/plugins/toastr/toastr.min.js')}}"></script>
 
-    @yield('script')
+    @yield('scripts')
 
 </body>
 </html>
