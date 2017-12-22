@@ -99,6 +99,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin/shoppers' , 'AdminController@shoppers')->name('admin_shoppers');
     Route::get('/admin/stores', 'AdminController@stores')->name('admin_stores');
     Route::get('/admin/stores/add_store', 'AdminController@add_store')->name('admin_add_store');
+//     Route::post('/admin/stores/create_store', 'AdminController@create_store')->name('create_store');
     Route::get('/admin/stores/edit_store', 'AdminController@edit_store')->name('admin_edit_store');
     Route::get('/admin/stores/store', 'AdminController@store')->name('admin_store');
     Route::get('/admin/departments' , 'AdminController@departments')->name('admin_departments');

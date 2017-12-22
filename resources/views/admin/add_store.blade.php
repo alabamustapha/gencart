@@ -27,15 +27,29 @@
                     <h2><i class="fa fa-cart-plus"></i>&nbsp;Add Store</h2>
                 </div>
                 <div class="ibox-content">
-                    <form action="">
+
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+
+
+                    <form action="{{ route('create_store')}}" method="POST" enctype="multipart/form-data">
+                        {{ csrf_field() }}
                         <div class="row">
+
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
                                     <div class="input-group input-group-lg">
                                         <span class="input-group-addon">
                                             <i class="fa fa-user"></i>
                                         </span>
-                                        <input type="text" name="name" id="" class="form-control" placeholder="store name">
+                                        <input type="text" name="name" value="{{ old('name') }}" class="form-control" placeholder="store name">
                                     </div>
                                 </div>
 
@@ -44,7 +58,7 @@
                                         <span class="input-group-addon">
                                             <i class="fa fa-map-marker"></i>
                                         </span>
-                                        <input type="text" name="addresses" id="" class="form-control" placeholder="addresses">
+                                        <input type="text" name="address" value="{{ old('address') }}" class="form-control" placeholder="address">
                                     </div>
                                 </div>
 
@@ -53,7 +67,7 @@
                                         <span class="input-group-addon">
                                             <i class="fa fa-phone"></i>
                                         </span>
-                                        <input type="tel" name="phone" id="" class="form-control" placeholder="phone number">
+                                        <input type="tel" name="phone" value="{{ old('phone') }}" class="form-control" placeholder="phone number">
                                     </div>
                                 </div>
 
@@ -62,11 +76,9 @@
                                         <span class="input-group-addon">
                                             <i class="fa fa-map"></i>
                                         </span>
-                                        <input type="text" name="zip" id="" class="form-control" placeholder="zip code">
+                                        <input type="text" name="zip" value="{{ old('zip') }}" class="form-control" placeholder="zip code">
                                     </div>
                                 </div>
-                                
-                                
                                     
                             </div>
 
@@ -86,7 +98,7 @@
                                    
                                     <div class="fileinput fileinput-new" data-provides="fileinput">
                                         <span class="btn btn-default btn-file"><span class="fileinput-new">Select store banner</span>
-                                        <span class="fileinput-exists">Change</span><input type="file" name="logo" id="logo"></span>
+                                        <span class="fileinput-exists">Change</span><input type="file" name="banner" id="banner"></span>
                                         <span class="fileinput-filename"></span>
                                         <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">×</a>
                                     </div> 
