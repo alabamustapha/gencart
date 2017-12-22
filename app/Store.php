@@ -37,4 +37,13 @@ class Store extends Model
     public function shelves(){
         return $this->hasMany('App\Shelf');
     }
+    
+    public function products(){
+        return $this->hasMany('App\Product');
+    }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

@@ -22,7 +22,9 @@ class CreateUsersTable extends Migration
             $table->string('image')->nullable();
             $table->string('address');
 			$table->integer('zipcode')->nullable();
-			$table->string('referral_code')->unique()->nullable();
+			$table->string('place_id')->nullable();
+            $table->string('referral_code')->unique()->nullable();
+            $table->string('lat_long')->nullable();
 			$table->enum('role', ['customer', 'shopper', 'admin'])->default('customer');
             $table->rememberToken();
             $table->timestamps();

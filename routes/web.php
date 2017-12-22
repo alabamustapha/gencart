@@ -69,10 +69,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/store/welcome', function(){
             return view('store.welcome');
     });
-
-    Route::get('/store/{storname}', function($storename){
-        return view('store', compact('storename'));
-    });
+    
 });
 
 
@@ -83,14 +80,14 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin/users', 'AdminController@showUsers')->name('admin_users');
     Route::get('/admin/customers', 'AdminController@customers')->name('admin_customers');
     Route::get('/admin/shoppers', 'AdminController@shoppers')->name('admin_shoppers');
-    
     Route::get('/admin/stores', 'StoreController@index')->name('admin_stores');
     Route::get('/admin/stores/create', 'StoreController@create')->name('admin_create_store');
     Route::POST('/admin/stores', 'StoreController@store')->name('admin_store_store');
+    Route::get('/admin/stores/{store}', 'StoreController@show')->name('admin_show_store');
     
     
     
-    Route::get('/admin/stores/store', 'AdminController@stores_store')->name('admin_stores_store');
+    
     Route::get('/admin/departments', 'AdminController@departments')->name('admin_departments');
     Route::get('/admin/products', 'AdminController@products')->name('admin_products');
     Route::get('/admin/cities', 'AdminController@cities')->name('admin_cities');

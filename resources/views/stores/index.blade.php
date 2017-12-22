@@ -68,9 +68,9 @@
                                         @foreach($stores as $store)
                                         <tr>
                                             <td>{{ $store->name }}</td>
-                                            <td><i class="fa fa-map-marker"></i>{{ $store->lat_long}}</td>
-                                            <td><i class="fa fa-envelope"></i>{{ $store->address}}</td>
-                                            <td><i class="fa fa-envelope"></i>{{ $store->zipcode}}</td>
+                                            <td><i class="fa fa-map-marker"></i>{{ $store->lat_long }}</td>
+                                            <td><i class="fa fa-envelope"></i>{{ $store->address }}</td>
+                                            <td><i class="fa fa-envelope"></i>{{ $store->zipcode }}</td>
                                             <td>
                                                 <div class="btn-group" role="group" aria-label="...">
                                                     <a href="{{ route('admin_show_store', ['store' => $store->slug]) }}"  type="button" class="btn btn-default btn-xs"><i class="fa fa-angle-double-right"></i>&nbsp;view</a>
