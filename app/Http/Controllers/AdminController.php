@@ -55,6 +55,12 @@ class AdminController extends Controller
     	return view('admin.products');
     }
 
+    public function add_city(){
+        return view('admin.add_city');
+    }
+    public function edit_city(){
+        return view('admin.edit_city');
+    }
     public function cities(){
     	return view('admin.cities');
     }

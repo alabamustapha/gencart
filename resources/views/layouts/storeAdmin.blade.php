@@ -20,6 +20,9 @@
     <!-- Gritter -->
     <link href="{{ asset('js/admin/plugins/gritter/jquery.gritter.css')}}" rel="stylesheet">
 
+    <link href="{{ asset('css/admin/plugins/slick/slick.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/admin/plugins/slick/slick-theme.css')}}" rel="stylesheet">
+
     <link href="{{ asset('css/admin/animate.css')}}" rel="stylesheet">
     <link href="{{ asset('css/admin/style.css')}}" rel="stylesheet">
 
@@ -91,6 +94,12 @@
 
     <!-- Toastr -->
     <script src="{{ asset('js/admin/plugins/toastr/toastr.min.js')}}"></script>
+
+    <!-- inspinia custom -->
+    <script src="{{('js/inspinia.js')}}"></script>
+    <script src="{{('js/plugins/pace/pace.min.js')}}"></script>
+    <!-- slick carousel-->
+    <script src="{{asset('js/plugins/slick/slick.min.js')}}"></script>
 
 @yield('script')
     

@@ -39,6 +39,8 @@ Route::get('/admin/stores/edit_store', 'AdminController@edit_store')->name('admi
 Route::get('/admin/stores/store', 'AdminController@store')->name('admin_store');
 Route::get('/admin/departments' , 'AdminController@departments')->name('admin_departments');
 Route::get('/admin/products' , 'AdminController@products')->name('admin_products');
+Route::get('/admin/cities/add_city' , 'AdminController@add_city')->name('admin_add_city');
+Route::get('/admin/cities/edit_city' , 'AdminController@edit_city')->name('admin_edit_city');
 Route::get('/admin/cities' , 'AdminController@cities')->name('admin_cities');
 Route::get('/admin/old_orders' , 'AdminController@old_orders')->name('admin_old_orders');
 Route::get('/admin/new_orders' , 'AdminController@new_orders')->name('admin_new_orders');
@@ -56,6 +58,7 @@ Route::get('/admin/settings' , 'AdminController@settings')->name('admin_settings
 Route::get('/storeAdmin' , 'StoreAdminController@dashboard')->name('storeAdmin_dashboard');
 Route::get('/storeAdmin/departments' , 'StoreAdminController@departments')->name('storeAdmin_departments');
 Route::get('/storeAdmin/products' , 'StoreAdminController@products')->name('storeAdmin_products');
+Route::get('/storeAdmin/products/product' , 'StoreAdminController@product')->name('storeAdmin_product');
 Route::get('/storeAdmin/products/product_edit' , 'StoreAdminController@product_edit')->name('storeAdmin_product_edit');
 Route::get('/storeAdmin/old_orders' , 'StoreAdminController@old_orders')->name('storeAdmin_old_orders');
 Route::get('/storeAdmin/new_orders' , 'StoreAdminController@new_orders')->name('storeAdmin_new_orders');

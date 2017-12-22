@@ -15,6 +15,9 @@ class StoreAdminController extends Controller{
     public function products(){
        return view('storeAdmin.products');
     }
+    public function product(){
+       return view('storeAdmin.product');
+    }
 
     public function product_edit(){
        return view('storeAdmin.product-edit');
