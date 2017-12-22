@@ -2,22 +2,36 @@
 
 @section('content')
    <div class="row wrapper border-bottom white-bg page-heading">
-                <div class="col-lg-10">
-                    <h2>store name</h2>
-                    <ol class="breadcrumb">
-                        <li>
-                            <a>Home</a>
-                        </li>
-                        <li>
-                            <a href="{{route('admin_stores')}}">stores</a>
-                        </li>
-                        <li class="active">
-                            <a>store name</a>
-                        </li>
+        <div class="col-lg-10">
+            <h2>store name</h2>
+            <ol class="breadcrumb">
+                <li>
+                    <a>Home</a>
+                </li>
+                <li>
+                    <a href="{{route('admin_stores')}}">stores</a>
+                </li>
+                <li class="active">
+                    <a>store name</a>
+                </li>
 
-                    </ol>
-                </div>
+            </ol>
+        </div>
+        <div class="col-lg-2 m-t-lg">
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    Action <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="{{route('admin_add_department')}}"><i class="fa fa-plus"></i>&nbsp;add department</a></li>
+                    <li><a href="{{route('admin_add_shelve')}}"><i class="fa fa-plus"></i>&nbsp;add shelve</a></a></li>
+                    <li><a href="{{route('admin_add_product')}}"><i class="fa fa-plus"></i>&nbsp;add product</a></a></li>
+                   
+                </ul>
             </div>
+        </div>
+
+    </div>
 
             <div class="row wrapper wrapper-content">
               
