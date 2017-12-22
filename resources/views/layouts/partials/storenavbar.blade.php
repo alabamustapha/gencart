@@ -211,7 +211,7 @@
         <div id="navbar-search" class="search-bar primary-nav-search-bar hidden" aria-hidden="false" style="flex-grow: 1;">
             <form>
                 <span class="twitter-typeahead" style="position: relative; display: inline-block;">
-                    <input type="search" class="tt-input search-field" placeholder="Search {{ $store->name }}..." style="position: relative; vertical-align: top;">
+                    <input type="search" class="tt-input search-field" placeholder="Search {{ isset($store) ? $store->name : "" }}..." style="position: relative; vertical-align: top;">
                 </span>
                 <button class="search-btn" type="submit" aria-label="start search" style="color: rgb(67, 176, 42);"><i class="fa fa-search"></i></button>
             </form>

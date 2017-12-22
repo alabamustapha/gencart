@@ -14,16 +14,12 @@
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('home');
-Route::get('/admin/users', 'AdminController@showUsers')->name('admin_users');
+
 
 Route::middleware(['guest'])->group(function () {
     Route::get('/', 'HomeController@index')->name('home');
 });
 
-Route::get('/store/{storname}', function($storename){
-        return view('store', compact('storename'));
-    });
 
 /*
  |-------------------------------------------------------------------------
@@ -69,13 +65,15 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/store/welcome', function(){
             return view('store.welcome');
     });
-    
+
+    Route::get('/stores/{store}', 'StoreController@show')->name('show_store');
+
 });
 
 
 
 Route::middleware(['auth', 'admin'])->group(function () {
-
+    Route::get('/admin/users', 'AdminController@showUsers')->name('admin_users');
     Route::get('/admin', 'AdminController@dashboard')->name('admin_dashboard');
     Route::get('/admin/users', 'AdminController@showUsers')->name('admin_users');
     Route::get('/admin/customers', 'AdminController@customers')->name('admin_customers');
