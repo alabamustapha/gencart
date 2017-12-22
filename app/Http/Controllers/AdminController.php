@@ -46,7 +46,15 @@ class AdminController extends Controller
    public function edit_store(){
        return view('admin.edit_store');
    }
-   
+   public function add_department(){
+       return view('admin.add_department');
+   }
+   public function add_shelve(){
+       return view('admin.add_shelve');
+   }
+   public function add_product(){
+       return view('admin.add_product');
+   } 
 
     public function departments(){
     	return view('admin.departments');
