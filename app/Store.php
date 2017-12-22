@@ -11,7 +11,7 @@ class Store extends Model
 
     protected $table = 'stores';
 
-    protected $fillable = ['name','name','logo','banner','zipcode','addresses','phone','status','user_id'];
+    protected $fillable = ['name','name','logo','banner','zipcode','address','phone','status','user_id', 'slug', 'lat_long', 'place_id'];
 
     protected $hidden = ['user_id'];
 
@@ -24,12 +24,26 @@ class Store extends Model
     {
         return [
             'slug' => [
-                'source' => 'title'
+                'source' => 'name'
             ]
         ];
     }
 
     public function departments(){
         return $this->hasMany('App\Department');
+    }
+
+
+    public function shelves(){
+        return $this->hasMany('App\Shelf');
+    }
+    
+    public function products(){
+        return $this->hasMany('App\Product');
+    }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
     }
 }

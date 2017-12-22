@@ -19,9 +19,12 @@ class CreateStoresTable extends Migration
             $table->string('logo')->nullable();
             $table->string('banner')->nullable();
             $table->text('zipcode')->nullable();
-            $table->text('addresses')->nullable();
+            $table->text('address')->nullable();
             $table->string('phone');
             $table->boolean('status')->default(0);
+            $table->string('place_id')->nullable();
+            $table->string('lat_long')->nullable();
+            $table->string('slug')->unique();
             $table->unsignedInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
             $table->timestamps();

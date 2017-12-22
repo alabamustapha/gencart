@@ -20,7 +20,7 @@
                         <div class="container">
                             <ul class="list-group">
                                 <li class="list-group-item text-center">
-                                    <h3>Stores in <strong>Medina</strong></h3>
+                                    <h3>Stores in <strong>{{ auth()->user()->zipcode }}</strong></h3>
                                 </li>
 
                                 <li class="list-group-item">
@@ -211,7 +211,7 @@
         <div id="navbar-search" class="search-bar primary-nav-search-bar hidden" aria-hidden="false" style="flex-grow: 1;">
             <form>
                 <span class="twitter-typeahead" style="position: relative; display: inline-block;">
-                    <input type="search" class="tt-input search-field" placeholder="Search {{$storename }}..." style="position: relative; vertical-align: top;">
+                    <input type="search" class="tt-input search-field" placeholder="Search {{ $store->name }}..." style="position: relative; vertical-align: top;">
                 </span>
                 <button class="search-btn" type="submit" aria-label="start search" style="color: rgb(67, 176, 42);"><i class="fa fa-search"></i></button>
             </form>
@@ -219,7 +219,7 @@
 
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a href="#" class="nav-link"><i class="fa fa-map-marker" aria-hidden="true"></i> 94578</a>
+                <a href="#" class="nav-link"><i class="fa fa-map-marker" aria-hidden="true"></i> {{ auth()->user()->zipcode }}</a>
             </li>
 
             <li class="nav-item dropdown">
@@ -227,7 +227,7 @@
                 Account<span class="sr-only">(Account)</span>
                 </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Hi, {{ auth()->user()->first_name }}</a>
+                        <a class="dropdown-item" href="#">Hi, {{ auth()->user()->name }}</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Your Account</a>
                         <a class="dropdown-item" href="#">Your Order</a>

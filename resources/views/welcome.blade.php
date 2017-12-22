@@ -19,13 +19,16 @@
                                     <form class="form-horizontal signup-form" method="POST" action="{{ route('register') }}">
                                         {{ csrf_field() }}
                                         
-                                        <div class="form-row"> 
-                                            
+                                        <div class="form-row justify-text-center"> 
+                                            <div class="col-lg-10 col-md-10 col-sm-10">
                                                 <div class="form-group" id="address-search">
                                                     <input type="text" class="form-control form-control-md controls" id="pac-input" placeholder="Enter address to start" name="address" required autofocus>   
                                                 </div>
-                                            
+                                            </div>
                                         </div>
+
+                                        <input type="hidden" name="zipcode"  id="zipcode" value="">
+                                        <input type="hidden" name="place_id" id="placeId" value="">
 
                                         <div class="signup-details" id="signup-fields">
                                                 
@@ -34,7 +37,6 @@
                                                     <div class="form-group col{{ $errors->has('first_name') ? ' has-error' : '' }}">
                                                         <input type="text" class="form-control form-control-md " placeholder="First name" name="first_name" required>
                                                     </div>
-
                                                 </div>
                                                 <div class="col-lg-10 col-md-10 col-sm-10">
                                                     <div class="form-group col{{ $errors->has('last_name') ? ' has-error' : '' }}">
@@ -148,13 +150,12 @@
           place.address_components.forEach(element => {
                 
                 address_type = element.types ;
-                if(address_type.find(zip_code)){
-                    console.log(element.long_name);
-                    console.log(element.short_name);
-                }
+                    if(address_type.find(zip_code)){
+                        $('input#zipcode').val(element.short_name);
+                        $('input#placeId').val(place.id);
+                    }
           });
 
-        //   console.log(place.geometry);
         });
 
       }

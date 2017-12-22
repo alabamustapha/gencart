@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Product;
 use Illuminate\Http\Request;
-use App\Http\Requests;
-use App\Store;
-class StoreController extends Controller
+
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class StoreController extends Controller
      */
     public function index()
     {
-        $stores = Store::with(['departments', 'products', 'shelves'])->get();
-        return view('stores.index', compact('stores'));
+        //
     }
 
     /**
@@ -25,7 +24,7 @@ class StoreController extends Controller
      */
     public function create()
     {
-        return view('stores.create');
+        //
     }
 
     /**
@@ -34,44 +33,41 @@ class StoreController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Requests\CreateStoreRequest $request)
+    public function store(Request $request)
     {
-    
-        $store = Store::create($request->all());
-
-        return back()->with('message', $store->name . ' Added');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $store
+     * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(Store $store)
+    public function show(Product $product)
     {
-        return view('store.show', compact('store'));
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Product $product)
     {
-        return view('store.edit', compact('store'));
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Product $product)
     {
         //
     }
@@ -79,12 +75,11 @@ class StoreController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Product $product)
     {
-        $store->delete();
-        return back()->with('message', 'Store deleted');
+        //
     }
 }
