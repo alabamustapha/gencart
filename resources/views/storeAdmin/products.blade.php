@@ -77,7 +77,7 @@
                                             <td>14 Dec 2017</td>
                                             <td>
                                                 <div class="btn-group" role="group" aria-label="...">
-                                                    <a href="" type="button" class="btn btn-default btn-xs">
+                                                    <a href="{{route('storeAdmin_product')}}" type="button" class="btn btn-default btn-xs">
                                                         <i class="fa fa-angle-double-right"></i>&nbsp;view</a>
                                                     <a href="{{route('storeAdmin_product_edit')}}" type="button" class="btn btn-success btn-xs">
                                                         <i class="fa fa-edit"></i>&nbsp;edit</a>
@@ -93,6 +93,5 @@
                         </div>
                     </div>
                 </div>
-
             </div>
 @endsection
