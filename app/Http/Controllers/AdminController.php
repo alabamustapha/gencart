@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Store;
 
 class AdminController extends Controller
 {
@@ -35,8 +36,8 @@ class AdminController extends Controller
        return view('admin.stores');
    }
 
-   public function store(){
-       return view('admin.store');
+   public function showStore(Store $store){
+       return view('admin.store', compact('store'));
    }
 
    public function add_store(){
