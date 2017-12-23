@@ -2481,11 +2481,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-<<<<<<< HEAD
             "time": "2017-12-14T19:40:10+00:00"
-=======
-            "time": "2017-12-14T19:48:22+00:00"
->>>>>>> 2fa32415278dd6b6c1bf206c27df418b2833688c
         },
         {
             "name": "symfony/finder",

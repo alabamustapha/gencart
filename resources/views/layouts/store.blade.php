@@ -41,9 +41,9 @@
 
             <div class="store-header-inner-wrapper" style="opacity: 1;">
                 <div class="store-header-logo" aria-hidden="true">
-                    <img src="{{ asset('images/new-logo.png')}}" width="156" height="156" alt="{{$store->name}}">
+                    <img src="{{ asset('images/new-logo.png')}}" width="156" height="156" alt="{{isset($store) ? $store->name : ""}}">
                 </div>
-                <h1>{{ $store->name }}</h1>
+                <h1>{{ isset($store) ? $store->name : "" }}</h1>
                 <div class="store-header-retailer-info">
                     <p class="store-header-price-transparency text-center same">
                         <a href="#" class="store-header-price-transparency-pricing-link">Everyday store prices</a>
@@ -54,7 +54,7 @@
                 <div class="search-bar primary-nav-search-bar" aria-hidden="false" style="flex-grow: 1;">
                     <form>
                         <span class="twitter-typeahead" style="position: relative; display: inline-block;">
-                            <input type="search" class="tt-input search-field" placeholder="Search {{$store->name }}..." style="position: relative; vertical-align: top;">
+                            <input type="search" class="tt-input search-field" placeholder="Search {{isset($store) ? $store->name : "" }}..." style="position: relative; vertical-align: top;">
                         </span>
                         <button class="search-btn" type="submit" aria-label="start search" style="color: rgb(67, 176, 42);"><i class="fa fa-search"></i></button>
                     </form>
