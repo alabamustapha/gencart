@@ -26,9 +26,6 @@ Route::middleware(['guest'])->group(function () {
  |admin dashboard routes
  |------------------------------------------------------------------------- 
 */
-<<<<<<< HEAD
-
-=======
 Route::get('/admin', 'AdminController@dashboard')->name('admin_dashboard');
 Route::get('/admin/customers', 'AdminController@customers')->name('admin_customers');
 Route::get('/admin/shoppers', 'AdminController@shoppers')->name('admin_shoppers');
@@ -61,7 +58,6 @@ Route::get('/admin/old_orders' , 'AdminController@old_orders')->name('admin_old_
 Route::get('/admin/new_orders' , 'AdminController@new_orders')->name('admin_new_orders');
 Route::get('/admin/statistics' , 'AdminController@statistics')->name('admin_statistics');
 Route::get('/admin/settings' , 'AdminController@settings')->name('admin_settings');
->>>>>>> admin-dashboard
 
 
 
