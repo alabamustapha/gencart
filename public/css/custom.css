@@ -406,6 +406,17 @@ input[type="search"]{
     border-bottom: 4px solid rgb(67, 176, 42); 
 }
 
+.box {
+    background: #fff;
+    margin: 0 0 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 20px 0;
+    border-left: none;
+    border-right: none;
+}
+
 
 @media screen and (max-height: 768px) and (min-width: 991px){
 

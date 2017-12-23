@@ -257,8 +257,12 @@
 
         </ul>
         
-        <form class="form-inline my-2 my-lg-0">
-            <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="fa fa-shopping-cart"></i>  Cart</button>
+        <form class="form-inline my-2 my-lg-0">        
+            <!-- button to trigger cart modal -->
+            <button type="button" class="btn btn-success my-2 my-sm-0" data-toggle="modal" data-target=".bd-cart-modal-lg">
+                <i class="fa fa-shopping-cart fa-lg"></i> Cart
+            </button>
+
         </form>
     </div>
 </nav> 

@@ -2,6 +2,142 @@
 
 @section('content')
 
+<div class="cartModal" style="">
+    <!-- Modal -->
+    <!-- <div class="modal fade bd-cart-modal-lg" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document"> -->
+        <div class="modal fade bd-cart-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">My Cart</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="text-center">
+                        <i class="fa fa-shopping-cart fa-5x"></i>
+                        <p><strong>Your Cart is Empty</strong></p>
+                    </div>
+        
+        
+                    <div class="box">                    
+                        <table class="table table-striped table-hover table-responsive">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Quantity</th>
+                                    <th>Unit price</th>
+                                    <th>Discount</th>
+                                    <th colspan="2">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <a href="">Urban Remedy Inflamm-Relieve</a>
+                                    </td>
+
+                                    <td>
+                                    <form id="" method="POST" action="">
+        
+                                        <input type="hidden" name="_method" value="PUT">
+                                        <input type="number" min="1" name="qty" value="2" class="form-control form-control-sm">
+                                    
+                                    </form>
+                                    </td>
+                                    <td>$1.9</td>
+                                    <td>$0.00</td>
+                                    <td>$1.9</td>
+                                    <td>
+                                        <button title="Update Item Quantity" class="btn btn-default">
+                                            <i class="fa fa-refresh"></i>
+                                        </button>
+                                        <button title="Remove Item from Cart" class="btn btn-danger">
+                                            <i class="fa fa-trash-o"></i>
+                                            
+                                        </button>
+        
+        
+                                        <form id="" action="" method="POST" style="display: none;">
+                                            <input type="hidden" name="_token" value="">
+                                            <input type="hidden" name="_method" value="DELETE">
+                                            
+                                        </form> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="">Urban Remedy Inflamm-Relieve</a>
+                                    </td>
+
+                                    <td>
+                                    <form id="" method="POST" action="">
+        
+                                        <input type="hidden" name="_method" value="PUT">
+                                        <input type="number" min="1" name="qty" value="2" class="form-control form-control-sm">
+                                    
+                                    </form>
+                                    </td>
+                                    <td>$1.9</td>
+                                    <td>$0.00</td>
+                                    <td>$1000.00</td>
+                                    <td>
+                                        <button title="Update Item Quantity" class="btn btn-default">
+                                            <i class="fa fa-refresh"></i>
+                                        </button>
+                                        <button title="Remove Item from Cart" class="btn btn-danger">
+                                            <i class="fa fa-trash-o"></i>
+                                            
+                                        </button>
+        
+        
+                                        <form id="" action="" method="POST" style="display: none;">
+                                            <input type="hidden" name="_token" value="">
+                                            <input type="hidden" name="_method" value="DELETE">
+                                            
+                                        </form> 
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th colspan="5">Total</th>
+                                    <th colspan="2">$1000.00</th>
+                                </tr>
+                            </tfoot>
+                            </table>
+                            <!-- /.table-responsive -->
+        
+                        </div>        
+        
+        
+                    </div>
+
+                    <div class="modal-footer" >
+                        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+                        <button type="button" class="btn btn-default btn-block" style="display:flex; justify-content: space-between;">
+                            Checkout
+                            <h1><span class="badge badge-secondary">$45</span></h1>
+                        </button>
+                    </div>
+                </div>        
+        
+        
+        
+                
+            </div>
+        </div>
+        </div>
+        
+    </div>
+
+</div> <!-- cart modal -->
+
 <div class="content">
 
     <div class="container">
