@@ -38,9 +38,9 @@ Route::get('/admin/stores/add_store', 'AdminController@add_store')->name('admin_
 Route::get('/admin/stores/edit_store', 'AdminController@edit_store')->name('admin_edit_store');
 Route::get('/admin/stores/store', 'AdminController@store')->name('admin_store');
 Route::get('/admin/departments' , 'AdminController@departments')->name('admin_departments');
-Route::get('/admin/stores/store/add_department' , 'AdminController@add_department')->name('admin_add_department');
-Route::get('/admin/stores/store/add_shelve' , 'AdminController@add_shelve')->name('admin_add_shelve');
-Route::get('/admin/stores/store/add_product' , 'AdminController@add_product')->name('admin_add_product');
+// Route::get('/admin/stores/store/add_department' , 'AdminController@add_department')->name('admin_add_department');
+// Route::get('/admin/stores/store/add_shelve' , 'AdminController@add_shelve')->name('admin_add_shelve');
+// Route::get('/admin/stores/store/add_product' , 'AdminController@add_product')->name('admin_add_product');
 Route::get('/admin/products' , 'AdminController@products')->name('admin_products');
 Route::get('/admin/cities/add_city' , 'AdminController@add_city')->name('admin_add_city');
 Route::get('/admin/cities/edit_city' , 'AdminController@edit_city')->name('admin_edit_city');
