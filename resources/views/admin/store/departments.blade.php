@@ -59,70 +59,69 @@
     </div>
 
     <div class="row wrapper wrapper-content">
-                <div class="col-lg-12">
-                    <div class="ibox">
-                        <div class="ibox-content">
-                            <h2> Departments</h2>
-                            <p> All Departments in {{ $store->name }} </p>
-                            
-                            <div class="row ">
-                                <div class="col-lg-3">
-                                    <select name="" id="" class="form-control">
-                                        <option value="" disabled selected>records per page</option>
-                                        <option value="10">10</option>
-                                        <option value="20">20</option>
-                                        <option value="30">30</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-offset-3 col-lg-6">
-                                    <div class="input-group">
-            
-                                        <input type="text" placeholder="Search... " class="input form-control">
-                                        <span class="input-group-btn">
-                                            <button type="button" class="btn btn btn-primary">
-                                                <i class="fa fa-search"></i> Search</button>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-        
-                            <div class="table-responsive m-t-lg">
-            
-                                <table class="table table-bordered table-striped">
-                                    <tbody>
-                                        <tr>
-            
-                                            <th>Name</th>
-                                            <th>Shelves</th>
-                                            <th>Products</th>
-                                            <th>action</th>
-                                        </tr>
-                                        @foreach($store->departments as $department)
-                                        <tr>
-                                                <td>{{ $department->name }}</td>
-                                                <td>{{ $department->shelves->count() }}</td>
-                                                <td>{{ 0 }}</td>
-                                                <td>
-                                                    <div class="btn-group" role="group" aria-label="...">
-                                                        <a href="" type="button" class="btn btn-default btn-xs">
-                                                            <i class="fa fa-angle-double-right"></i>&nbsp;view</a>
-                                                        <a href="" type="button" class="btn btn-success btn-xs">
-                                                            <i class="fa fa-edit"></i>&nbsp;edit</a>
-                                                        <a href="" type="button" class="btn btn-danger btn-xs">
-                                                            <i class="fa fa-trash"></i>&nbsp;delete</a>
-                                                    </div>
-                                                </td> 
-                                        </tr>
-                                            @endforeach                                               
-
-                                    </tbody>
-            
-                                </table>
+        <div class="col-lg-12">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <h2> Departments</h2>
+                    <p> All Departments in {{ $store->name }} </p>
+                    
+                    <div class="row ">
+                        <div class="col-lg-3">
+                            <select name="" id="" class="form-control">
+                                <option value="" disabled selected>records per page</option>
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="30">30</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-offset-3 col-lg-6">
+                            <div class="input-group">
+    
+                                <input type="text" placeholder="Search... " class="input form-control">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn btn-primary">
+                                        <i class="fa fa-search"></i> Search</button>
+                                </span>
                             </div>
                         </div>
                     </div>
+
+                    <div class="table-responsive m-t-lg">
+    
+                        <table class="table table-bordered table-striped">
+                            <tbody>
+                                <tr>
+    
+                                    <th>Name</th>
+                                    <th>Shelves</th>
+                                    <th>Products</th>
+                                    <th>action</th>
+                                </tr>
+                                @foreach($store->departments as $department)
+                                <tr>
+                                        <td>{{ $department->name }}</td>
+                                        <td>{{ $department->shelves->count() }}</td>
+                                        <td>{{ 0 }}</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="...">
+                                                <a href="" type="button" class="btn btn-default btn-xs">
+                                                    <i class="fa fa-angle-double-right"></i>&nbsp;view</a>
+                                                <a href="" type="button" class="btn btn-success btn-xs">
+                                                    <i class="fa fa-edit"></i>&nbsp;edit</a>
+                                                <a href="" type="button" class="btn btn-danger btn-xs">
+                                                    <i class="fa fa-trash"></i>&nbsp;delete</a>
+                                            </div>
+                                        </td> 
+                                </tr>
+                                    @endforeach                                               
+
+                            </tbody>
+    
+                        </table>
+                    </div>
                 </div>
-            
             </div>
+        </div>
+    </div>
 
 @endsection
