@@ -57,8 +57,8 @@ class AdminController extends Controller
        return view('admin.add_product');
    } 
 
-    public function departments(){
-    	return view('admin.departments');
+    public function showStoreDepartments(Store $store){
+    	return view('admin.store.departments', compact(['store']));
     }
     public function products(){
     	return view('admin.products');

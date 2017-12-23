@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Department;
 use Illuminate\Http\Request;
+use App\Store;
+use App\Http\Requests;
 
 class DepartmentController extends Controller
 {
@@ -33,9 +35,11 @@ class DepartmentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Requests\CreateDepartmentRequest $request, Store $store)
     {
-        //
+        $department = Department::create($request->all());
+
+        return back()->with('message', $department->name . ' department created');
     }
 
     /**

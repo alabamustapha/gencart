@@ -18,14 +18,10 @@
             </ol>
         </div>
         <div class="col-lg-3 m-t-lg">
-            <div class="btn-group">
-                <button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                <a class="btn btn-primary btn-lg" href="{{ route('admin_store_departments', ['store' => $store->slug ]) }}">
                     Manage Departments
-                </button>
-            </div>
+                </a>
         </div>
-
-    </div>
 
             <div class="row wrapper wrapper-content">
               
@@ -49,10 +45,7 @@
                                         <i class="fa fa-star fa-2x"></i>
                                         <i class="fa fa-star fa-2x"></i>
                                         <i class="fa fa-star-half-full fa-2x"></i>
-                                        
                                     </span>
-                                
-
                             </div>
                         </div>
 
@@ -83,11 +76,8 @@
                                         <i class="fa fa-shopping-basket fa-4x"></i>
                                         <h1 class="m-xs">477</h1>
                                         <h3 class="font-bold no-margins">
-                                          stock available
-                                          
-                                        </h3>
-                                       
-                                       
+                                          Stock available
+                                        </h3>                                       
                                     </div>
                                 </div>
                             </div>

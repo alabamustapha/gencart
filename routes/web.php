@@ -43,8 +43,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::post('/admin/stores', 'StoreController@store')->name('admin_store_store');
     Route::get('/admin/stores/{store}', 'AdminController@showStore')->name('admin_show_store');
     Route::get('/admin/stores/{store}/departments', 'AdminController@showStoreDepartments')->name('admin_store_departments');    
-    Route::get('/admin/stores/{store}/departments/create', 'StoreController@create')->name('admin_create_department');    
-    Route::post('/admin/stores/{store}/departments', 'StoreController@store')->name('admin_store_departments');    
+    Route::post('/admin/stores/{store}/departments', 'DepartmentController@store')->name('admin_add_store_department');    
     
     
     Route::get('/storeAdmin', 'StoreAdminController@dashboard')->name('storeAdmin_dashboard');
