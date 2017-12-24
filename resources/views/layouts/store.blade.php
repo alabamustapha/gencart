@@ -34,7 +34,7 @@
 <body style="background-color: #f7f7f7;">
     <div id="app">
 
-        <header class="store-header">
+        <header class="store-header" style="background: url('{{ asset('storage/'.$store->banner) }}'), red; background-repeat: no-repeat;background-position: 50% 50%;background-size: cover;">
 
             @include('layouts.partials.storenavbar')
             

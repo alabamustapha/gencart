@@ -186,10 +186,10 @@ ul {
 *************************************************/
 
 .store-header {
-    background: url('/images/banner1.jpg'), red;
+    /* background: url('/images/banner1.jpg'), red;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: cover;
+    background-size: cover; */
     width: 100%;
     min-height: 215px;
     position: relative;
