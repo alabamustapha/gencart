@@ -238,8 +238,12 @@ ul {
     height: 156px;
     margin: 0 auto;
     position: relative;
+    
 }
-
+.store-header-logo img {
+    border: 1px solid grey;
+    border-radius: 50%;
+}
 .logo-background {
     height: 99%;
     width: 99%;
