@@ -41,7 +41,7 @@
 
             <div class="store-header-inner-wrapper" style="opacity: 1;">
                 <div class="store-header-logo" aria-hidden="true">
-                    <img src="{{ asset('images/new-logo.png')}}" width="156" height="156" alt="{{isset($store) ? $store->name : ""}}">
+                    <img src="{{ asset('storage/'.$store->logo)}}" width="156" height="156" alt="{{isset($store) ? $store->name : ""}}">
                 </div>
                 <h1>{{ isset($store) ? $store->name : "" }}</h1>
                 <div class="store-header-retailer-info">
