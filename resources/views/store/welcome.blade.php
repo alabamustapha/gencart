@@ -86,7 +86,9 @@
     
                 <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
                     @if(count($allstores))
+                       <div class="row">
                         @foreach($allstores as $store)
+                            <div class="col-md-3">
                             <div class="card" style="width: 15rem;">
                                 <div class="card text-center">
                                     <a href="#">
@@ -101,7 +103,9 @@
                                 </div>              
                                 
                             </div>
+                            </div>
                         @endforeach
+                       </div>
                     @endif
                     
                 </div>
