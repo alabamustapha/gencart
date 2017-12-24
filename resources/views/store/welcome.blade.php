@@ -91,9 +91,17 @@
                             <div class="col-md-3">
                             <div class="card" style="width: 15rem;">
                                 <div class="card text-center">
+                                    @if($store->logo)
                                     <a href="#">
                                         <img class="card-img-top card-img-rounded" src="{{ asset('storage/' . $store->logo) }}" alt="{{$store->name}}">
                                     </a>
+                                    @else
+                                    <a href="#">
+                                        <img class="card-img-top card-img-rounded" src="{{ asset('images/cart-logo.png') }}" alt="{{$store->name}}">
+                                    </a>
+                                    @endif
+
+
                                     <div class="card-body">
                                     <a href="{{route('show_store', $store->slug)}}">
                                         <h4 class="card-title">{{ $store->name }}</h4>
