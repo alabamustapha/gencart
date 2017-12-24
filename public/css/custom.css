@@ -186,10 +186,6 @@ ul {
 *************************************************/
 
 .store-header {
-    /* background: url('/images/banner1.jpg'), red;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover; */
     width: 100%;
     min-height: 215px;
     position: relative;
@@ -234,14 +230,14 @@ ul {
 
 
 .store-header-logo {
-    width: 156px;
-    height: 156px;
+    width: 96px;
+    height: 96px;
     margin: 0 auto;
     position: relative;
     
 }
 .store-header-logo img {
-    border: 1px solid grey;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.16);
     border-radius: 50%;
 }
 .logo-background {

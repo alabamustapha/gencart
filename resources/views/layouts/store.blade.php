@@ -34,14 +34,14 @@
 <body style="background-color: #f7f7f7;">
     <div id="app">
 
-        <header class="store-header" style="background: url('{{ asset('storage/'.$store->banner) }}'), red; background-repeat: no-repeat;background-position: 50% 50%;background-size: cover;">
+        <header class="store-header" style="background: url('{{ asset('storage/'.$store->banner) }}'), transparent; background-repeat: no-repeat;background-position: 50% 50%;background-size: cover;">
 
             @include('layouts.partials.storenavbar')
             
 
             <div class="store-header-inner-wrapper" style="opacity: 1;">
                 <div class="store-header-logo" aria-hidden="true">
-                    <img src="{{ asset('storage/'.$store->logo)}}" width="156" height="156" alt="{{isset($store) ? $store->name : ""}}">
+                    <img src="{{ asset('storage/'.$store->logo)}}" width="96" height="96" alt="{{isset($store) ? $store->name : ""}}">
                 </div>
                 <h1>{{ isset($store) ? $store->name : "" }}</h1>
                 <div class="store-header-retailer-info">
