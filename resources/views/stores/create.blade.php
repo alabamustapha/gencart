@@ -27,8 +27,16 @@
                     <h2><i class="fa fa-cart-plus"></i>&nbsp;Add Store</h2>
                 </div>
                 <div class="ibox-content">
-                @include('layouts.partials.errors_list');
-                    <form action="{{ route("admin_store_store") }}" method="POST">
+                @include('layouts.partials.errors_list') 
+
+                @if (session('message'))
+                    <div class="alert alert-success">
+                        {{ session('message') }}
+                    </div>
+                @endif
+
+
+                    <form action="{{ route('admin_store_store') }}" method="POST" enctype="multipart/form-data">
                     {{ csrf_field() }}
                         <div class="row">
                             <div class="col-lg-6 col-md-6">

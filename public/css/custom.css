@@ -468,6 +468,8 @@ input[type="search"]{
 } 
 .nav-tabs .nav-link.active {
     color: rgb(67, 176, 42);
+    -webkit-border-bottom: 4px solid rgb(67, 176, 42);
+    -moz-border-bottom: 4px solid rgb(67, 176, 42);
     border-bottom: 4px solid rgb(67, 176, 42);
     
 }
@@ -589,12 +591,11 @@ input[type="search"]{
 .department-cards {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-content: center;
-    /* align-items: center;
-    align-self: center; */
 }
 .department-cards .card {
+    margin-right: 2%;
     margin-bottom: 2rem;
 }
 

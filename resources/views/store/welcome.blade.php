@@ -85,63 +85,24 @@
             <div class="tab-content" id="myTabContent">
     
                 <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
-                    <div class="card-columns">
-                        <div class="card text-center">
-                            <a href="#">
-                                <img class="card-img-top card-img-rounded" src="/images/recipe.jpg" alt="">
-                            </a>
-                            <div class="card-body">
-                            <h4 class="card-title">Whole Foods</h4>
-                            <p class="card-text"><small class="text-muted" style="font-size: 13px">Groceries &middot; Organic &middot; Specialty </small></p>
+                    @if(count($allstores))
+                        @foreach($allstores as $store)
+                            <div class="card" style="width: 15rem;">
+                                <div class="card text-center">
+                                    <a href="#">
+                                        <img class="card-img-top card-img-rounded" src="{{ asset('storage/' . $store->logo) }}" alt="{{$store->name}}">
+                                    </a>
+                                    <div class="card-body">
+                                    <a href="{{route('show_store', $store->slug)}}">
+                                        <h4 class="card-title">{{ $store->name }}</h4>
+                                    </a>
+                                    <p class="card-text"><small class="text-muted" style="font-size: 13px">Groceries &middot; Organic &middot; Specialty </small></p>
+                                    </div>
+                                </div>              
+                                
                             </div>
-                        </div>
-                        <div class="card text-center">
-                            <a href="#">
-                                <img class="card-img-top card-img-rounded" src="/images/recipe.jpg" alt="">
-                            </a>
-                            <div class="card-body">
-                            <h4 class="card-title">Whole Foods</h4>
-                            <p class="card-text"><small class="text-muted" style="font-size: 13px">Groceries &middot; Organic &middot; Specialty </small></p>
-                            </div>
-                        </div>
-                        <div class="card text-center">
-                            <a href="#">
-                                <img class="card-img-top card-img-rounded" src="/images/recipe.jpg" alt="">
-                            </a>
-                            <div class="card-body">
-                            <h4 class="card-title">Whole Foods</h4>
-                            <p class="card-text"><small class="text-muted" style="font-size: 13px">Groceries &middot; Organic &middot; Specialty </small></p>
-                            </div>
-                        </div>
-                        <div class="card text-center">
-                            <a href="#">
-                                <img class="card-img-top card-img-rounded" src="/images/recipe.jpg" alt="">
-                            </a>
-                            <div class="card-body">
-                            <h4 class="card-title">Whole Foods</h4>
-                            <p class="card-text"><small class="text-muted" style="font-size: 13px">Groceries &middot; Organic &middot; Specialty </small></p>
-                            </div>
-                        </div>              
-                        <div class="card text-center">
-                            <a href="#">
-                                <img class="card-img-top card-img-rounded" src="/images/recipe.jpg" alt="">
-                            </a>
-                            <div class="card-body">
-                            <h4 class="card-title">Whole Foods</h4>
-                            <p class="card-text"><small class="text-muted" style="font-size: 13px">Groceries &middot; Organic &middot; Specialty </small></p>
-                            </div>
-                        </div>              
-                        <div class="card text-center">
-                            <a href="#">
-                                <img class="card-img-top card-img-rounded" src="/images/recipe.jpg" alt="">
-                            </a>
-                            <div class="card-body">
-                            <h4 class="card-title">Whole Foods</h4>
-                            <p class="card-text"><small class="text-muted" style="font-size: 13px">Groceries &middot; Organic &middot; Specialty </small></p>
-                            </div>
-                        </div>              
-                        
-                    </div>
+                        @endforeach
+                    @endif
                     
                 </div>
 

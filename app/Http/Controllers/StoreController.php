@@ -39,6 +39,22 @@ class StoreController extends Controller
     
         $store = Store::create($request->all());
 
+        if($store) {
+
+           if ($request->hasFile('logo') && $request->file('logo')->isValid()) {
+                $path = $request->logo->store('public/logos');
+                $store->logo = str_replace('public/', '', $path);
+				$store->save();  
+            }
+
+           if ($request->hasFile('banner') && $request->file('banner')->isValid()) {
+                $path = $request->banner->store('public/banners');
+                $store->banner = str_replace('public/', '', $path);
+				$store->save();  
+            }
+       }  
+        
+
         return back()->with('message', $store->name . ' Added');
     }
 

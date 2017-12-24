@@ -22,8 +22,12 @@ Route::middleware(['guest'])->group(function () {
 
 
 Route::middleware(['auth'])->group(function () {
+
     Route::get('/store/welcome', function(){
-            return view('store.welcome');
+
+        $allstores = \App\Store::all();
+
+            return view('store.welcome', compact('allstores'));
     });
 
     Route::get('/stores/{store}', 'StoreController@show')->name('show_store');
