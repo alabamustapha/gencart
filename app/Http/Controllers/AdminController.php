@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Store;
+use App\Department;
 
 class AdminController extends Controller
 {
@@ -39,46 +40,15 @@ class AdminController extends Controller
    public function showStore(Store $store){
        return view('admin.store', compact('store'));
    }
+   
+   public function showStoreDepartment(Store $store, Department $department){
+       return view('admin.store.department', compact(['store', 'department']));
+   }
 
    public function add_store(){
        return view('admin.add_store');
    }
 
-//    public function create_store(Request $request){
-//        $validator = $request->validate([
-//            'name'       => 'bail|required|unique:stores',
-//            'address'    => 'required',
-//            'phone'      => 'required',
-//            'zip'        => 'required',
-//            'logo'       => 'image|mimes:jpeg,png,jpg,gif,svg|max:1024',
-//            'banner'     => 'image|mimes:jpeg,png,jpg,gif,svg|max:1024'
-//        ]);
-
-//        $store = Store::create([
-//            'name' => $request->name,
-//     		'address' => $request->address,
-//     		'phone' => $request->phone,
-//     		'logo' => '',
-//     		'banner' => '',
-//     		'zip' => $request->zip,
-//        ]);
-
-//        if($store) {
-//            if ($request->hasFile('logo') && $request->file('logo')->isValid()) {
-//                $extension = $request->logo->getClientOriginalExtension();
-//                 $path = $request->logo->storeAs(
-//                     'logos', str_replace(' ', '_',$request->name).'_logo'.'.'.$extension
-//                 );
-
-//                 dd($path);
-
-//                 $store->logo = str_replace('public/', '', $path);
-// 				$store->save();  
-//             }
-//        }
-
-        
-//    }
 
    public function edit_store(){
        return view('admin.edit_store');

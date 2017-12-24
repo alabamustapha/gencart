@@ -36,4 +36,9 @@ class Department extends Model
     public function shelves(){
         return $this->hasMany('App\Shelf');
     }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }
