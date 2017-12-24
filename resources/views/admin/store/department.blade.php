@@ -4,7 +4,7 @@
 
     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-lg-9">
-            <h2> {{ $store->name }} Departments</h2>
+            <h2> {{ $store->name }} -  {{ $department->name }} Department</h2>
             <ol class="breadcrumb">
                 <li>
                     <a href="{{ route('admin_stores') }}">Home</a>
@@ -12,40 +12,44 @@
                 <li>
                     <a href="{{ route('admin_show_store', ['store' => $store->slug ]) }}">{{ $store->name }}</a>
                 </li>
+                <li>
+                    <a href="{{ route('admin_store_departments', ['store' => $store->slug ]) }}">Departments</a>
+                </li>
                 <li class="active">
-                    <a href="#">Departments</a>
+                    <a href="#">{{ $department->name }}</a>
                 </li>
                 
 
             </ol>
         </div>
         <div class="col-lg-3 m-t-lg">
-                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#add-department-modal">
-                    Add Department
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#add-shelf-modal">
+                    Add Shelve
                 </button>
         </div>
 
         <!-- Start Add department modal -->
-                <div class="modal inmodal" id="add-department-modal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal inmodal" id="add-shelf-modal" tabindex="-1" role="dialog" aria-hidden="true">
                     <div class="modal-dialog">
                     <div class="modal-content animated bounceInRight">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                <i class="fa fa-building modal-icon"></i>
-                                <h4 class="modal-title">Add new department</h4>
+                                <i class="fa fa-shopping-cart modal-icon"></i>
+                                <h4 class="modal-title">Add new shelf</h4>
                             </div>
                             <div class="modal-body">
-                                <form method="post" action="{{ route('admin_add_store_department', ['store' => $store->slug]) }}">
+                                <form method="post" action="{{ route('admin_add_store_shelf', ['store' => $store->slug, 'department' => $department->slug]) }}">
                                     {{ csrf_field() }}
                                     <input type="hidden" name="store_id" value="{{ $store->id }}">
+                                    <input type="hidden" name="department_id" value="{{ $department->id }}">
                                     <div class="form-group">
-                                        <label>Department name</label> 
-                                        <input type="name" placeholder="enter department name" class="form-control" name="name">
+                                        <label>Shelf Label</label> 
+                                        <input type="text" placeholder="enter shelf lable" class="form-control" name="name">
                                     </div>
 
                                     <div class="form-group">
-                                        <label>Department description</label> 
-                                        <textarea name="description" cols="30" rows="4" placeholder="description" class="form-control"></textarea>
+                                        <label>Shelf description</label> 
+                                        <textarea name="description" cols="30" rows="4" placeholder="shelf description" class="form-control"></textarea>
                                     </div>
 
                                     <button type="submit" class="btn btn-primary">Save changes</button>
@@ -62,8 +66,8 @@
         <div class="col-lg-12">
             <div class="ibox">
                 <div class="ibox-content">
-                    <h2> Departments</h2>
-                    <p> All Departments in {{ $store->name }} </p>
+                    <h2> Shelves </h2>
+                    <p> Shelves in {{ $department->name }} </p>
                     
                     <div class="row ">
                         <div class="col-lg-3">
@@ -93,14 +97,12 @@
                                 <tr>
     
                                     <th>Name</th>
-                                    <th>Shelves</th>
                                     <th>Products</th>
                                     <th>action</th>
                                 </tr>
-                                @foreach($store->departments as $department)
+                                @foreach($department->shelves as $shelf)
                                 <tr>
-                                        <td>{{ $department->name }}</td>
-                                        <td>{{ $department->shelves->count() }}</td>
+                                        <td>{{ $shelf->name }}</td>
                                         <td>{{ 0 }}</td>
                                         <td>
                                             <div class="btn-group" role="group" aria-label="...">

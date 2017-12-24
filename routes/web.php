@@ -48,6 +48,8 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin/stores/{store}', 'AdminController@showStore')->name('admin_show_store');
     Route::get('/admin/stores/{store}/departments', 'AdminController@showStoreDepartments')->name('admin_store_departments');    
     Route::post('/admin/stores/{store}/departments', 'DepartmentController@store')->name('admin_add_store_department');    
+    Route::get('/admin/stores/{store}/departments/{department}', 'AdminController@showStoreDepartment')->name('admin_store_department');    
+    Route::post('/admin/stores/{store}/departments/{department}', 'ShelfController@store')->name('admin_add_store_shelf');    
     
     
     Route::get('/storeAdmin', 'StoreAdminController@dashboard')->name('storeAdmin_dashboard');
