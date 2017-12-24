@@ -28,7 +28,7 @@ class CreateStoreRequest extends FormRequest
             "address" => "required|min:10",
             "phone" => "required|min:7",
             "zipcode" => "required|min:5",
-            // "place_id" => "required",
+            "place_id" => "required",
             "logo" => "nullable|image|mimes:jpeg,png,jpg,svg|max:1024",
             "banner" => "nullable|image|mimes:jpeg,png,jpg,svg|max:1024"
         ];
