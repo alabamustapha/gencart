@@ -4,11 +4,10 @@
 
 <div class="cartModal" style="">
     <!-- Modal -->
-    <!-- <div class="modal fade bd-cart-modal-lg" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document"> -->
-        <div class="modal fade bd-cart-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal fade bd-cart-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
-            <div class="modal-content">
+            <div class="modal-content" role="document">
+
                 <div class="modal-header">
                     <h5 class="modal-title" id="cartModalLabel">My Cart</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -22,7 +21,6 @@
                         <i class="fa fa-shopping-cart fa-5x"></i>
                         <p><strong>Your Cart is Empty</strong></p>
                     </div>
-        
         
                     <div class="box">                    
                         <table class="table table-striped table-hover table-responsive">
@@ -110,30 +108,21 @@
                                     <th colspan="2">$1000.00</th>
                                 </tr>
                             </tfoot>
-                            </table>
-                            <!-- /.table-responsive -->
+                        </table>
+                        <!-- /.table-responsive -->
         
-                        </div>        
+                    </div>        
         
-        
-                    </div>
+                </div>
 
-                    <div class="modal-footer" >
-                        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-                        <button type="button" class="btn btn-default btn-block" style="display:flex; justify-content: space-between;">
-                            Checkout
-                            <h1><span class="badge badge-secondary">$45</span></h1>
-                        </button>
-                    </div>
-                </div>        
-        
-        
-        
-                
-            </div>
+                <div class="modal-footer" >
+                    <button type="button" class="btn btn-default btn-block" style="display:flex; justify-content: space-between;">
+                        Checkout
+                        <h1><span class="badge badge-secondary">$45</span></h1>
+                    </button>
+                </div>
+            </div>        
         </div>
-        </div>
-        
     </div>
 
 </div> <!-- cart modal -->

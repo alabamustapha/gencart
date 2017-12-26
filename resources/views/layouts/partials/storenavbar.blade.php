@@ -229,20 +229,20 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#">Hi, {{ auth()->user()->name }}</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Your Account</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-user-circle"></i> Your Account</a>
                         <a class="dropdown-item" href="#">Your Order</a>
                         <a class="dropdown-item" href="#">Add Promo Code</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Group Carts</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-cart-plus"></i> Group Carts</a>
                         <a class="dropdown-item" href="#"><i class="fa fa-gift"></i> Buy Gift Cards</a>
                         <a class="dropdown-item" href="#">GenCart Express</a>
-                        <a class="dropdown-item" href="#">How GenCart Works</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-sliders"></i> How GenCart Works</a>
                         <a class="dropdown-item" href="#">Lists and Recipes</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
-                                Logout
+                                <i class="fa fa-sign-out"></i>&nbsp;Logout
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -262,6 +262,10 @@
             <button type="button" class="btn btn-success my-2 my-sm-0" data-toggle="modal" data-target=".bd-cart-modal-lg">
                 <i class="fa fa-shopping-cart fa-lg"></i> Cart
             </button>
+
+            <!-- <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal2">
+			Right Sidebar Modal
+		</button> -->
 
         </form>
     </div>
