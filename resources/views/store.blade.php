@@ -5,8 +5,7 @@
 <div class="content">
 
     <div class="container">
-        <div class="owl-carousel owl-theme">
-
+        <div class="owl-carousel owl-theme" style="position:relative;">
             <div>
                 <img src="{{ asset('images/sameday.jpg') }}" alt="">
             </div>
@@ -21,7 +20,6 @@
             </div>
             <div>
                 <img src="{{ asset('images/sameday.jpg') }}" alt="">
-            
             </div>
             <div>                
                 <img src="{{ asset('images/sameday.jpg') }}" alt="">
