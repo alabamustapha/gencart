@@ -42,9 +42,9 @@
             <div class="store-header-inner-wrapper" style="opacity: 1;">
                 <div class="store-header-logo" aria-hidden="true">
                     @if($store->logo)
-                    <img src="{{ asset('storage/'.$store->logo)}}" width="96" height="96" alt="{{isset($store) ? $store->name : ""}}">
+                        <img src="{{ asset('storage/'.$store->logo)}}" width="96" height="96" alt="{{isset($store) ? $store->name : ""}}">
                     @else
-                    <img src="{{ asset('images/cart-logo.png')}}" width="96" height="96" alt="{{isset($store) ? $store->name : ""}}">
+                        <img src="{{ asset('images/cart-logo.png')}}" width="96" height="96" alt="{{isset($store) ? $store->name : ""}}">
                     @endif
                 </div>
                 <h1>{{ isset($store) ? $store->name : "" }}</h1>

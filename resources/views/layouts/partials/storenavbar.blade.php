@@ -262,13 +262,9 @@
         
         <form class="form-inline my-2 my-lg-0">        
             <!-- button to trigger cart modal -->
-            <button type="button" class="btn btn-success my-2 my-sm-0" data-toggle="modal" data-target=".bd-cart-modal-lg">
+            <button type="button" class="btn btn-success my-2 my-sm-0" data-toggle="modal" data-target="#modalSidePaneRight">
                 <i class="fa fa-shopping-cart fa-lg"></i> Cart
             </button>
-
-            <!-- <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal2">
-			Right Sidebar Modal
-		</button> -->
 
         </form>
     </div>

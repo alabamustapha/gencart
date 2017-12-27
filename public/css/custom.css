@@ -567,16 +567,6 @@ input[type="search"]{
     transition: all .5s ease-in-out;
 }
 
-/* .dept-wrapper {
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    flex-flow: column wrap;
-    height: 170px;
-    width: 170px;
-    justify-content: flex-start
-} */
-
-
 #store-list-dropdown {
         width: 70vw;
         max-width: 920px;
@@ -603,42 +593,45 @@ input[type="search"]{
     margin-bottom: 2rem;
 }
 
+/* cart modal customization */
 
-/* .navbar-link-color a {    
-    color: red !important;
-} */
+.modal.modal-left-pane .modal-dialog, 
+.modal.modal-right-pane .modal-dialog {
+  max-width: 520px;
+  min-height: calc(100vh - 56px);
+}
+.modal.modal-left-pane.show .modal-dialog, 
+.modal.modal-right-pane.show .modal-dialog {
+  transform: translate(0, 0);
+}
+.modal.modal-left-pane .modal-content, 
+.modal.modal-right-pane .modal-content {
+  min-height: calc(100vh - 0);
+  /* height: 100vh; */
+}
+.modal.modal-left-pane .modal-dialog {
+  transform: translate(-100%, 0);
+  margin: 56px auto 0 0;
+}
+.modal.modal-right-pane .modal-dialog {
+  transform: translate(100%, 0);
+  margin: 0 0 0 auto;
+}
+
+.modal-open .modal {
+    padding-right: 0 !important; 
+}
+
 
 /********************************************
             owl carousel customization
 ********************************************/
 
-.arrow-right {
-    z-index: 100;
-    border: 0px;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    box-shadow: rgba(0, 0, 0, 0.26) 0px 1px 2px 0px, rgba(0, 0, 0, 0.16) 0px 1px 4px 0px;
-    transition: opacity 200ms linear;
-    text-align: center;
-    line-height: 1;
-    background-color: rgb(67, 176, 42);
-    color: rgb(255, 255, 255);
-    position: absolute;
-    top: 144px;
-    display: block;
-    right: 8px;
-    opacity: 1;
-}
 
 
 
 
-/* .modal.fade .modal-dialog {
-    padding-right: 0 !important;
-    -webkit-transform: translateX(787px) !important;
-    transform: translateX(787px) !important;
-} */
+
 
 
 
