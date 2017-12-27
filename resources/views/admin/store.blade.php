@@ -109,9 +109,151 @@
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </p>
-                    <a href="#" class="btn btn-primary">
-                        <i class="fa fa-plus"></i>&nbsp; add product</a>
+                    <a href="#" class="btn btn-primary" data-target="#productModal" data-toggle="modal">
+                        <i class="fa fa-plus"></i>&nbsp; Add product</a>
+    
                     <p></p>
+
+                     <!-- add product modal -->
+                    <div class="modal fade productModal" id="productModal">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                    <h3 class="modal-title">Add product</h3>
+                                </div>
+                                <form action="" method="post">
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="form-group">
+                                                    <div class="input-group input-group-lg">
+                                                        <span class="input-group-addon">
+                                                            <i class="fa fa-shopping-bag"></i>
+                                                        </span>
+                                                        <input type="text" name="name" id="name" class="form-control" placeholder="product name" required>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <div class="input-group input-group-lg">
+                                                        <span class="input-group-addon">
+                                                            <i class="fa fa-money"></i>
+                                                        </span>
+                                                        <input type="text" name="price" id="price" class="form-control" placeholder="price" required>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <div class="input-group input-group-lg">
+                                                        <span class="input-group-addon">
+                                                        %
+                                                        </span>
+                                                        <input type="text" name="tax" id="tax" class="form-control" placeholder="tax percentage if any" required>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <div class="input-group input-group-lg">
+                                                        <span class="input-group-addon">
+                                                            <i class="fa fa-shopping-bag"></i>
+                                                        </span>
+                                                        <input type="text" name="name" id="name" class="form-control" placeholder="product name" required>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <div class="input-group input-group-lg">
+                                                        <span class="input-group-addon">
+                                                            <i class="fa fa-list"></i>
+                                                        </span>
+                                                        <input type="text" name="amount" id="amount" class="form-control" placeholder="amount" required>
+                                                    </div>
+                                                </div>
+
+                                            
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="form-group">
+                                                    <div class="input-group input-group-lg">
+                                                        <span class="input-group-addon">
+                                                            unit
+                                                        </span>
+                                                        <select name="unit" id="unit" class="form-control">
+                                                                <option value="">...</option>
+                                                                <option value="kg">kg</option>
+                                                                <option value="pack">pack</option>
+                                                                <option value="dozen">dozen</option>
+                                                                <option value="m">m</option>
+                                                                <option value="pcs">pcs</option>
+                                                            </select>
+                                                    </div>
+                                                        
+                                                    
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="input-group input-group-lg">
+                                                        <span class="input-group-addon">
+                                                            shelf
+                                                        </span>
+                                                        <select name="store" id="store" class="form-control">
+                                                            <option value="">...</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="input-group input-group-lg">
+                                                        <span class="input-group-addon">
+                                                            department
+                                                        </span>
+                                                        <select name="department" id="department" class="form-control">
+                                                            <option value="">...</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="input-group input-group-lg">
+                                                        <span class="input-group-addon">
+                                                            brand
+                                                        </span>
+                                                        <select name="brand" id="brand" class="form-control">
+                                                            <option value="">...</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                        <span class="btn btn-default btn-file"><span class="fileinput-new">Select product image</span>
+                                                        <span class="fileinput-exists">Change</span><input type="file" name="..."/></span>
+                                                        <span class="fileinput-filename"></span>
+                                                        <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">×</a>
+                                                    </div> 
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="form-group">
+                                                    <textarea name="description" id="description" class="form-control"  rows="5" placeholder="product description..." required ></textarea>
+                                                </div>
+                                            
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-primary">add</button>
+                                    </div>
+                                </form>
+                            
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div>
+                    <!--- end product modal-->
+
+
                     <div class="row ">
                         <div class="col-lg-3">
                             <select name="" id="" class="form-control">

@@ -230,6 +230,9 @@
                         <a class="dropdown-item" href="#">Hi, {{ auth()->user()->name }}</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#"><i class="fa fa-user-circle"></i> Your Account</a>
+                        @if(auth()->user()->role !== 'customer' )
+                            <a class="dropdown-item" href="{{ route(auth()->user()->role . '_dashboard') }}"><i class="fa fa-user-circle"></i> Dashboard</a>
+                        @endif
                         <a class="dropdown-item" href="#">Your Order</a>
                         <a class="dropdown-item" href="#">Add Promo Code</a>
                         <div class="dropdown-divider"></div>
