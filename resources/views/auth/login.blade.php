@@ -21,10 +21,10 @@
                                 {{ csrf_field() }}
                                 <div class="form-group row">
                                     <div class="col-lg-10">
-                                        <input type="email" class="form-control form-control-lg input-zip" placeholder="email" name="email" required>
-                                        @if ($errors->has('email'))
+                                        <input type="tel" class="form-control form-control-lg input-zip" placeholder="phone" name="phone" required>
+                                        @if ($errors->has('phone'))
                                             <span class="help-block">
-                                                <strong>{{ $errors->first('email') }}</strong>
+                                                <strong>{{ $errors->first('phone') }}</strong>
                                             </span>
                                         @endif
                                     </div>
