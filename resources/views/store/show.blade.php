@@ -14,7 +14,7 @@
           <div class="modal-header">
             <h5 class="modal-title" id="sidePaneRightModal"> My Cart</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
+              <span class="modal-close" aria-hidden="true">&times; Close</span>
             </button>
           </div>
     

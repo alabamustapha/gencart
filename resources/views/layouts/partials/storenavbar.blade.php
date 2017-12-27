@@ -264,6 +264,10 @@
             <!-- button to trigger cart modal -->
             <button type="button" class="btn btn-success my-2 my-sm-0" data-toggle="modal" data-target="#modalSidePaneRight">
                 <i class="fa fa-shopping-cart fa-lg"></i> Cart
+                    <span class="cart-qty-badge">1</span>
+                    <!-- <span class="badge badge-pill badge-danger">1</span> -->
+                    
+                    <span class="sr-only">cart items</span>
             </button>
 
         </form>
