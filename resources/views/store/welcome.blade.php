@@ -114,6 +114,13 @@
                             </div>
                         @endforeach
                        </div>
+                    @else
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <i class="fa fa-shopping-cart fa-5x"></i>
+                            <h1>No Stores Currently, please check back later</h1>
+                        </div>
+                    </div>
                     @endif
                     
                 </div>
