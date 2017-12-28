@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use Illuminate\Http\Request;
+use App\Http\Requests;
 
 class ProductController extends Controller
 {
@@ -35,7 +36,9 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $product = Product::create($request->all());
+        
+        return back()->with('message', $product->name . " Added successfully");
     }
 
     /**

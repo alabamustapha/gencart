@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Store;
+use App\Brand;
 use App\Department;
 
 class AdminController extends Controller
@@ -38,7 +39,8 @@ class AdminController extends Controller
    }
 
    public function showStore(Store $store){
-       return view('admin.store', compact('store'));
+       $brands = Brand::all();
+       return view('admin.store', compact(['store', 'brands']));
    }
    
    public function showStoreDepartment(Store $store, Department $department){

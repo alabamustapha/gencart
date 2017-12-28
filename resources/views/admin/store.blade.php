@@ -28,7 +28,7 @@
             <div class="row m-b-sm">
                 <div class="col-lg-4">
                     <div class="widget-head-color-box navy-bg no-margins p-md text-center">
-                        <img src="{{asset('images/admin/a3.jpg')}}" class="img-circle " alt="logo">
+                        <img src="{{ asset('images/admin/a3.jpg') }}" class="img-circle " alt="logo">
                         <div class="m-md">
                             <h3 class="font-bold no-margins">
                                 {{ $store->name }}
@@ -104,16 +104,10 @@
         <div class="col-lg-12">
             <div class="ibox">
                 <div class="ibox-content">
-                    <h2>
-                        &nbsp;products</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </p>
+                    <h2>&nbsp;Products</h2>
                     <a href="#" class="btn btn-primary" data-target="#productModal" data-toggle="modal">
-                        <i class="fa fa-plus"></i>&nbsp; Add product</a>
-    
+                        <i class="fa fa-plus"></i>&nbsp; Add product</a>    
                     <p></p>
-
                      <!-- add product modal -->
                     <div class="modal fade productModal" id="productModal">
                         <div class="modal-dialog modal-lg">
@@ -122,7 +116,9 @@
                                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                                     <h3 class="modal-title">Add product</h3>
                                 </div>
-                                <form action="" method="post">
+                                <form action="{{ route('add_product') }}" method="post" enctype="multipart/form-data">
+                                    {{ csrf_field() }}
+                                    <input type="hidden" name="store_id" value="{{ $store->id }}">
                                     <div class="modal-body">
                                         <div class="row">
                                             <div class="col-lg-6 col-md-6">
@@ -156,18 +152,9 @@
                                                 <div class="form-group">
                                                     <div class="input-group input-group-lg">
                                                         <span class="input-group-addon">
-                                                            <i class="fa fa-shopping-bag"></i>
-                                                        </span>
-                                                        <input type="text" name="name" id="name" class="form-control" placeholder="product name" required>
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <div class="input-group input-group-lg">
-                                                        <span class="input-group-addon">
                                                             <i class="fa fa-list"></i>
                                                         </span>
-                                                        <input type="text" name="amount" id="amount" class="form-control" placeholder="amount" required>
+                                                        <input type="number" name="quantity" id="quantity" class="form-control" placeholder="quantity" min="0" required>
                                                     </div>
                                                 </div>
 
@@ -179,25 +166,33 @@
                                                         <span class="input-group-addon">
                                                             unit
                                                         </span>
-                                                        <select name="unit" id="unit" class="form-control">
-                                                                <option value="">...</option>
-                                                                <option value="kg">kg</option>
-                                                                <option value="pack">pack</option>
-                                                                <option value="dozen">dozen</option>
-                                                                <option value="m">m</option>
-                                                                <option value="pcs">pcs</option>
-                                                            </select>
+                                                        <select name="unit" id="unit" class="form-control">    
+                                                            <option value="">...</option>
+                                                            <option value="no">no</option>
+                                                            <option value="bag">bag</option>
+                                                            <option value="pint">pint</option>
+                                                            <option value="pcs">pcs</option>
+                                                            <option value="oz">oz</option>
+                                                            <option value="ml">ml</option>
+                                                            <option value="lt">lt</option>
+                                                            <option value="g">g</option>
+                                                            <option value="kg">kg</option>
+                                                            <option value="pack">pack</option>
+                                                            <option value="dozen">dozen</option>
+                                                            <option value="pcs">pcs</option>
+                                                        </select>
                                                     </div>
-                                                        
-                                                    
                                                 </div>
                                                 <div class="form-group">
                                                     <div class="input-group input-group-lg">
                                                         <span class="input-group-addon">
                                                             shelf
                                                         </span>
-                                                        <select name="store" id="store" class="form-control">
+                                                        <select name="shelf_id" id="shelf" class="form-control">
                                                             <option value="">...</option>
+                                                            @foreach($store->shelves as $shelf)
+                                                                <option value="{{ $shelf->id}}">{{ $shelf->name }}</option>                                                                
+                                                            @endforeach
                                                         </select>
                                                     </div>
                                                 </div>
@@ -206,8 +201,11 @@
                                                         <span class="input-group-addon">
                                                             department
                                                         </span>
-                                                        <select name="department" id="department" class="form-control">
+                                                        <select name="department_id" id="department" class="form-control">
                                                             <option value="">...</option>
+                                                            @foreach($store->departments as $department)
+                                                                <option value="{{ $department->id }}">{{ $department->name }}</option>                                                                   
+                                                            @endforeach
                                                         </select>
                                                     </div>
                                                 </div>
@@ -216,8 +214,11 @@
                                                         <span class="input-group-addon">
                                                             brand
                                                         </span>
-                                                        <select name="brand" id="brand" class="form-control">
+                                                        <select name="brand_id" id="brand" class="form-control">
                                                             <option value="">...</option>
+                                                            @foreach($brands as $brand)
+                                                                <option value="{{ $brand->id}}">{{ $brand->name }}</option>                                                                
+                                                            @endforeach
                                                         </select>
                                                     </div>
                                                 </div>
@@ -283,23 +284,28 @@
                             <tbody>
                                 <tr>
     
-                                    <th>product</th>
-                                    <th>quantity</th>
-                                    <th>price</th>
-                                    <th>total sales</th>
-                                    <th>added on</th>
-                                    <th>action</th>
+                                    <th>Product</th>
+                                    <th>Quantity</th>
+                                    <th>Price</th>
+                                    <th>Total sales</th>
+                                    <th>Department</th>
+                                    <th>Shelf</th>
+                                    <th>Brand</th>
+                                    <th>Action</th>
     
                                 </tr>
+                                @foreach($store->products as $product)
                                 <tr>
-                                    <td>milk</td>
-                                    <td>20</td>
+                                    <td>{{ $product->name }}</td>
+                                    <td>{{ $product->quantity }}</td>
                                     <td>
-                                        <i class="fa fa-dollar"></i>&nbsp;20</td>
+                                        <i class="fa fa-dollar"></i>&nbsp;{{ $product->price }}</td>
                                     <td>
-                                        10
+                                        {{ '0' }}
                                     </td>
-                                    <td>14 Dec 2017</td>
+                                    <td>{{ $product->department->name }}</td>
+                                    <td>{{ $product->shelf->name }}</td>
+                                    <td>{{ $product->brand->name }}</td>
                                     <td>
                                         <div class="btn-group" role="group" aria-label="...">
                                             <a href="" type="button" class="btn btn-default btn-xs">
@@ -311,6 +317,7 @@
                                         </div>
                                     </td>
                                 </tr>
+                                @endforeach
                             </tbody>
     
                         </table>

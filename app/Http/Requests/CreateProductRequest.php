@@ -34,6 +34,8 @@ class CreateProductRequest extends FormRequest
             "total_sale"   => "required|int",
             "store_id"   => "required|exists:stores,id",
             "department_id"   => "required|exists:departments,id",
+            "brand_id"   => "nullable|exists:brands,id",
+            "shelf_id"   => "nullable|exists:shelves,id",
         ];
     }
 }

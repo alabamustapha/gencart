@@ -1,15 +1,16 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
+use App\Http\Requests;
 
 
-class ApiRegisterController extends Controller
+class RegisterController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
@@ -22,7 +23,6 @@ class ApiRegisterController extends Controller
     |
      */
 
-
     /**
      * Get a validator for an incoming registration request.
      *
@@ -32,11 +32,13 @@ class ApiRegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'first_name' => 'required|string|max:255',
-            'last_name' => 'required|string|max:255',
+            'name' => 'required|string|max:255',
             'address' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
+            'email' => 'nullable|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+            'zipcode' => 'nullable|string|min:5',
+            'lat_long' => 'nullable|string',
+            'place_id' => 'nullable|string',
         ]);
     }
 
@@ -49,17 +51,19 @@ class ApiRegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['first_name'] . ' ' . $data['last_name'],
+            'name' => $data['name'],
             'email' => $data['email'],
             'address' => $data['address'],
-            'password' => bcrypt($data['password']),
+            'zipcode' => $data['zipcode'],
+            'place_id' => $data['place_id'],
+            'phone' => $data['phone'],
+            'lat_long' => $data['lat_long'],
+            'password' => bcrypt($data['password'])
         ]);
     }
+ 
 
-    // protected function redirectTo(){
-    //     return '/';
-    // }
-
+    
     /**
      * Handle a registration request for the application.
      *
