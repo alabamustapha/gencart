@@ -88,7 +88,7 @@
                                     <i class="fa fa-money fa-4x"></i>
                                     <h1 class="m-xs"><i class="fa fa-dollar"></i>&nbsp;47,700</h1>
                                     <h3 class="font-bold no-margins">
-                                        stock available
+                                        sales
                         
                                     </h3>
                         

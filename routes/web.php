@@ -132,5 +132,9 @@ Route::middleware(['auth', 'admin'])->group(function () {
 });
 
 
+Route::get('/info/faq' , 'InfoController@faq')->name('info_faq');
+Route::get('/info/About us' , 'InfoController@about')->name('info_about');
+
+
 
 
