@@ -1,10 +1,10 @@
 <div class="links">
     <ul class="nav justify-content-center">
         <li class="nav-item">
-            <a class="nav-link active" href="#">FAQ</a>
+            <a class="nav-link active" href="{{route('info_faq')}}">FAQ</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">About Us</a>
+            <a class="nav-link" href="{{route('info_about')}}">About Us</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#">Help</a>
