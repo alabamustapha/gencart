@@ -35,6 +35,11 @@ class Product extends Model
     {
         return $this->belongsTo('App\Shelf');
     }
+    
+    public function brand()
+    {
+        return $this->belongsTo('App\Brand');
+    }
 
     public function getRouteKeyName()
     {

@@ -284,23 +284,28 @@
                             <tbody>
                                 <tr>
     
-                                    <th>product</th>
-                                    <th>quantity</th>
-                                    <th>price</th>
-                                    <th>total sales</th>
-                                    <th>added on</th>
-                                    <th>action</th>
+                                    <th>Product</th>
+                                    <th>Quantity</th>
+                                    <th>Price</th>
+                                    <th>Total sales</th>
+                                    <th>Department</th>
+                                    <th>Shelf</th>
+                                    <th>Brand</th>
+                                    <th>Action</th>
     
                                 </tr>
+                                @foreach($store->products as $product)
                                 <tr>
-                                    <td>milk</td>
-                                    <td>20</td>
+                                    <td>{{ $product->name }}</td>
+                                    <td>{{ $product->quantity }}</td>
                                     <td>
-                                        <i class="fa fa-dollar"></i>&nbsp;20</td>
+                                        <i class="fa fa-dollar"></i>&nbsp;{{ $product->price }}</td>
                                     <td>
-                                        10
+                                        {{ '0' }}
                                     </td>
-                                    <td>14 Dec 2017</td>
+                                    <td>{{ $product->department->name }}</td>
+                                    <td>{{ $product->shelf->name }}</td>
+                                    <td>{{ $product->brand->name }}</td>
                                     <td>
                                         <div class="btn-group" role="group" aria-label="...">
                                             <a href="" type="button" class="btn btn-default btn-xs">
@@ -312,6 +317,7 @@
                                         </div>
                                     </td>
                                 </tr>
+                                @endforeach
                             </tbody>
     
                         </table>
