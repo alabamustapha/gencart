@@ -51,6 +51,8 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin/stores/{store}/departments/{department}', 'AdminController@showStoreDepartment')->name('admin_store_department');    
     Route::post('/admin/stores/{store}/departments/{department}', 'ShelfController@store')->name('admin_add_store_shelf');    
     
+    Route::post('/products', 'ProductController@store')->name('add_product');
+
     
     Route::get('/storeAdmin', 'StoreAdminController@dashboard')->name('storeAdmin_dashboard');
     Route::get('/storeAdmin/departments', 'StoreAdminController@departments')->name('storeAdmin_departments');
