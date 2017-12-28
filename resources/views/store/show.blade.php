@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="cartModal" style="">
-    @include('layouts.partials.cartModal')
+    @include('layouts.partials.cart_modal')
     
 </div> <!-- cart modal -->
 
