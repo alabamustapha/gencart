@@ -104,16 +104,10 @@
         <div class="col-lg-12">
             <div class="ibox">
                 <div class="ibox-content">
-                    <h2>
-                        &nbsp;products</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </p>
+                    <h2>&nbsp;Products</h2>
                     <a href="#" class="btn btn-primary" data-target="#productModal" data-toggle="modal">
-                        <i class="fa fa-plus"></i>&nbsp; Add product</a>
-    
+                        <i class="fa fa-plus"></i>&nbsp; Add product</a>    
                     <p></p>
-
                      <!-- add product modal -->
                     <div class="modal fade productModal" id="productModal">
                         <div class="modal-dialog modal-lg">
