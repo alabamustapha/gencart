@@ -516,7 +516,7 @@ input[type="search"]{
 }
 
 .card:hover {
-    background: #f7f7f7;
+    /* background: #f7f7f7; */
     cursor: pointer;
 }
 
@@ -549,6 +549,55 @@ input[type="search"]{
     font-size: 16px;
     line-height: 1.4rem;
     margin-bottom: .35rem;
+}
+.store-new-arrival .card-body {
+    padding: 5px 25px 0;
+}
+.store-new-arrival .card-text {
+    font-size: 13px;
+    line-height: 1.4em;
+}
+.store-new-arrival .card-title {
+    margin-bottom: .35rem;
+    display: inline-block;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+}
+.store-new-arrival .card-image {
+    display: block;
+    width: 155px;
+    height: auto;
+    margin: 10px auto;
+}
+.item-size {
+    display: block;
+    font-size: 13px;
+    margin-top: 3px;
+    margin-bottom: 7px;
+}
+
+.hide {
+    display: none;   
+}
+
+.item-add-btn {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 115px;
+    width: 100%;
+    height: 53px;
+    padding: 10px;
+    padding-bottom: 0;
+    background-image: -webkit-linear-gradient( bottom , white 33%, rgba(255, 255, 255, 0) 100%);
+    background-image: linear-gradient(to top, white 33%, rgba(255, 255, 255, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9ffffff', endColorstr='#ffffff',GradientType=0 );
+}
+
+
+.muted {
+    color: #999;
 }
 .store-featured-product .card-title {
     margin-bottom: .15rem;

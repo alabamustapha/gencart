@@ -7,15 +7,6 @@
     
 </div> <!-- cart modal -->
 
-
-
-
-
-
-
-
-
-
 <div class="content">
 
     <div class="container">
@@ -52,24 +43,260 @@
                     <div class="owl-carousel owl-theme">
 
                         <div>
-                            <img src="{{ asset('images/sameday.jpg') }}" alt="">
+                            <div class="card" style="width: 12rem;">
+                                <div class="card-img-top">
+                                    <img src="{{ asset('images/sameday.jpg') }}" alt="">
+                                </div>
+                                <div class="card-body">
+
+                                    <div class="item-add-btn">
+                                        <div class="favourite float-left">
+                                            <i class="fa fa-heart-o fa-lg"></i>
+                                        </div>
+                                        <div class="add-btn float-right">
+                                            <button type="submit" class="btn btn-success"> <i class="fa fa-plus"></i> Add</button>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="card-title">$1.54</h4>
+                                    <p class="card-text">this is a product description. And should be taken just as so</p>
+                                    <span class="item-size muted">120 oz</span>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="card" style="width: 12rem;">
+                                <div class="card-img-top">
+                                    <img src="{{ asset('images/sameday.jpg') }}" alt="">
+                                </div>
+                                <div class="card-body">
+
+                                    <div class="item-add-btn">
+                                        <div class="favourite float-left">
+                                            <i class="fa fa-heart-o fa-lg"></i>
+                                        </div>
+                                        <div class="add-btn float-right">
+                                            <button type="submit" class="btn btn-success"> <i class="fa fa-plus"></i> Add</button>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="card-title">$1.54</h4>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <span class="item-size muted">120 oz</span>
+
+                                </div>
+                            </div>
                         </div>
                         <div>
-                            <img src="{{ asset('images/recipe.jpg') }}" alt="">
+                            <div class="card" style="width: 12rem;">
+                                <div class="card-img-top">
+                                    <img src="{{ asset('images/sameday.jpg') }}" alt="">
+                                </div>
+                                <div class="card-body">
+
+                                    <div class="item-add-btn">
+                                        <div class="favourite float-left">
+                                            <i class="fa fa-heart-o fa-lg"></i>
+                                        </div>
+                                        <div class="add-btn float-right">
+                                            <button type="submit" class="btn btn-success"> <i class="fa fa-plus"></i> Add</button>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="card-title">$1.54</h4>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <span class="item-size muted">120 oz</span>
+
+                                </div>
+                            </div>
                         </div>
                         <div>
-                            <img src="{{ asset('images/product.jpg') }}" alt="">
+                            <div class="card" style="width: 12rem;">
+                                <div class="card-img-top">
+                                    <img src="{{ asset('images/sameday.jpg') }}" alt="">
+                                </div>
+                                <div class="card-body">
+
+                                    <div class="item-add-btn">
+                                        <div class="favourite float-left">
+                                            <i class="fa fa-heart-o fa-lg"></i>
+                                        </div>
+                                        <div class="add-btn float-right">
+                                            <button type="submit" class="btn btn-success"> <i class="fa fa-plus"></i> Add</button>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="card-title">$1.54</h4>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <span class="item-size muted">120 oz</span>
+
+                                </div>
+                            </div>
                         </div>
                         <div>
-                            <img src="{{ asset('images/time.jpg') }}" alt="">
+                            <div class="card" style="width: 12rem;">
+                                <div class="card-img-top">
+                                    <img src="{{ asset('images/sameday.jpg') }}" alt="">
+                                </div>
+                                <div class="card-body">
+
+                                    <div class="item-add-btn">
+                                        <div class="favourite float-left">
+                                            <i class="fa fa-heart-o fa-lg"></i>
+                                        </div>
+                                        <div class="add-btn float-right">
+                                            <button type="submit" class="btn btn-success"> <i class="fa fa-plus"></i> Add</button>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="card-title">$1.54</h4>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <span class="item-size muted">120 oz</span>
+
+                                </div>
+                            </div>
                         </div>
                         <div>
-                            <img src="{{ asset('images/sameday.jpg') }}" alt="">
+                            <div class="card" style="width: 12rem;">
+                                <div class="card-img-top">
+                                    <img src="{{ asset('images/sameday.jpg') }}" alt="">
+                                </div>
+                                <div class="card-body">
+
+                                    <div class="item-add-btn">
+                                        <div class="favourite float-left">
+                                            <i class="fa fa-heart-o fa-lg"></i>
+                                        </div>
+                                        <div class="add-btn float-right">
+                                            <button type="submit" class="btn btn-success"> <i class="fa fa-plus"></i> Add</button>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="card-title">$1.54</h4>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <span class="item-size muted">120 oz</span>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="card" style="width: 12rem;">
+                                <div class="card-img-top">
+                                    <img src="{{ asset('images/sameday.jpg') }}" alt="">
+                                </div>
+                                <div class="card-body">
+
+                                    <div class="item-add-btn">
+                                        <div class="favourite float-left">
+                                            <i class="fa fa-heart-o fa-lg"></i>
+                                        </div>
+                                        <div class="add-btn float-right">
+                                            <button type="submit" class="btn btn-success"> <i class="fa fa-plus"></i> Add</button>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="card-title">$1.54</h4>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <span class="item-size muted">120 oz</span>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="card" style="width: 12rem;">
+                                <div class="card-img-top">
+                                    <img src="{{ asset('images/sameday.jpg') }}" alt="">
+                                </div>
+                                <div class="card-body">
+
+                                    <div class="item-add-btn">
+                                        <div class="favourite float-left">
+                                            <i class="fa fa-heart-o fa-lg"></i>
+                                        </div>
+                                        <div class="add-btn float-right">
+                                            <button type="submit" class="btn btn-success"> <i class="fa fa-plus"></i> Add</button>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="card-title">$1.54</h4>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <span class="item-size muted">120 oz</span>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="card" style="width: 12rem;">
+                                <div class="card-img-top">
+                                    <img src="{{ asset('images/sameday.jpg') }}" alt="">
+                                </div>
+                                <div class="card-body">
+
+                                    <div class="item-add-btn">
+                                        <div class="favourite float-left">
+                                            <i class="fa fa-heart-o fa-lg"></i>
+                                        </div>
+                                        <div class="add-btn float-right">
+                                            <button type="submit" class="btn btn-success"> <i class="fa fa-plus"></i> Add</button>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="card-title">$1.54</h4>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <span class="item-size muted">120 oz</span>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="card" style="width: 12rem;">
+                                <div class="card-img-top">
+                                    <img src="{{ asset('images/sameday.jpg') }}" alt="">
+                                </div>
+                                <div class="card-body">
+
+                                    <div class="item-add-btn">
+                                        <div class="favourite float-left">
+                                            <i class="fa fa-heart-o fa-lg"></i>
+                                        </div>
+                                        <div class="add-btn float-right">
+                                            <button type="submit" class="btn btn-success"> <i class="fa fa-plus"></i> Add</button>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="card-title">$1.54</h4>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <span class="item-size muted">120 oz</span>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- <div>
+                            <div class="card" style="width: 12rem;">
+                                <div class="card-img-top">
+                                    <img src="{{ asset('images/sameday.jpg') }}" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">$1.54</h4>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="/store/rainbow-grocery/departments/pantry">Pantry</a>
+                                </div>
+                            </div>
+                        </div> -->
+                       
+
                         
-                        </div>
+    
+
+                        <!-- 
                         <div>                
                             <img src="{{ asset('images/sameday.jpg') }}" alt="">
-                        </div>
+                        </div> -->
                     </div>
                            
             </div>
