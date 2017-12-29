@@ -28,7 +28,11 @@
             <div class="row m-b-sm">
                 <div class="col-lg-4">
                     <div class="widget-head-color-box navy-bg no-margins p-md text-center">
-                        <img src="{{ asset('images/admin/a3.jpg') }}" class="img-circle " alt="logo">
+                        @if($store->logo)
+                            <img src="{{ asset('storage/' .$store->logo) }}" width="96" height="96" class="img-circle " alt="{{ $store->name}}">
+                        @else
+                            <img src="{{ asset('images/cart-logo.png') }}" width="96" height="96" class="img-circle " alt="{{$store->name}}">
+                        @endif
                         <div class="m-md">
                             <h3 class="font-bold no-margins">
                                 {{ $store->name }}
