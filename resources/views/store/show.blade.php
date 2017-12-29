@@ -4,7 +4,6 @@
 
 <div class="cartModal" style="">
     @include('layouts.partials.cart_modal')
-    
 </div> <!-- cart modal -->
 
 <div class="content">

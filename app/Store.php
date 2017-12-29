@@ -33,6 +33,14 @@ class Store extends Model
         return $this->hasMany('App\Department');
     }
 
+    public function categories()
+    {
+        return $this->belongsToMany('App\Category');
+    }
+
+    public function hasCategory($category_id){
+        return $this->belongsToMany('App\Category')->wherePivot('category_id', $category_id);
+    }
 
     public function shelves(){
         return $this->hasMany('App\Shelf');

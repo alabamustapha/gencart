@@ -25,9 +25,11 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/store/welcome', function(){
 
-        $allstores = \App\Store::all();
+        $stores = \App\Store::with('categories')->get();
 
-        return view('store.welcome', compact('allstores'));
+        $categories = \App\Category::all();
+
+        return view('store.welcome', compact(['stores', 'categories']));
     });
 
     Route::get('/stores/{store}', 'StoreController@show')->name('show_store');
