@@ -18,9 +18,8 @@ class CreateOrderProductOptionTable extends Migration
             $table->unsignedInteger('order_product_id');
             $table->unsignedInteger('option_id');
             $table->unsignedInteger('quantity');
-
-            $table->foreign('order_product_id')->refences('id')->on('order_product');
-            $table->foreign('option_id')->refences('id')->on('options');
+            $table->foreign('order_product_id')->references('id')->on('order_product');
+            $table->foreign('option_id')->references('id')->on('options');
             $table->timestamps();
         });
     }

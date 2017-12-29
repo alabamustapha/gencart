@@ -41,9 +41,46 @@ class RegisterController extends Controller
         
     }
 
-    // protected function redirectTo(){
-    //     return '/';
-    // }
+
+    /**
+     * Get a validator for an incoming registration request.
+     *
+     * @param  array  $data
+     * @return \Illuminate\Contracts\Validation\Validator
+     */
+    protected function validator(array $data)
+    {
+        return Validator::make($data, [
+            'name' => 'required|string|max:255',
+            'address' => 'required|string|max:255',
+            'email' => 'nullable|string|email|max:255|unique:users',
+            'password' => 'required|string|min:6|confirmed',
+            'zipcode' => 'nullable|string|min:5',
+            'lat_long' => 'nullable|string',
+            'place_id' => 'nullable|string',
+        ]);
+    }
+
+    /**
+     * Create a new user instance after a valid registration.
+     *
+     * @param  array  $data
+     * @return \App\User
+     */
+    protected function create(array $data)
+    {
+        return User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'address' => $data['address'],
+            'zipcode' => $data['zipcode'],
+            'place_id' => $data['place_id'],
+            'phone' => $data['phone'],
+            'lat_long' => $data['lat_long'],
+            'password' => bcrypt($data['password'])
+        ]);
+    }
+
 
     /**
      * The user has been registered.

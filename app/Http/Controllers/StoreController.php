@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Store;
+use App\Category;
 class StoreController extends Controller
 {
     /**
@@ -66,7 +67,9 @@ class StoreController extends Controller
      */
     public function show(Store $store)
     {
-        return view('store.show', compact('store'));
+        $stores = Store::all();
+        $categories = Category::all();
+        return view('store.show', compact(['store', 'categories', 'stores']));
     }
 
     /**

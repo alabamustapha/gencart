@@ -48,7 +48,7 @@
                         <h2>Choose a Store to Begin shopping</h2>
                     </li>
                     <li class="list-group-item text-center">
-                        <h3>Stores in <strong>{{ explode(',', auth()->user()->address)[0] }}</strong></h3>
+                        <h3><strong>Available stores around you</strong></h3>
                     </li>
 
                     <li class="list-group-item">
@@ -57,21 +57,16 @@
                             <li class="nav-item">
                                 <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">All</a>
                             </li>
+                            @if(auth()->user()->zipcode)
                             <li class="nav-item">
-                                <a class="nav-link" id="petsupplies-tab" data-toggle="tab" href="#petsupplies" role="tab" aria-controls="petsupplies" aria-selected="false">Pet supplies</a>
+                                <a class="nav-link" id="zipcode-tab" data-toggle="tab" href="#zipcode" role="tab" aria-controls="zipcode" aria-selected="true">{{ 'In ' . auth()->user()->zipcode }}</a>
                             </li>
+                            @endif
+                            @foreach($categories as $category)
                             <li class="nav-item">
-                                <a class="nav-link" id="meals-tab" data-toggle="tab" href="#meals" role="tab" aria-controls="meals" aria-selected="false">Meals</a>
+                                <a class="nav-link" id="{{ $category->slug }}-tab" data-toggle="tab" href="#{{ $category->slug }}" role="tab" aria-controls="{{ $category->slug }}" aria-selected="false">{{ $category->name }}</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="drugstores-tab" data-toggle="tab" href="#drugstores" role="tab" aria-controls="drugstores" aria-selected="false">Drugstores</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="groceries-tab" data-toggle="tab" href="#groceries" role="tab" aria-controls="groceries" aria-selected="false">Groceries</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="alcohol-tab" data-toggle="tab" href="#alcohol" role="tab" aria-controls="alcohol" aria-selected="false">Alcohol</a>
-                            </li>
+                            @endforeach
                         </ul>
                     </li>
 
@@ -85,9 +80,56 @@
             <div class="tab-content" id="myTabContent">
     
                 <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
-                    @if(count($allstores))
+                    @if(count($stores))
                        <div class="row">
-                        @foreach($allstores as $store)
+                        @foreach($stores as $store)
+                        <div class="col-md-3">
+                            <div class="card" style="width: 15rem;">
+                                <div class="card text-center">
+                                    @if($store->logo)
+                                    <a href="#">
+                                        <img class="card-img-top card-img-rounded" src="{{ asset('storage/' . $store->logo) }}" alt="{{$store->name}}">
+                                    </a>
+                                    @else
+                                    <a href="#">
+                                        <img class="card-img-top card-img-rounded" src="{{ asset('images/cart-logo.png') }}" alt="{{$store->name}}">
+                                    </a>
+                                    @endif
+
+
+                                    <div class="card-body">
+                                        <a href="{{route('show_store', $store->slug)}}">
+                                            <h4 class="card-title">{{ $store->name }}</h4>
+                                        </a>
+                                        <p class="card-text"><small class="text-muted" style="font-size: 13px"> 
+                                            @foreach($store->categories as $store_category) 
+                                                @if($loop->last) 
+                                                    {{ $store_category->name }} 
+                                                @else 
+                                                    {{ $store_category->name }} &middot;
+                                                @endif 
+                                            @endforeach</small>
+                                        </p>
+                                    </div>
+                                </div>               
+                            </div>
+                        </div>
+                        @endforeach
+                       </div>
+                    @else
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <i class="fa fa-shopping-cart fa-5x"></i>
+                            <h1>No Stores Currently, please check back later</h1>
+                        </div>
+                    </div>
+                    @endif
+                </div>
+
+                <div class="tab-pane fade show" id="zipcode" role="tabpanel" aria-labelledby="zipcode-tab">
+                    @if(count($stores = $stores->where('zipcode', auth()->user()->zipcode)))
+                       <div class="row">
+                        @foreach($stores as $store)
                             <div class="col-md-3">
                             <div class="card" style="width: 15rem;">
                                 <div class="card text-center">
@@ -106,7 +148,15 @@
                                     <a href="{{route('show_store', $store->slug)}}">
                                         <h4 class="card-title">{{ $store->name }}</h4>
                                     </a>
-                                    <p class="card-text"><small class="text-muted" style="font-size: 13px">Groceries &middot; Organic &middot; Specialty </small></p>
+                                    <p class="card-text"><small class="text-muted" style="font-size: 13px"> 
+                                        @foreach($store->categories as $store_category) 
+                                            @if($loop->last) 
+                                                {{ $store_category->name }} 
+                                            @else 
+                                                {{ $store_category->name }} &middot;
+                                            @endif 
+                                        @endforeach</small>
+                                    </p>
                                     </div>
                                 </div>              
                                 
@@ -118,85 +168,51 @@
                     <div class="row">
                         <div class="col-lg-12 text-center">
                             <i class="fa fa-shopping-cart fa-5x"></i>
-                            <h1>No Stores Currently, please check back later</h1>
+                            <h1>No Stores Currently in {{ auth()->user()->zipcode }}, please check back later</h1>
                         </div>
                     </div>
                     @endif
-                    
                 </div>
 
-                <div class="tab-pane fade" id="petsupplies" role="tabpanel" aria-labelledby="petsupplies-tab">
-                    <div class="card-columns">
-                        <div class="card text-center">
-                            <a href="#">
-                                <img class="card-img-top card-img-rounded" src="/images/recipe.jpg" alt="">
-                            </a>
-                            <div class="card-body">
-                            <h4 class="card-title">Whole Foods</h4>
-                            <p class="card-text"><small class="text-muted" style="font-size: 13px">Groceries &middot; Organic &middot; Specialty </small></p>
+                @foreach($categories as $category)
+                <div class="tab-pane fade" id="{{ $category->slug }}" role="tabpanel" aria-labelledby="{{ $category->slug }}-tab">
+                    
+                    @foreach($stores as $store)
+                    
+                    @if($store->hasCategory($category->id))
+                        <div class="card-columns">
+                            <div class="card text-center">
+                                @if($store->logo)
+                                    <a href="#">
+                                        <img class="card-img-top card-img-rounded" src="{{ asset('storage/' . $store->logo) }}" alt="{{$store->name}}">
+                                    </a>
+                                    @else
+                                    <a href="#">
+                                        <img class="card-img-top card-img-rounded" src="{{ asset('images/cart-logo.png') }}" alt="{{$store->name}}">
+                                    </a>
+                                    @endif
+
+
+                                    <div class="card-body">
+                                    <a href="{{route('show_store', $store->slug)}}">
+                                        <h4 class="card-title">{{ $store->name }}</h4>
+                                    </a>
+                                    <p class="card-text"><small class="text-muted" style="font-size: 13px"> 
+                                        @foreach($store->categories as $store_category) 
+                                            @if($loop->last) 
+                                                {{ $store_category->name }} 
+                                            @else 
+                                                {{ $store_category->name }} &middot;
+                                            @endif 
+                                        @endforeach</small>
+                                    </p>    
                             </div>
                         </div>
-                    </div>
+                    @endif
+                    @endforeach
                     
                 </div>
-
-                <div class="tab-pane fade" id="meals" role="tabpanel" aria-labelledby="meals-tab">
-                    <div class="card-columns">
-                        <div class="card text-center">
-                            <a href="#">
-                                <img class="card-img-top card-img-rounded" src="/images/recipe.jpg" alt="">
-                            </a>
-                            <div class="card-body">
-                                <h4 class="card-title">Whole Foods</h4>
-                                <p class="card-text"><small class="text-muted" style="font-size: 13px">Groceries &middot; Organic &middot; Specialty </small></p>
-                            </div>
-                        </div>               
-                    </div>
-                </div>
-
-                <div class="tab-pane fade" id="drugstores" role="tabpanel" aria-labelledby="drugstores-tab">
-                    <div class="card-columns">
-                        <div class="card text-center">
-                            <a href="#">
-                                <img class="card-img-top card-img-rounded" src="/images/recipe.jpg" alt="">
-                            </a>
-                            <div class="card-body">
-                                <h4 class="card-title">Whole Foods</h4>
-                                <p class="card-text"><small class="text-muted" style="font-size: 13px">Groceries &middot; Organic &middot; Specialty </small></p>
-                            </div>
-                        </div>           
-                    </div>
-                </div>
-
-                <div class="tab-pane fade" id="groceries" role="tabpanel" aria-labelledby="groceries-tab">
-                    <div class="card-columns">
-                        <div class="card text-center">
-                            <a href="#">
-                                <img class="card-img-top card-img-rounded" src="/images/recipe.jpg" alt="">
-                            </a>
-                            <div class="card-body">
-                                <h4 class="card-title">Whole Foods</h4>
-                                <p class="card-text"><small class="text-muted" style="font-size: 13px">Groceries &middot; Organic &middot; Specialty </small></p>
-                            </div>
-                        </div>             
-                        
-                    </div>
-                </div>
-
-                <div class="tab-pane fade" id="alcohol" role="tabpanel" aria-labelledby="alcohol-tab">
-                    <div class="card-columns">
-                        <div class="card text-center">
-                            <a href="#">
-                                <img class="card-img-top card-img-rounded" src="/images/recipe.jpg" alt="">
-                            </a>
-                            <div class="card-body">
-                            <h4 class="card-title">Whole Foods</h4>
-                            <p class="card-text"><small class="text-muted" style="font-size: 13px">Groceries &middot; Organic &middot; Specialty </small></p>
-                            </div>
-                        </div>     
-                        
-                    </div>
-                </div>
+                @endforeach
 
             </div> <!-- tab ends here -->
         </div> <!-- container ends here -->
@@ -212,7 +228,7 @@
 
     </div> <!-- app ends here -->
     <!-- Scripts -->
-     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
     <script src="{{ asset('js/bootstrap.min.js')}}"></script>

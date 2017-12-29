@@ -19,6 +19,7 @@
                                 
                                 <input type="hidden" name="zipcode"  id="zipcode" value="">
                                 <input type="hidden" name="place_id" id="placeId" value="">
+                                <input type="hidden" name="lat_long" id="lat_long" value="">
 
                                 <div class="form-row"> 
                                     <div class="col-md-10">
@@ -148,13 +149,15 @@
         // Listen for the event fired when the user selects a prediction and retrieve
         // more details for that place.
         autocomplete.addListener('place_changed', function() {
-          var place = autocomplete.getPlace();
+        
+        var place = autocomplete.getPlace();
+
+        $('input#lat_long').val(place.geometry.location.lat() + ',' + place.geometry.location.lng());
+        $('input#placeId').val(place.id);
           place.address_components.forEach(element => {
-                
                 address_type = element.types ;
                     if(address_type.find(zip_code)){
                         $('input#zipcode').val(element.short_name);
-                        $('input#placeId').val(place.id);
                     }
           });
 
