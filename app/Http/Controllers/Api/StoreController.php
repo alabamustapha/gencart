@@ -16,7 +16,7 @@ class StoreController extends Controller
      */
     public function all()
     {
-        $stores = Store::with(['departments', 'products', 'shelves'])->get();
+        $stores = Store::with(['departments', 'shelves'])->get();
         return $stores;
     }
 
