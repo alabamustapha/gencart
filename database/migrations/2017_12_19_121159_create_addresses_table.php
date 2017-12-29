@@ -19,7 +19,8 @@ class CreateAddressesTable extends Migration
             $table->string('label');
             $table->string('address');
             $table->string('zipcode')->nullable();
-            $table->string('lat_long');
+            $table->string('lat_long')->nullable();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
