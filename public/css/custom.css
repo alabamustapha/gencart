@@ -365,6 +365,10 @@ input[type="search"]{
     will-change: position;
 }
 
+#myTab .nav-link {
+    color: rgba(0,0,0,.9);
+}
+
 .nav-tabs-inner-wrapper {
     height: 100%;
     display: inline-block;
@@ -513,7 +517,6 @@ input[type="search"]{
 
 .list-group-item {
     border: none;
-    /* padding: 1.25rem 1.25rem; */
     border-bottom: 1px solid rgba(0, 0, 0, .125);
     border-top: 1px solid rgba(0, 0, 0, .125);
 }
@@ -526,7 +529,6 @@ input[type="search"]{
 }
 
 .card:hover {
-    /* background: #f7f7f7; */
     cursor: pointer;
 }
 
@@ -661,7 +663,7 @@ input[type="search"]{
 
 .modal.modal-left-pane .modal-dialog, 
 .modal.modal-right-pane .modal-dialog {
-  max-width: 520px;
+  max-width: 620px;
   min-height: calc(100vh - 56px);
 }
 .modal.modal-left-pane.show .modal-dialog, 
