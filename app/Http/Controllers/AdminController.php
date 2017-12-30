@@ -6,11 +6,15 @@ use Illuminate\Http\Request;
 use App\Store;
 use App\Brand;
 use App\Department;
+use App\Http\Helpers\Statistics;
 
 class AdminController extends Controller
 {
     public function dashboard(){
-        return view('admin.dashboard');
+
+        $statistics = new Statistics();
+        return view('admin.dashboard', compact('statistics'));
+        
     }
 
     public function showUsers(){

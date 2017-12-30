@@ -26,5 +26,6 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         require_once __DIR__ . '/../Http/Helpers/Navigation.php';
+        require_once __DIR__ . '/../Http/Helpers/Statistics.php';
     }
 }

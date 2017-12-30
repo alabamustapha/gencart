@@ -8,15 +8,15 @@
                     <div class="col-lg-3">
                         <div class="ibox float-e-margins">
                             <div class="ibox-title">
-                                <span class="label label-success pull-right">Monthly</span>
-                                <h5>Sales</h5>
+                                <span class="label label-success pull-right">All</span>
+                                <h5>Stores</h5>
                             </div>
                             <div class="ibox-content">
-                                <h1 class="no-margins"><i class="fa fa-dollar"></i>&nbsp;40 886,200</h1>
-                                <div class="stat-percent font-bold text-success">20%
+                                <h1 class="no-margins"><i class="fa fa-shopping-cart"></i>&nbsp;{{ $statistics->totalStores() }}</h1>
+                                <!-- <div class="stat-percent font-bold text-success">20%
                                     <i class="fa fa-level-up"></i>
-                                </div>
-                                <small>Total sales</small>
+                                </div> -->
+                                <small>Total stores</small>
                             </div>
                         </div>
                     </div>
@@ -27,7 +27,7 @@
                                 <h5>Orders</h5>
                             </div>
                             <div class="ibox-content">
-                                <h1 class="no-margins"> <i class="fa fa-shopping-bag"></i>  275,800</h1>
+                                <h1 class="no-margins"> <i class="fa fa-shopping-bag"></i>  {{ $statistics->totalOrders() }}</h1>
                             <div class="stat-percent font-bold text-info">20%
                                     <i class="fa fa-level-up"></i>
                                 </div>
@@ -38,14 +38,14 @@
                     <div class="col-lg-3">
                         <div class="ibox float-e-margins">
                             <div class="ibox-title">
-                                <span class="label label-primary pull-right">annual</span>
-                                <h5>users</h5>
+                                <!-- <span class="label label-primary pull-right">annual</span> -->
+                                <h5>Users</h5>
                             </div>
                             <div class="ibox-content">
-                                <h1 class="no-margins"><i class="fa fa-users"></i>&nbsp;106,120</h1>
-                                <div class="stat-percent font-bold text-navy">44%
+                                <h1 class="no-margins"><i class="fa fa-users"></i>&nbsp;{{ $statistics->totalUsers() }}</h1>
+                                <!-- <div class="stat-percent font-bold text-navy">44%
                                     <i class="fa fa-level-up"></i>
-                                </div>
+                                </div> -->
                                 <small>all users</small>
                             </div>
                         </div>
@@ -53,11 +53,11 @@
                     <div class="col-lg-3">
                         <div class="ibox float-e-margins">
                             <div class="ibox-title">
-                                <!-- <span class="label label-danger pull-right">Low value</span> -->
-                                <h5>products</h5>
+                                <span class="label label-danger pull-right">All</span>
+                                <h5>Products</h5>
                             </div>
                             <div class="ibox-content">
-                                <h1 class="no-margins"><i class="fa fa-shopping-basket"></i>&nbsp;80,600</h1>
+                                <h1 class="no-margins"><i class="fa fa-shopping-basket"></i>&nbsp;{{ $statistics->totalProducts() }}</h1>
                                 <div class="stat-percent font-bold text-danger">
                                     
                                 </div>
@@ -71,12 +71,7 @@
                     <div class="col-lg-12">
                        <div class="ibox">
                             <div class="ibox-content">
-                                <span class="text-muted small pull-right">Last modification:
-                                    <i class="fa fa-clock-o"></i> 2:10 pm - 12.06.2014</span>
-                                <h2><i class="fa fa-shopping-bag"></i>&nbsp;recent Orders</h2>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                </p>
+                                <h2><i class="fa fa-shopping-bag"></i>&nbsp;Recent Orders</h2>
                                 <div class="row">
                                         <div class="col-lg-3">
                                         <select name="" id="" class="form-control">
