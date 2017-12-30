@@ -28,51 +28,36 @@
 	                <div class="clients-list">
 						<div class="full-height-scroll">
 							<div class="table-responsive" style="margin-top:10px;">
+							
 								<table class="table table-striped table-bordered table-hover customers-datatable">
-								<thead>
-											<tr>
-												<th>#</th>
-												<th>name</th>
-												<th>location</th>
-												<th>contact</th>
-												<th>status</th>
-												<th>action</th>
-											</tr>
+										<thead>
+											<th>#</th>
+											<th>Name</th>
+											<th>Address</th>
+											<th>Phone</th>
+											<th>Email</th>
+											<th>Zipcode</th>
+											<th>Total orders</th>
 										</thead>
-									<tbody>
-										<tr>
-											<td>#</td>
-											<td>Jane Doe</td>
-											<td>Goningora , kaduna</td>
-											<td> <i class="fa fa-phone"></i>&nbsp;000-000-0000</td>
-											<td><span class="label label-primary">active</span></td>
-											<td><a href="#" class="btn btn-danger">delete&nbsp;</a></td>
-										</tr>
-										<tr>
-											<td>#</td>
-											<td>Jane Doe</td>
-											<td>Goningora , kaduna</td>
-											<td><i class="fa fa-phone"></i>&nbsp;000-000-0000</td>
-											<td><span class="label label-warning">pending</span></td>
-											<td><a href="#" class="btn btn-danger">delete&nbsp;</a></td>
-											
-										</tr>
-										<tr>
-											<td>#</td>
-											<td>Jane Doe</td>
-											<td>Goningora , kaduna</td>
-											<td><i class="fa fa-phone"></i>&nbsp;000-000-0000</td>
-											<td><span class="label label-primary">active</span></td>
-											<td><a href="#" class="btn btn-danger">delete&nbsp;</a></td>
-											
-										</tr>
-									</tbody>
-									
+										<tbody>
+											@foreach($users as $user)
+											<tr>
+												<td>{{ $loop->iteration }}</td>
+												<td><a href="#" title="View {{ $user->name}}">{{ $user->name }}</a></td>
+												<td>{{ $user->address }}</td>
+												<td>{{ $user->phone }}</td>
+												<td>{{ $user->email }}</td>
+												<td>{{ $user->zipcode }}</td>
+												<td>{{ "2" }}</td>
+											</tr>
+											@endforeach
+										</tbody>
 								</table>
-
-
+								<div class="">
+									{{ $users->links() }}	
+								</div>
 							</div>
-
+							
 						</div>
 	                </div>
 
