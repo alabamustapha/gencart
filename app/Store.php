@@ -54,4 +54,8 @@ class Store extends Model
     {
         return 'slug';
     }
+
+    public function manager(){
+        return $this->belongsTo('App\User');
+    }
 }

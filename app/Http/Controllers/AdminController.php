@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Store;
 use App\Brand;
 use App\Department;
+use App\User;
 use App\Http\Helpers\Statistics;
 
 class AdminController extends Controller
@@ -14,7 +15,7 @@ class AdminController extends Controller
 
         $statistics = new Statistics();
         return view('admin.dashboard', compact('statistics'));
-        
+
     }
 
     public function showUsers(){
@@ -22,7 +23,8 @@ class AdminController extends Controller
     }
 
     public function customers(){
-    	return view('admin.customers');
+        $users = User::paginate(30);
+    	return view('admin.customers', compact('users'));
     }
 
     public function add_shopper(){
