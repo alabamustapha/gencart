@@ -447,8 +447,12 @@ input[type="search"]{
     background-color: transparent !important;
 }
 
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(255, 255, 255);
+}
+
 .navbar-nav .nav-link {
-    color: rgb(255, 255, 255) !important;
+    color: rgb(255, 255, 255);
     font-weight: 700;
     font-size: 17px;
 }

@@ -14,7 +14,6 @@ $(document).ready(function () {
     });
 
     // show add item button on each product
-
     $(".store-new-arrival .card").hover(function () {
         $(this).find(".item-add-btn").fadeIn();
         }
