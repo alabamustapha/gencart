@@ -21,4 +21,12 @@ $(document).ready(function () {
             $(this).find(".item-add-btn").fadeOut();
     });
 
+    $(".store-new-arrival .owl-carousel").hover(function (){
+        $(this).find(".owl-prev").css('opacity', '1');
+        $(this).find(".owl-next").css('opacity', '1');
+    }, function (){
+        $(this).find(".owl-prev").css('opacity', '0');
+        $(this).find(".owl-next").css('opacity', '0');
+    });
+
 });

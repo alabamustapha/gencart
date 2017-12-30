@@ -64,7 +64,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div>
                             <div class="card" style="width: 12rem;">
                                 <div class="card-img-top">
@@ -273,29 +272,6 @@
                             </div>
                         </div>
 
-
-
-                        <!-- <div>
-                            <div class="card" style="width: 12rem;">
-                                <div class="card-img-top">
-                                    <img src="{{ asset('images/sameday.jpg') }}" alt="">
-                                </div>
-                                <div class="card-body">
-                                    <h4 class="card-title">$1.54</h4>
-                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                    <a href="/store/rainbow-grocery/departments/pantry">Pantry</a>
-                                </div>
-                            </div>
-                        </div> -->
-                       
-
-                        
-    
-
-                        <!-- 
-                        <div>                
-                            <img src="{{ asset('images/sameday.jpg') }}" alt="">
-                        </div> -->
                     </div>
                            
             </div>
@@ -496,8 +472,7 @@
         $(document).ready(function(){
             $(window).scroll(function () {
                 var scroll = $(window).scrollTop();
-                if (scroll > 200) {
-                    
+                if (scroll > 200) {                    
                     $("#navbar").removeClass('bg-light').css('backgroundColor', '#fff');
                     $("#navbar-search").removeClass("hidden");
                     $(".navbar-nav .nav-link").css('color', 'rgb(67, 176, 42)');
@@ -531,7 +506,7 @@
                 'display': 'block',
                 'left': '8px',
                 'right': '8px',
-                'opacity': '1',
+                'opacity': '0',
             });
             $(".owl-next").html('<i class="fa fa-chevron-right"></i>');
             $(".owl-next").css({
@@ -551,7 +526,7 @@
                 'top': '83px',
                 'display': 'block',
                 'right': '8px',
-                'opacity': '1'
+                'opacity': '0'
             });
 
 
