@@ -537,11 +537,13 @@ input[type="search"]{
     font-size: 14px;
 }
 
-.featured-products {
+.featured-products-title, 
+.new-arrival-title {
     margin-bottom: 1.25rem;
+    font-weight: 500;
 }
 
-.store-featured-product .jumbotron,
+.featured-products .jumbotron,
 .store-new-arrival .jumbotron,
 .store-sales .jombotron {
     background-color: #fff;
@@ -555,21 +557,25 @@ input[type="search"]{
     line-height: 1.4rem;
     margin-bottom: .35rem;
 }
-.store-new-arrival .card-body {
+.store-new-arrival .card-body,
+.featured-products .card-body {
     padding: 5px 25px 0;
 }
-.store-new-arrival .card-text {
+.store-new-arrival .card-text,
+.featured-products .card-text {
     font-size: 13px;
     line-height: 1.4em;
 }
-.store-new-arrival .card-title {
+.store-new-arrival .card-title,
+.featured-products .card-title {
     margin-bottom: .35rem;
     display: inline-block;
     color: black;
     font-size: 16px;
     font-weight: 600;
 }
-.store-new-arrival .card-image {
+.store-new-arrival .card-image,
+.featured-products .card-image {
     display: block;
     width: 155px;
     height: auto;
@@ -609,7 +615,6 @@ input[type="search"]{
 }
 
 .store-department .dept-title {
-    margin-top: 50px;
     margin-bottom: 40px;
     font-weight: 500;
 }
@@ -707,13 +712,17 @@ input[type="search"]{
 ********************************************/
 
 
+.ads-container {
+    display: block;
+}
 
-
-
-
-
-
-/* helper css classes */
+.ad-container {
+    width: 416px;
+    height: 200px;
+    /* display: inline-block;
+    float: left;
+    background: #43B02A; */
+}
 
 
 
