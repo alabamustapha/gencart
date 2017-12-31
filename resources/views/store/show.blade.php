@@ -628,12 +628,12 @@
                 if (scroll > 200) {                    
                     $("#navbar").removeClass('bg-light').css('backgroundColor', '#fff');
                     $("#navbar-search").removeClass("hidden");
-                    $(".navbar-nav .nav-link").css('color', 'rgb(67, 176, 42)');
+                    $(".navbar-nav .nav-link:not(#myTab .nav-link)").css('color', 'rgb(67, 176, 42)');
                     $('#nav-tabs-outer').addClass('fixed').css('top', '56px');            
                 }else {
                     $('#navbar').addClass('bg-light');
                     $("#navbar-search").addClass("hidden");
-                    $(".navbar-nav .nav-link").css('color', 'rgb(255, 255, 255)');
+                    $(".navbar-nav .nav-link:not(#myTab .nav-link)").css('color', 'rgb(255, 255, 255)');
                     $("#nav-tabs-outer").removeClass('fixed').css('top', '0');
                 }
             });
