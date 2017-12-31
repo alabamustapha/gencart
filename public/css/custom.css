@@ -674,7 +674,9 @@ input[type="search"]{
 .modal.modal-right-pane.show .modal-dialog {
   transform: translate(0, 0);
 }
-.modal.modal-left-pane .modal-content, 
+.modal.modal-left-pane .modal-content{
+    min-height: calc(100vh - 66px)
+} 
 .modal.modal-right-pane .modal-content {
   min-height: calc(100vh - 0);
   /* height: 100vh; */
