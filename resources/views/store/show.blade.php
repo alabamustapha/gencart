@@ -2,9 +2,13 @@
 
 @section('content')
 
-<div class="cartModal" style="">
+<div class="cartModal">
     @include('layouts.partials.cart_modal')
 </div> <!-- cart modal -->
+
+<div class="store-dropdown-modal">
+    @include('layouts.partials.store-dropdown-modal')
+</div>
 
 <div class="content">
 
@@ -623,6 +627,8 @@
 @section('script')
     <script>
         $(document).ready(function(){
+
+
             $(window).scroll(function () {
                 var scroll = $(window).scrollTop();
                 if (scroll > 200) {                    
@@ -681,6 +687,13 @@
                 'right': '8px',
                 'opacity': '0'
             });
+
+
+            // $("#store-modal").click(function(){
+            //     $(this).find(".fa-chevron-down").css('transform', 'rotateX(150deg)');
+            // }, function() {
+            //     $(this).find(".fa-chevron-down").css('transform', 'rotateX(150deg)');
+            // });
 
 
             
