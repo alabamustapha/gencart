@@ -32,6 +32,8 @@ Route::middleware(['auth'])->group(function () {
         return view('store.welcome', compact(['stores', 'categories']));
     });
 
+    Route::get('user/become_shopper', 'ShopperController@showTerms')->name('become_shopper');
+
     Route::get('/stores/{store}', 'StoreController@show')->name('show_store');
 
 });

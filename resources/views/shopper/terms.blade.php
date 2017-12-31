@@ -1,3 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{ app()->getLocale() }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'GenCart') }} - @yield('title') </title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+
+    <!-- Bootstrap maxcdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" 
+    integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" 
+    crossorigin="anonymous">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- Custom stylesheet - for your changes -->
+    <link href="{{ asset('/css/custom.css') }}" rel="stylesheet">
+
+</head>
+<body style="background-color: #f7f7f7;">
+    <div id="app">
+
+      
 <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
     <a class="navbar-brand" href="#">
     <img src="{{ asset('images/cart-logo.png')}}" width="57" class="d-inline-block align-middle" alt="">
@@ -203,7 +237,7 @@
         <div id="navbar-search" class="search-bar primary-nav-search-bar hidden" aria-hidden="false" style="flex-grow: 1;">
             <form>
                 <span class="twitter-typeahead" style="position: relative; display: inline-block;">
-                    <input type="search" class="tt-input search-field" placeholder="Search {{ isset($store) ? $store->name : "" }}..." style="position: relative; vertical-align: top;">
+                    <input type="search" class="tt-input search-field" placeholder="Search " style="position: relative; vertical-align: top;">
                 </span>
                 <button class="search-btn" type="submit" aria-label="start search" style="color: rgb(67, 176, 42);"><i class="fa fa-search"></i></button>
             </form>
@@ -263,7 +297,72 @@
                     <span class="cart-qty-badge">1</span>                    
                     <span class="sr-only">cart items</span>
             </button>
-
         </form>
     </div>
 </nav> 
+<header class="store-header" style="background: url('{{ asset('storage/banners/shopper-banner.jpeg') }}'), transparent; background-repeat: no-repeat;background-position: 50% 50%;background-size: cover;">
+    @include('layouts.partials.storenavbar')
+
+     <div class="store-header-inner-wrapper" style="opacity: 1;">
+        <div class="store-header-logo" aria-hidden="true">
+                <img src="{{ asset('images/cart-logo.png')}}" width="96" height="96" alt="GenCart">
+        </div>
+        <h1>Become a shopper</h1>
+        
+        <div class="search-bar primary-nav-search-bar" aria-hidden="false" style="flex-grow: 1;">
+            <form>
+                <span class="twitter-typeahead" style="position: relative; display: inline-block;">
+                    <input type="search" class="tt-input search-field" placeholder="Search ..." style="position: relative; vertical-align: top;">
+                </span>
+                <button class="search-btn" type="submit" aria-label="start search" style="color: rgb(67, 176, 42);"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+</header>
+        
+
+
+<div class="row justify-content-center">
+    <div class="col-10">
+            <div class="card border-success mb-3">
+                
+                <div class="card-header bg-transparent border-success">
+                    Terms and condition
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam tempora autem explicabo dolore qui minus officia, doloribus veritatis dicta culpa necessitatibus voluptatum delectus molestiae facere sit ab accusamus! Repudiandae, perferendis.<br>
+
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique distinctio, laudantium, assumenda deserunt repellendus veniam, unde quas earum modi sit hic error doloremque? Vitae, magnam corporis dignissimos officiis provident voluptatibus!<br>
+
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam rerum minima sunt itaque rem repudiandae nostrum quia explicabo voluptas aliquid similique vitae corporis deserunt labore impedit exercitationem, sed iusto mollitia?<br>
+                    </p>
+
+                    <form action="#" method="POST">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+ 
+    </div>
+</div>
+
+
+
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+    <script src="{{ asset('js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('js/main.js')}}"></script>
+
+    @yield('script')
+
+</body>
+</html>
