@@ -58,6 +58,10 @@
                         <a class="dropdown-item" href="#"><i class="fa fa-sliders"></i> How GenCart Works</a>
                         <a class="dropdown-item" href="#">Lists and Recipes</a>
                         <div class="dropdown-divider"></div>
+                        @if(auth()->user()->role != 'shopper')
+                            <a class="dropdown-item" href="{{ route('become_shopper') }}">Become a shopper</a>
+                            
+                        @endif
                         <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">

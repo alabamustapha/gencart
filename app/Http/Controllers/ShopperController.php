@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Store;
+use App\Category;
+use App\Http\Requests;
 use Illuminate\Http\Request;
 
 class ShopperController extends Controller{
@@ -23,6 +25,19 @@ class ShopperController extends Controller{
 
     public function settings(){
         return view('shopper.settings');
+    }
+
+    public function showTerms(){
+        $stores = Store::all();
+        $categories = Category::all();
+        return view('shopper.terms', compact(['stores', 'categories']));
+    }
+
+    public function shopperRequest(Requests\BecomeShopperRequest $request){
+          auth()->user()->become_a_shopper = 1;
+          auth()->user()->save();
+          
+          return back()->withMessage('Request sent');
     }
 
 
