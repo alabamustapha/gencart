@@ -324,8 +324,19 @@
 
 <div class="row justify-content-center">
     <div class="col-10">
-            <div class="card border-success mb-3">
-                
+            @if(auth()->user()->become_a_shopper)
+               <div class="card mb-3">
+                <img class="card-img-top" src="{{ asset('images/shopper.jpg')}}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Account under review</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aperiam eos quia, id dolorum cumque, quas, aliquam sed similique delectus perspiciatis beatae ex cupiditate optio ipsum dolore suscipit rerum fugiat?</p>
+                    <a class="btn btn-success" href="{{ route('home') }}">
+                            <span class="fa fa-home">&nbsp;Home</span>
+                    </a>
+                </div>
+                </div>
+            @else
+            <div class="card border-success mb-3">  
                 <div class="card-header bg-transparent border-success">
                     Terms and condition
                 </div>
@@ -337,15 +348,28 @@
 
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam rerum minima sunt itaque rem repudiandae nostrum quia explicabo voluptas aliquid similique vitae corporis deserunt labore impedit exercitationem, sed iusto mollitia?<br>
                     </p>
+                    <hr>
+                    
+                    <div class="row justify-content-center">
+                        <div class="col">
+                                <form action="{{ route('shopper_request') }}" method="POST" class="form-inline">
+                                    {{ csrf_field() }}
+                                      <div class="form-check mb-2 mr-sm-2">
+                                        <input class="form-check-input" type="checkbox" id="inlineFormCheck" name="accept" required>
+                                        <label class="form-check-label" for="inlineFormCheck">
+                                        I accept terms and condition
+                                        </label>
+                                    </div>
 
-                    <form action="#" method="POST">
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="customCheck1">
-                            <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+                                    <button type="submit" class="btn btn-primary mb-2">Become a shopper</button> 
+                                </form>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
+            @endif
+
+            
  
     </div>
 </div>
