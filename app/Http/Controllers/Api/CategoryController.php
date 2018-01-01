@@ -6,8 +6,9 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Store;
+use App\Category;
 
-class StoreController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Return a listing of the resource.
@@ -16,8 +17,8 @@ class StoreController extends Controller
      */
     public function all()
     {
-        $stores = Store::with(['departments', 'shelves'])->get();
-        return $stores;
+        $categories = Category::all();
+        return $categories;
     }
 
     /**
@@ -38,24 +39,24 @@ class StoreController extends Controller
      */
     public function store(Requests\CreateStoreRequest $request)
     {
-    
+
         $store = Store::create($request->all());
 
-        if($store) {
+        if ($store) {
 
-           if ($request->hasFile('logo') && $request->file('logo')->isValid()) {
+            if ($request->hasFile('logo') && $request->file('logo')->isValid()) {
                 $path = $request->logo->store('public/logos');
                 $store->logo = str_replace('public/', '', $path);
-				$store->save();  
+                $store->save();
             }
 
-           if ($request->hasFile('banner') && $request->file('banner')->isValid()) {
+            if ($request->hasFile('banner') && $request->file('banner')->isValid()) {
                 $path = $request->banner->store('public/banners');
                 $store->banner = str_replace('public/', '', $path);
-				$store->save();  
+                $store->save();
             }
-       }  
-        
+        }
+
 
         return $store;
     }
@@ -82,16 +83,17 @@ class StoreController extends Controller
     public function destroy(Store $store)
     {
 
-        if($store->delete()){
+        if ($store->delete()) {
             return true;
         }
 
         return false;
-        
+
     }
 
-    public function getStore($id){
-        return Store::with(['departments', 'products', 'shelves'])->whereId($id)->first();
+    public function getStores(Category $category)
+    {
+        return $category->stores()->paginate(10);
     }
 
 }

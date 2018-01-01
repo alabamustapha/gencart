@@ -23,3 +23,7 @@ Route::middleware('auth:api')->post('/register', 'Api\RegisterController@registe
 
 Route::middleware('auth:api')->get('/stores', 'Api\StoreController@all');
 Route::middleware('auth:api')->get('/stores/{id}', 'Api\StoreController@getStore');
+
+Route::middleware('auth:api')->get('/categories', 'Api\CategoryController@all');
+Route::middleware('auth:api')->get('/categories/{category}/stores', 'Api\CategoryController@getStores');
+// Route::middleware('auth:api')->get('/stores/{id}', 'Api\StoreController@getStore');
