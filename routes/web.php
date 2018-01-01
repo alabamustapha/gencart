@@ -132,8 +132,11 @@ Route::middleware(['auth', 'admin'])->group(function () {
 });
 
 
-Route::get('/info/faq' , 'InfoController@faq')->name('info_faq');
-Route::get('/info/About us' , 'InfoController@about')->name('info_about');
+Route::get('/faq' , 'InfoController@faq')->name('faq');
+Route::get('/About us' , 'InfoController@about')->name('about');
+Route::get('/terms' , 'InfoController@terms')->name('terms');
+Route::get('/privacy' , 'InfoController@privacy')->name('privacy');
+Route::get('/help' , 'InfoController@help')->name('help');
 
 
 
