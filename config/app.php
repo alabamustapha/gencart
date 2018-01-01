@@ -178,6 +178,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         \Torann\GeoIP\GeoIPServiceProvider::class,
+        LukePOLO\LaraCart\LaraCartServiceProvider::class,
 
 
     ],
@@ -228,8 +229,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
         'GeoIP' => \Torann\GeoIP\Facades\GeoIP::class,
+        'LaraCart' => LukePOLO\LaraCart\Facades\LaraCart::class,
 
     ],
 
