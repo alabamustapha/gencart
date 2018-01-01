@@ -25,6 +25,10 @@ class Product extends Model
         ];
     }
 
+    public function store()
+    {
+        return $this->belongsTo('App\Store');
+    }
     public function department()
     {
         return $this->belongsTo('App\Department');

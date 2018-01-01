@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Store;
 use App\Category;
+use App\Product;
 class StoreController extends Controller
 {
     /**
@@ -67,6 +68,7 @@ class StoreController extends Controller
      */
     public function show(Store $store)
     {
+        // $new_products = Store::with('products')->where('created_at', '<=', now())
         $stores = Store::all();
         $categories = Category::all();
         return view('store.show', compact(['store', 'categories', 'stores']));

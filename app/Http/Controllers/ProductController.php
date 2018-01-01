@@ -37,6 +37,14 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $product = Product::create($request->all());
+
+        if($product) {
+            if($request->hasFile('image') && $request->file('image')->isValid()){
+                $path = $request->image->store('public/products');
+                $product->image = str_replace('public/', '', $path);
+				$product->save(); 
+            }
+        }
         
         return back()->with('message', $product->name . " Added successfully");
     }

@@ -229,7 +229,7 @@
                                                 <div class="form-group">
                                                     <div class="fileinput fileinput-new" data-provides="fileinput">
                                                         <span class="btn btn-default btn-file"><span class="fileinput-new">Select product image</span>
-                                                        <span class="fileinput-exists">Change</span><input type="file" name="..."/></span>
+                                                        <span class="fileinput-exists">Change</span><input type="file" name="image"/></span>
                                                         <span class="fileinput-filename"></span>
                                                         <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">×</a>
                                                     </div> 
