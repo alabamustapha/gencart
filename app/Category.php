@@ -8,10 +8,8 @@ use Cviebrock\EloquentSluggable\Sluggable;
 class Category extends Model
 {
     use Sluggable;
-    
+
     protected $table = "categories";
-
-
 
     protected $fillable = ['name', 'slug'];
 
