@@ -99,6 +99,12 @@ class ProductController extends Controller
 
         $item = LaraCart::add($product->id, $product->name, $qty = 1, $product->price, ['description' => $product->description]);
 
-        return json_encode($item);
+        $totalItems = count(LaraCart::getItems());
+        $total      = LaraCart::total();
+        $itemQty    = $item->qty;
+        $itemPrice  = $item->price($formatted = true);
+        $itemID     = $item->id;
+
+        return json_encode(['id' => $itemID, 'price' => $itemPrice, 'qty' => $itemQty, 'total' => $total, 'totalItems' => $totalItems]);
     }
 }
