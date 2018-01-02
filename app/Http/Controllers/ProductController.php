@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Product;
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use LukePOLO\LaraCart\Facades\LaraCart;
 
 class ProductController extends Controller
 {
@@ -92,5 +93,12 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         //
+    }
+
+    public function addToCart(Request $request, Product $product){
+
+        $item = LaraCart::add($product->id, $product->name, $qty = 1, $product->price, ['message' => 'some instructions']);
+
+        return json_encode($item);
     }
 }

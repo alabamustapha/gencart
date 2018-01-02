@@ -7,6 +7,8 @@ use App\Http\Requests;
 use App\Store;
 use App\Category;
 use App\Product;
+use LukePOLO\LaraCart\Facades\LaraCart;
+
 class StoreController extends Controller
 {
     /**
@@ -71,7 +73,13 @@ class StoreController extends Controller
         // $new_products = Store::with('products')->where('created_at', '<=', now())
         $stores = Store::all();
         $categories = Category::all();
-        return view('store.show', compact(['store', 'categories', 'stores']));
+        $cartItems = LaraCart::getItems();
+        // foreach ($cartItems as $item) {
+        //     var_dump($item->name);
+        // }
+
+        // dd("f");
+        return view('store.show', compact(['store', 'categories', 'stores', 'cartItems']));
     }
 
     /**

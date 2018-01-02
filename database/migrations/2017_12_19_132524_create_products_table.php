@@ -23,9 +23,9 @@ class CreateProductsTable extends Migration
 			$table->text('description')->nullable();
 			$table->unsignedInteger('total_sale')->default(0);
 			$table->unsignedInteger('store_id');
-			$table->unsignedInteger('department_id');
-			$table->unsignedInteger('shelf_id');
-			$table->unsignedInteger('brand_id');
+			$table->unsignedInteger('department_id')->nullable();
+			$table->unsignedInteger('shelf_id')->nullable();
+			$table->unsignedInteger('brand_id')->nullable();
 			$table->enum('unit',array('no','bunch','kg' , 'g' , 'lt','ml' , 'oz','pcs' , 'pint' , 'pack' , 'dozen', 'bag'))->nullable();
 			$table->float('tax')->default(0);
             $table->enum('status', ['available', 'out of stock', 'unavailable', 'promo'])->default('available');
