@@ -84,7 +84,9 @@
                                     </div>
 
                                     <h4 class="card-title">{{ '$' .$product->price}}</h4>
-                                    <p class="card-text">{{ $product->name}}</p>
+                                    <p class="card-text">
+                                        <a role="button" data-toggle ="modal" data-target=".bd-example-modal-lg">{{$product->name }}</a>
+                                    </p>
                                     <span class="item-size muted">{{$product->unit}}</span>
 
                                 </div>
@@ -126,8 +128,6 @@
                                             <button type="submit" class="btn btn-success"> <i class="fa fa-plus"></i> Add</button>
                                         </div>
                                     </div>
-
-                                    <!-- <button data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button> -->
 
                                     <h4 class="card-title">{{'$'.$product->price}}</h4>
                                     <p class="card-text">
