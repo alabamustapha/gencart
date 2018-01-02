@@ -75,11 +75,11 @@
                                 <div class="card-body">
 
                                     <div class="item-add-btn">
-                                        <div class="favourite float-left">
+                                        <div class="favourite float-left" id="fav-{{ $product->slug }}">
                                             <i class="fa fa-heart-o fa-lg"></i>
                                         </div>
                                         <div class="add-btn float-right">
-                                            <button type="submit" class="btn btn-success"> <i class="fa fa-plus"></i> Add</button>
+                                            <button type="submit" class="btn btn-success" id="{{ $product->slug }}"> <i class="fa fa-plus"></i> Add</button>
                                         </div>
                                     </div>
 

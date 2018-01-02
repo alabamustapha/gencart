@@ -14,7 +14,11 @@
 
 Auth::routes();
 
-
+Route::get('/faq', 'InfoController@faq')->name('faq');
+Route::get('/About-us', 'InfoController@about')->name('about');
+Route::get('/terms', 'InfoController@terms')->name('terms');
+Route::get('/privacy', 'InfoController@privacy')->name('privacy');
+Route::get('/help', 'InfoController@help')->name('help');
 
 Route::middleware(['guest'])->group(function () {
     Route::get('/', 'HomeController@index')->name('home');
@@ -36,6 +40,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('user/become_shopper', 'ShopperController@shopperRequest')->name('shopper_request');
 
     Route::get('/stores/{store}', 'StoreController@show')->name('show_store');
+    Route::post('/products/{product}/add_to_cart', 'ProductController@addToCart')->name('add_to_cart');
 
 });
 
@@ -139,8 +144,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
 });
 
 
-Route::get('/info/faq' , 'InfoController@faq')->name('info_faq');
-Route::get('/info/About us' , 'InfoController@about')->name('info_about');
+
 
 
 

@@ -35,7 +35,7 @@
 
     <!-- Custom stylesheet - for your changes -->
     <link href="{{ asset('/css/custom.css') }}" rel="stylesheet">
-
+    @routes
 </head>
 <body style="background-color: #f7f7f7;">
     <div id="app">
@@ -87,6 +87,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
     <script src="{{ asset('js/bootstrap.min.js')}}"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="{{ asset('js/cart.js')}}"></script>
     <script src="{{ asset('js/main.js')}}"></script>
 
     @yield('script')

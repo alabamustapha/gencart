@@ -37,7 +37,7 @@
             <div class="ibox">
 
                 <div class="ibox-title">
-                    <span class="float-right">(<strong>5</strong>) items</span>
+                    <span class="float-right">(<strong>{{ count($cartItems) }}</strong>) items</span>
                     <h5>Items in your cart</h5>
                 </div>
                 
@@ -160,7 +160,7 @@
 
                 Checkout
 
-                <h1><span class="badge badge-secondary">$45</span></h1>
+                <h1><span class="badge badge-secondary">{{ LaraCart::total() }}</span></h1>
 
             </button>
 

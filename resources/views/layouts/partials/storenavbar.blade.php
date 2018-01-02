@@ -84,7 +84,9 @@
             <!-- button to trigger cart modal -->
             <button type="button" class="btn btn-success my-2 my-sm-0" data-toggle="modal" data-target="#modalSidePaneRight">
                 <i class="fa fa-shopping-cart fa-lg"></i> Cart
-                    <span class="cart-qty-badge">1</span>                    
+                    @if(count($cartItems) > 0)
+                    <span class="cart-qty-badge">{{ count($cartItems) }}</span>                    
+                    @endif
                     <span class="sr-only">cart items</span>
             </button>
 

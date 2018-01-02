@@ -307,9 +307,9 @@
                                     <td>
                                         {{ '0' }}
                                     </td>
-                                    <td>{{ $product->department->name }}</td>
-                                    <td>{{ $product->shelf->name }}</td>
-                                    <td>{{ $product->brand->name }}</td>
+                                    <td>{{ $product->department->name or 'N/A'}}</td>
+                                    <td>{{ $product->shelf->name or 'N/A'}}</td>
+                                    <td>{{ $product->brand->name or 'N/A'}}</td>
                                     <td>
                                         <div class="btn-group" role="group" aria-label="...">
                                             <a href="" type="button" class="btn btn-default btn-xs">

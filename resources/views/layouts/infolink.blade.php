@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 
     <!-- Bootstrap maxcdn -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <!-- boostrap -->
     <link rel="stylesheet" href="{{asset('/css/bootstrap.min.css')}}">
     <!-- font awesome -->
@@ -38,6 +38,13 @@
     .text-primary{
         color:#0a8a78;
     }
+    .nav-border{
+        border-bottom:0.5px solid rgba(255,255,255,0.1);
+    }
+
+    .card-body > p{
+        font-size:16px;
+    }
     </style>
 
     @yield('stylesheets')
@@ -46,17 +53,17 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-lg sticky-top navbar-primary bg-primary">
-
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
+        <nav class="navbar navbar-expand-lg sticky-top navbar-primary nav-border bg-primary">
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                           <img src="{{asset('/images/cart-logo.png')}}" alt="" height="57">
+                           <img src="{{asset('/images/cart-logo.png')}}" alt="" height="50">
                         <!-- {{ config('app.name', 'GenCart') }} -->
                     </a>
+                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
 
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -68,7 +75,7 @@
                          <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">Register</a></li>
                      @else
                          <li class="dropdown nav-item">
-                             <a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                             <a  href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                                  {{ Auth::user()->name }} <span class="caret"></span>
                              </a>
     
@@ -91,12 +98,12 @@
                 </ul>
                 <ul class="navbar-nav ">
                         <!-- other links -->
-                        <li class="nav-item"><a class="nav-link" href="{{route('info_faq')}}">FAQ</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{route('info_about')}}">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="http://">help</a></li>
-                        <li class="nav-item"><a class="nav-link" href="http://">privacy</a></li>
-                        <li class="nav-item"><a class="nav-link" href="http://">terms</a></li>
-                        <li class="nav-item"><a class="nav-link" href="http://">become a shopper</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('faq')}}">FAQ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('about')}}">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('help')}}">help</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('privacy')}}">privacy</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('terms')}}">terms</a></li>
+                        <li class="nav-item"><a class="nav-link btn btn-dark" href="http://">become a shopper</a></li>
                     </ul>
                
             </div>
