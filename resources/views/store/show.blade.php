@@ -10,6 +10,8 @@
     @include('layouts.partials.store-dropdown-modal')
 </div>
 
+@include('layouts.partials.single-product-display-modal')
+
 <div class="content">
 
 <section class="store-ads">
@@ -125,8 +127,11 @@
                                         </div>
                                     </div>
 
+                                    <!-- <button data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button> -->
+
                                     <h4 class="card-title">{{'$'.$product->price}}</h4>
-                                    <p class="card-text"> {{$product->name }} </p>
+                                    <p class="card-text">
+                                        <a role="button" data-toggle ="modal" data-target=".bd-example-modal-lg">{{$product->name }}</a> </p>
                                     <span class="item-size muted">{{$product->unit}}</span>
 
                                 </div>
