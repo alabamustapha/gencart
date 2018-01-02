@@ -74,11 +74,6 @@ class StoreController extends Controller
         $stores = Store::all();
         $categories = Category::all();
         $cartItems = LaraCart::getItems();
-        // foreach ($cartItems as $item) {
-        //     var_dump($item->name);
-        // }
-
-        // dd("f");
         return view('store.show', compact(['store', 'categories', 'stores', 'cartItems']));
     }
 
