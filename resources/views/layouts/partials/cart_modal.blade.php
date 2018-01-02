@@ -24,7 +24,7 @@
             <div class="ibox">
 
                 <div class="ibox-title">
-                    <span class="float-right">(<strong>{{ count($cartItems) }}</strong>) items</span>
+                    <span class="float-right" id="total-items-in-cart">(<strong>{{ count($cartItems) }}</strong>) items</span>
                     <h5>Items in your cart</h5>
                 </div>
                 
@@ -35,7 +35,7 @@
 
                             <tbody>
                             @foreach($cartItems as $item)
-                            <tr>
+                            <tr id="side-cart-product-{{$item->id}}">
                                 <td width="90">
                                     <div class="cart-product-imitation">
                                     </div>
@@ -65,7 +65,7 @@
                                     $1.90
                                 </td> -->
                                 <td width="65">
-                                    <input type="text" class="form-control" value="{{ $item->qty }}">
+                                    <input name="qty" type="text" class="form-control" value="{{ $item->qty }}" id="side-item-cart-qty-{{ $item->id }}">
                                 </td>
 
                                 <td>

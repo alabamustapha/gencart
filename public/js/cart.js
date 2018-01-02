@@ -9,7 +9,12 @@ $(document).ready(function () {
         
         axios.post('/products/' + product + '/add_to_cart', {})
         .then(function (response) {
-            console.log(response);
+            $('.cart-qty-badge').html(response.data.totalItems);
+            $('span#total-items-in-cart > strong').html(response.data.totalItems);
+            $('input#side-item-cart-qty-' + response.data.id).val(response.data.qty);
+            console.log(response.data.id);
+            console.log(response.data.price);
+            console.log(response.data.total);
         })
         .catch(function (error) {
             console.log(error);
