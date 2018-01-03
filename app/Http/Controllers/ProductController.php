@@ -110,7 +110,11 @@ class ProductController extends Controller
         return json_encode(['id' => $itemID, 'price' => $itemPrice, 'qty' => $itemQty, 'total' => $total, 'totalItems' => $totalItems]);
     }
 
+<<<<<<< HEAD
     public function details(Product $product){
         return $product->toJson();
     }
+=======
+   
+>>>>>>> a555d356c6ac06075c4a8a8f4f2de2895c8a1c94
 }

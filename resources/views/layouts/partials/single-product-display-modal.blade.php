@@ -33,8 +33,13 @@
                                     <!-- <small>Many desktop publishing packages and web page editors now.</small> -->
                                     <hr>
                                     <div>
+<<<<<<< HEAD
                                         <!-- <h1 class="product-main-price" id="modal-product-pricee">$1.9 <small class="text-muted">Exclude Tax</small> </h1> -->
                                         <h1 class="product-main-price" id="modal-product-pricee">$0</h1>
+=======
+                                        
+                                        <h1 class="product-main-price">$1.9 <small class="text-muted float-right">Oz</small> </h1>
+>>>>>>> a555d356c6ac06075c4a8a8f4f2de2895c8a1c94
                                     </div>
                                     <hr>
                                     <div class="form-group" style="display: inline-flex; flex-flow: row nowrap;justify-content: space-around;">

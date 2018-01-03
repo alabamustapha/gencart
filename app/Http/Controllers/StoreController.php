@@ -111,4 +111,12 @@ class StoreController extends Controller
         $store->delete();
         return back()->with('message', 'Store deleted');
     }
+
+    public function checkout(){
+        return view('store.checkout');
+    }
+    public function payment(){
+        
+        return view('store.payment');
+    }
 }
