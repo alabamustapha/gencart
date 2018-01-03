@@ -12,15 +12,28 @@ $(document).ready(function () {
             $('.cart-qty-badge').html(response.data.totalItems);
             $('span#total-items-in-cart > strong').html(response.data.totalItems);
             $('input#side-item-cart-qty-' + response.data.id).val(response.data.qty);
-            console.log(response.data.id);
-            console.log(response.data.price);
-            console.log(response.data.total);
+            $('span.cart-total').html(response.data.total);
         })
         .catch(function (error) {
             console.log(error);
         });
         
     });
+
+
+    $('img.item-img, .product-name').click(function () {
+
+        var product = $(this).closest('div.product-details').attr('id'); 
+        
+        axios.post('/products/' + product + '/details', {})
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+        
+     });
     
     $('div.item-add-btn > div.favourite').click(function() {
        alert("favouriting"); 

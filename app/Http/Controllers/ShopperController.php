@@ -35,9 +35,12 @@ class ShopperController extends Controller{
 
     public function shopperRequest(Requests\BecomeShopperRequest $request){
           auth()->user()->become_a_shopper = 1;
-          auth()->user()->save();
-          
+          auth()->user()->save();  
           return back()->withMessage('Request sent');
+    }
+
+    public function showCheckoutPage(){
+        return view('stores.checkout');
     }
 
 

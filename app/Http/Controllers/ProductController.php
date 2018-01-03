@@ -97,7 +97,9 @@ class ProductController extends Controller
 
     public function addToCart(Request $request, Product $product){
 
-        $item = LaraCart::add($product->id, $product->name, $qty = 1, $product->price, ['description' => $product->description]);
+        $qty = $request->has('qty') ? $request->qty : 1;
+        $instruction = $request->has('instruction') ? $request->description . '<br> Additional Instruction: ' . $request->instruction : $request->description;
+        $item = LaraCart::add($product->id, $product->name, $qty, $product->price, ['description' => $product->description]);
 
         $totalItems = count(LaraCart::getItems());
         $total      = LaraCart::total();
@@ -106,5 +108,9 @@ class ProductController extends Controller
         $itemID     = $item->id;
 
         return json_encode(['id' => $itemID, 'price' => $itemPrice, 'qty' => $itemQty, 'total' => $total, 'totalItems' => $totalItems]);
+    }
+
+    public function details(Product $product){
+        return $product->toJson();
     }
 }

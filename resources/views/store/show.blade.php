@@ -63,13 +63,13 @@
                     <div id="new-arrival" class="owl-carousel owl-theme">
 
                         @foreach($store->products as $product)
-                        <div>
+                        <div id="{{ $product->slug }}" class="product-details">
                             <div class="card" style="width: 12rem;">
                                 <div class="card-img-top">
                                     @if($product->image)
-                                    <img class="item-img" src="{{ asset('storage/' .$product->image) }}" alt="{{$product->name}}">
+                                    <img class="item-img" src="{{ asset('storage/' . $product->image) }}" alt="{{$product->name}}" data-toggle ="modal" data-target=".bd-example-modal-lg">
                                     @else
-                                    <img src="{{ asset('images/sameday.jpg') }}" alt="">
+                                    <img class="item-img" src="{{ asset('images/sameday.jpg') }}" alt="{{$product->name}}" data-toggle ="modal" data-target=".bd-example-modal-lg">
                                     @endif
                                 </div>
                                 <div class="card-body">
@@ -85,7 +85,7 @@
 
                                     <h4 class="card-title">{{ '$' .$product->price}}</h4>
                                     <p class="card-text">
-                                        <a role="button" data-toggle ="modal" data-target=".bd-example-modal-lg">{{$product->name }}</a>
+                                        <a class="product-name" role="button" data-toggle ="modal" data-target=".bd-example-modal-lg">{{$product->name }}</a>
                                     </p>
                                     <span class="item-size muted">{{$product->unit}}</span>
 

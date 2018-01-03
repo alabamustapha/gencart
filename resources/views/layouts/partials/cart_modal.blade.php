@@ -92,13 +92,11 @@
 
         <div class="modal-footer" >
 
-            <button type="button" class="btn btn-default btn-block" style="display:flex; justify-content: space-between;">
+            <a class="btn btn-default btn-block btn-lg" style="display:flex; justify-content: space-between;" href={{ route('checkout') }}>
 
-                Checkout
+                Checkout <span class="badge badge-secondary cart-total">{{ LaraCart::total() }}</span>
 
-                <h1><span class="badge badge-secondary">{{ LaraCart::total() }}</span></h1>
-
-            </button>
+            </a>
 
         </div>
 

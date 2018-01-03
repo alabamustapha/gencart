@@ -80,7 +80,7 @@
 
         </ul>
         
-        <form class="form-inline my-2 my-lg-0">        
+        <!-- <form class="form-inline my-2 my-lg-0">         -->
             <!-- button to trigger cart modal -->
             <button type="button" class="btn btn-success my-2 my-sm-0" data-toggle="modal" data-target="#modalSidePaneRight">
                 <i class="fa fa-shopping-cart fa-lg"></i> Cart
@@ -90,6 +90,6 @@
                     <span class="sr-only">cart items</span>
             </button>
 
-        </form>
+        <!-- </form> -->
     </div>
 </nav> 
