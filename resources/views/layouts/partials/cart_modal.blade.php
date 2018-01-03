@@ -57,7 +57,7 @@
                                     <div class="m-t-sm">
                                         <a href="#" class="text-muted"><i class="fa fa-edit"></i> instructions</a>
                                         |
-                                        <a href="#" class="text-muted"><i class="fa fa-trash"></i> Remove</a>
+                                        <a href="#" id="{{$item->getHash()}}" class="text-muted" ><i class="fa fa-trash"></i> Remove</a>
                                     </div>
                                 </td>
 
@@ -91,14 +91,12 @@
 
 
         <div class="modal-footer" >
-
-            <button type="button" class="btn btn-default btn-block" style="display:flex; justify-content: space-between;">
+            <a href="{{route('checkout')}}" class="btn btn-secondary btn-block" style="display:flex; justify-content: space-between;">
 
                 Checkout
 
-                <h1><span class="badge badge-secondary">{{ LaraCart::total() }}</span></h1>
-
-            </button>
+                <h3><span class="badge badge-secondary">{{ LaraCart::total() }}</span></h3>
+            </a>
 
         </div>
 

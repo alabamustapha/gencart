@@ -36,7 +36,7 @@
                                     <hr>
                                     <div>
                                         
-                                        <h1 class="product-main-price">$1.9 <small class="text-muted">Exclude Tax</small> </h1>
+                                        <h1 class="product-main-price">$1.9 <small class="text-muted float-right">Oz</small> </h1>
                                     </div>
                                     <hr>
                                     <div class="form-group" style="display: inline-flex; flex-flow: row nowrap;justify-content: space-around;">

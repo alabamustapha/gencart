@@ -107,4 +107,6 @@ class ProductController extends Controller
 
         return json_encode(['id' => $itemID, 'price' => $itemPrice, 'qty' => $itemQty, 'total' => $total, 'totalItems' => $totalItems]);
     }
+
+   
 }
