@@ -40,9 +40,10 @@ Route::middleware(['auth'])->group(function () {
     Route::post('user/become_shopper', 'ShopperController@shopperRequest')->name('shopper_request');
 
     Route::get('/stores/checkout', 'StoreController@checkout')->name('checkout');
+    Route::get('/stores/checkout/payment', 'StoreController@payment')->name('checkout-payment');
 
     Route::get('/stores/{store}', 'StoreController@show')->name('show_store');
-    
+
     Route::post('/products/{product}/add_to_cart', 'ProductController@addToCart')->name('add_to_cart');
 
 });

@@ -115,4 +115,8 @@ class StoreController extends Controller
     public function checkout(){
         return view('store.checkout');
     }
+    public function payment(){
+        
+        return view('store.payment');
+    }
 }
