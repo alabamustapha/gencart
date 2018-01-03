@@ -46,7 +46,7 @@
             
 
 
-        <footer class="store-lists-footer fixed-bottom">
+        <footer class="store-lists-footer">
             <div class="list-group">
                 <li class="list-group-item text-center">
                     <p class="disclaimer">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente vel nulla inventore illum minima exercitationem! Expedita, quod maiores facilis tempora nisi asperiores libero! Provident, neque ipsum veniam labore ratione sint? </p>
