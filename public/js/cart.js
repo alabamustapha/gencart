@@ -23,7 +23,11 @@ $(document).ready(function () {
 
     $('img.item-img, .product-name').click(function () {
 
-        var product = $(this).closest('div.product-details').attr('id'); 
+        var product = $(this).closest('div.product-details').attr('id');
+        $("#modal-product-price").html('$10'); 
+        $("#modal-product-name").html('Some product name'); 
+        $("#modal-product-description").html("hskhdskjfhdskfjhskfdf");
+        // var image_url
         
         axios.post('/products/' + product + '/details', {})
             .then(function (response) {

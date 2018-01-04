@@ -19,7 +19,7 @@
                                 
                                         <div class="" style="width: 100%">
                                             <div class="image-imitation">
-                                                <img id="modal-product-image" src="" alt="">
+                                                <img id="modal-product-image" src="#" alt="#">
                                             </div>
                                         </div>
 
@@ -28,18 +28,13 @@
                                 <div class="col-md-7">
 
                                     <h2 class="font-bold m-b-xs" id="modal-product-name">
-                                        Desktop publishing software 
+                                        
                                     </h2>
                                     <!-- <small>Many desktop publishing packages and web page editors now.</small> -->
                                     <hr>
                                     <div>
-<<<<<<< HEAD
                                         <!-- <h1 class="product-main-price" id="modal-product-pricee">$1.9 <small class="text-muted">Exclude Tax</small> </h1> -->
-                                        <h1 class="product-main-price" id="modal-product-pricee">$0</h1>
-=======
-                                        
-                                        <h1 class="product-main-price">$1.9 <small class="text-muted float-right">Oz</small> </h1>
->>>>>>> a555d356c6ac06075c4a8a8f4f2de2895c8a1c94
+                                        <h1 class="product-main-price" id="modal-product-price">$0</h1>
                                     </div>
                                     <hr>
                                     <div class="form-group" style="display: inline-flex; flex-flow: row nowrap;justify-content: space-around;">
@@ -48,7 +43,7 @@
                                             <input class="form-control form-control-lg" type="number" min="1" name="qty" id="qty" placeholder="1">
                                         </form>
                                         
-                                        <button class="btn btn-success btn-lg float-right">
+                                        <button class="btn btn-success btn-lg float-right" id="modal-product-button">
                                         <i class="fa fa-plus"></i> Add to cart</button>
                                         
                                     </div>
@@ -56,17 +51,15 @@
                                     <hr>
                                     <h4>Product description</h4>
 
-                                    <div class="small text-muted">
-                                        It is a long established fact that a reader will be 
-                                        distracted by the readable
-                                        content of a page when looking at its layout.
+                                    <div class="small text-muted" id="modal-product-description">
+                                        
                                     </div>
-                                    <div class="text-right">
+                                    <!-- <div class="text-right">
                                         <div class="btn-group">
                                             <button class="btn btn-white btn-sm"><i class="fa fa-star"></i> Add to wishlist </button>
                                             <button class="btn btn-white btn-sm"><i class="fa fa-envelope"></i> Contact with author </button>
                                         </div>
-                                    </div>
+                                    </div> -->
 
 
                                 </div>

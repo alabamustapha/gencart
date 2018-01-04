@@ -91,19 +91,11 @@
 
 
         <div class="modal-footer" >
-<<<<<<< HEAD
 
             <a class="btn btn-default btn-block btn-lg" style="display:flex; justify-content: space-between;" href={{ route('checkout') }}>
-=======
-            <a href="{{route('checkout')}}" class="btn btn-secondary btn-block" style="display:flex; justify-content: space-between;">
->>>>>>> a555d356c6ac06075c4a8a8f4f2de2895c8a1c94
 
                 Checkout <span class="badge badge-secondary cart-total">{{ LaraCart::total() }}</span>
 
-<<<<<<< HEAD
-=======
-                <h3><span class="badge badge-secondary">{{ LaraCart::total() }}</span></h3>
->>>>>>> a555d356c6ac06075c4a8a8f4f2de2895c8a1c94
             </a>
 
         </div>
