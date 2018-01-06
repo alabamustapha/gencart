@@ -67,9 +67,14 @@
                             <div class="card" style="width: 12rem;">
                                 <div class="card-img-top">
                                     @if($product->image)
-                                    <img class="item-img" src="{{ asset('storage/' . $product->image) }}" alt="{{$product->name}}" data-toggle ="modal" data-target=".bd-example-modal-lg">
+                                        @if(starts_with($product->image, 'http://'))        
+                                        <img class="item-img" src="{{ $product->image }}" alt="{{$product->name}}">
+                                        @else
+                                        <img class="item-img" src="{{ asset('storage/' .$product->image) }}" alt="{{$product->name}}">
+                                        @endif
+                                   
                                     @else
-                                    <img class="item-img" src="{{ asset('images/sameday.jpg') }}" alt="{{$product->name}}" data-toggle ="modal" data-target=".bd-example-modal-lg">
+                                    <img src="{{ asset('images/sameday.jpg') }}" alt="">
                                     @endif
                                 </div>
                                 <div class="card-body">
@@ -113,7 +118,12 @@
                             <div class="card" style="width: 12rem;">
                                 <div class="card-img-top">
                                     @if($product->image)
-                                    <img class="item-img" src="{{ asset('storage/' .$product->image) }}" alt="{{$product->name}}">
+                                        @if(starts_with($product->image, 'http://'))        
+                                        <img class="item-img" src="{{ $product->image }}" alt="{{$product->name}}">
+                                        @else
+                                        <img class="item-img" src="{{ asset('storage/' .$product->image) }}" alt="{{$product->name}}">
+                                        @endif
+                                   
                                     @else
                                     <img src="{{ asset('images/sameday.jpg') }}" alt="">
                                     @endif

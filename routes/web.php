@@ -68,6 +68,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::post('/admin/stores/{store}/departments/{department}', 'ShelfController@store')->name('admin_add_store_shelf');    
     
     Route::post('/products', 'ProductController@store')->name('add_product');
+    Route::post('/{store}/products/upload', 'ProductController@storeBulk')->name('add_bulk_product');
 
     
     Route::get('/storeAdmin', 'StoreAdminController@dashboard')->name('storeAdmin_dashboard');
