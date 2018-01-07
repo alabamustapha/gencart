@@ -23,7 +23,12 @@ $(document).ready(function () {
 
     $('img.item-img, .product-name').click(function () {
 
+        axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+        axios.defaults.headers.common['X-CSRF-TOKEN'] = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+
         var product = $(this).closest('div.product-details').attr('id');
+
+        alert(product);
         $("#modal-product-price").html('$10'); 
         $("#modal-product-name").html('Some product name'); 
         $("#modal-product-description").html("hskhdskjfhdskfjhskfdf");

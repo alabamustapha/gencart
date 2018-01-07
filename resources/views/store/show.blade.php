@@ -17,18 +17,7 @@
 <section class="store-ads">
     <div class="container">
     
-        <div id="ads-carousel" class="owl-carousel owl-theme">
-            <!-- <div class="ads-container">
-                <div class="ad-container">
-                    <div class="ad-body">
-                        <div class="ad-content">
-
-                        </div>
-                        <div class="ad-logo"></div>
-                    </div>
-                </div>
-            </div> -->
-    
+        <!-- <div id="ads-carousel" class="owl-carousel owl-theme">
             <div>
                 <img src="{{ asset('images/recipe.jpg') }}" alt="">
             </div>
@@ -48,7 +37,7 @@
             <div>                
                 <img src="{{ asset('images/recipe.jpg') }}" alt="">
             </div>
-        </div>
+        </div> -->
     </div>
 
 </section>
@@ -62,7 +51,7 @@
                 
                     <div id="new-arrival" class="owl-carousel owl-theme">
 
-                        @foreach($store->products as $product)
+                        @foreach($newProducts as $product)
                         <div id="{{ $product->slug }}" class="product-details">
                             <div class="card" style="width: 12rem;">
                                 <div class="card-img-top">
@@ -88,7 +77,7 @@
                                         </div>
                                     </div>
 
-                                    <h4 class="card-title">{{ '$' .$product->price}}</h4>
+                                    <h4 class="card-title">{{ 'SAR' .$product->price}}</h4>
                                     <p class="card-text">
                                         <a class="product-name" role="button" data-toggle ="modal" data-target=".bd-example-modal-lg">{{$product->name }}</a>
                                     </p>
@@ -139,7 +128,7 @@
                                         </div>
                                     </div>
 
-                                    <h4 class="card-title">{{'$'.$product->price}}</h4>
+                                    <h4 class="card-title">{{'SAR'.$product->price}}</h4>
                                     <p class="card-text">
                                         <a role="button" data-toggle ="modal" data-target=".bd-example-modal-lg">{{$product->name }}</a> </p>
                                     <span class="item-size muted">{{$product->unit}}</span>
@@ -155,9 +144,6 @@
     </section>
     <!-- end featured products -->
 
-
-
-
     <section class="store-department">
         <div class="container">
             <div class="jumbotron">
@@ -165,64 +151,25 @@
 
 
                 <div class="department-cards">
-
-                    <div class="card" style="width: 15rem;">
-                        <div class="card-body">
-                            <h4 class="card-title">Special title treatment</h4>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="/store/rainbow-grocery/departments/pantry">Pantry</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 15rem;">
-                        <div class="card-body">
-                            <h4 class="card-title">Special title treatment</h4>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="">Toiletries</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 15rem;">
-                        <div class="card-body">
-                            <h4 class="card-title">Special title treatment</h4>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="">Beverages</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 15rem;">
-                        <div class="card-body">
-                            <h4 class="card-title">Special title treatment</h4>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="">Deli</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 15rem;">
-                        <div class="card-body">
-                            <h4 class="card-title">Special title treatment</h4>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="">Frozen</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 15rem;">
-                        <div class="card-body">
-                            <h4 class="card-title">Special title treatment</h4>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="">Meat & Seefood</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 15rem;">
-                        <div class="card-body">
-                            <h4 class="card-title">Special title treatment</h4>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="">Diary & Egg</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 15rem;">
-                        <div class="card-body">
-                            <h4 class="card-title">Special title treatment</h4>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="">Go somewhere</a>
+                   @foreach($departments as $department)                         
+                    <div class="card" style="width: 176px; height:176px;">
+                        <img class="card-img" src="{{ asset('images/pantry.jpg') }}" alt="Card image">                    
+                        <div class="card-img-overlay" style="padding-top: 80%">
+                            <h6 class="card-title">{{ $department->name }}</h6>
+                            <!-- <a href="#" class="text-muted"><h4 class="card-title">{{ $department->name }}</h4></a> -->
+                            
                         </div>
                     </div>
 
+                    <!-- <div class="card bg-dark text-white">
+                        <img class="card-img" src="..." alt="Card image">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">{{ $department->name }}</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text">Last updated 3 mins ago</p>
+                        </div>
+                    </div> -->
+                    @endforeach                        
                 </div>
 
             </div>

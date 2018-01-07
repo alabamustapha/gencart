@@ -44,6 +44,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/stores/checkout/payment', 'StoreController@payment')->name('checkout-payment');
 
     Route::get('/stores/{store}', 'StoreController@show')->name('show_store');
+    Route::get('/stores/{store}/departments', 'StoreController@departments')->name('show_store_departments');
 
     Route::post('/products/{product}/add_to_cart', 'ProductController@addToCart')->name('add_to_cart');
     Route::post('/products/{product}/details', 'ProductController@details')->name('details');
