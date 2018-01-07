@@ -688,12 +688,11 @@ input[type="search"]{
     text-overflow: ellipsis; 
     overflow: hidden;
 }
-/* .department-cards .card {
-    margin-right: 2%;
-    margin-bottom: 2rem;
-} */
 
-/* modal customization */
+/************************************
+        modal customization 
+*************************************/
+
 
 .modal.modal-left-pane .modal-dialog{
     width: 70vw;

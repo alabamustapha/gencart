@@ -170,14 +170,21 @@
 
                 <div class="department-cards">
 
-                    <a href="#" class="dept-link">
-                        <div class="dept-img">
-                            <img src="{{ asset('images/pantry.jpg')}}" alt="pantry" style="height: 120px;">
-                        </div>
-                        <div class="dept-name">Pantry</div>
-                    </a>
+                    @foreach($departments as $dept)
 
                     <a href="#" class="dept-link">
+                        <div class="dept-img">
+                            @if($dept->image)
+                            <img src="{{ asset('storage/' .$dept->image)}}" alt="{{ isset($dept) ? $dept->name : ''}}" srcset="">
+                            @else
+                            <img src="{{ asset('images/pantry.jpg')}}" alt="pantry" style="height: 120px;">
+                            @endif
+                        </div>
+                        <div class="dept-name">{{$dept->name}}</div>
+                    </a>
+                    @endforeach
+
+                    <!-- <a href="#" class="dept-link">
                         <div class="dept-img">
                             <img src="{{ asset('images/pantry.jpg')}}" alt="pantry" style="height: 120px;">
                         </div>
@@ -215,7 +222,7 @@
                             <img src="{{ asset('images/pantry.jpg')}}" alt="pantry" style="height: 120px;">
                         </div>
                         <div class="dept-name">Deli</div>
-                    </a>
+                    </a> -->
 
 
                 </div>

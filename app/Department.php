@@ -11,7 +11,7 @@ class Department extends Model
     
     protected $table = "departments";
     
-    protected $fillable = ["name", 'slug', 'store_id', 'description'];
+    protected $fillable = ["name", 'slug', 'store_id', 'description', 'image'];
 
     protected $hidden   =   ['store_id'];
 

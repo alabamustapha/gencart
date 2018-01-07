@@ -34,18 +34,30 @@
                                 <i class="fa fa-building modal-icon"></i>
                                 <h4 class="modal-title">Add new department</h4>
                             </div>
+                            @include('layouts.partials.errors_list')
+
                             <div class="modal-body">
-                                <form method="post" action="{{ route('admin_add_store_department', ['store' => $store->slug]) }}">
+                                <form method="post" action="{{ route('admin_add_store_department', ['store' => $store->slug]) }}" enctype="multipart/form-data">
                                     {{ csrf_field() }}
                                     <input type="hidden" name="store_id" value="{{ $store->id }}">
                                     <div class="form-group">
                                         <label>Department name</label> 
-                                        <input type="name" placeholder="enter department name" class="form-control" name="name">
+                                        <input type="text" placeholder="enter department name" class="form-control" name="name">
                                     </div>
 
                                     <div class="form-group">
                                         <label>Department description</label> 
                                         <textarea name="description" cols="30" rows="4" placeholder="description" class="form-control"></textarea>
+                                    </div>
+
+                                    <div class="form-group">
+                                
+                                        <div class="fileinput fileinput-new" data-provides="fileinput">
+                                            <span class="btn btn-default btn-file"><span class="fileinput-new ">Select department background</span>
+                                            <span class="fileinput-exists">Change</span><input type="file" name="image" id="image"></span>
+                                            <span class="fileinput-filename"></span>
+                                            <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">×</a>
+                                        </div> 
                                     </div>
 
                                     <button type="submit" class="btn btn-primary">Save changes</button>

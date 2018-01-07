@@ -7,6 +7,7 @@ use App\Http\Requests;
 use App\Store;
 use App\Category;
 use App\Product;
+use App\Department;
 use LukePOLO\LaraCart\Facades\LaraCart;
 
 class StoreController extends Controller
@@ -74,7 +75,8 @@ class StoreController extends Controller
         $stores = Store::all();
         $categories = Category::all();
         $cartItems = LaraCart::getItems();
-        return view('store.show', compact(['store', 'categories', 'stores', 'cartItems']));
+        $departments = Department::where('store_id', $store->id)->get();
+        return view('store.show', compact(['store', 'categories', 'stores', 'cartItems', 'departments']));
     }
 
     /**
