@@ -14,48 +14,48 @@
 
 <div class="content">
 
-<section class="store-ads">
-    <div class="container">
-    
-        <div id="ads-carousel" class="owl-carousel owl-theme">
-            <!-- <div class="ads-container">
-                <div class="ad-container">
-                    <div class="ad-body">
-                        <div class="ad-content">
+    <section class="store-ads">
+        <div class="container">
+        
+            <div id="ads-carousel" class="owl-carousel owl-theme">
+                <!-- <div class="ads-container">
+                    <div class="ad-container">
+                        <div class="ad-body">
+                            <div class="ad-content">
 
+                            </div>
+                            <div class="ad-logo"></div>
                         </div>
-                        <div class="ad-logo"></div>
                     </div>
+                </div> -->
+        
+                <div>
+                    <img src="{{ asset('images/recipe.jpg') }}" alt="">
                 </div>
-            </div> -->
-    
-            <div>
-                <img src="{{ asset('images/recipe.jpg') }}" alt="">
-            </div>
-            <div>
-                <img src="{{ asset('images/recipe.jpg') }}" alt="">
-            </div>
-            <div>
-                <img src="{{ asset('images/recipe.jpg') }}" alt="">
-            </div>
-            <div>
-                <img src="{{ asset('images/recipe.jpg') }}" alt="">
-            </div>
-            <div>
-                <img src="{{ asset('images/recipe.jpg') }}" alt="">
-            
-            </div>
-            <div>                
-                <img src="{{ asset('images/recipe.jpg') }}" alt="">
+                <div>
+                    <img src="{{ asset('images/recipe.jpg') }}" alt="">
+                </div>
+                <div>
+                    <img src="{{ asset('images/recipe.jpg') }}" alt="">
+                </div>
+                <div>
+                    <img src="{{ asset('images/recipe.jpg') }}" alt="">
+                </div>
+                <div>
+                    <img src="{{ asset('images/recipe.jpg') }}" alt="">
+                
+                </div>
+                <div>                
+                    <img src="{{ asset('images/recipe.jpg') }}" alt="">
+                </div>
             </div>
         </div>
-    </div>
 
-</section>
-
+    </section>
 
 
-     <section class="store-new-arrival">
+
+    <section class="store-new-arrival">
         <div class="container">
             <div class="jumbotron">
                 <p class="new-arrival-title">New Arrivals</p>
@@ -160,72 +160,73 @@
 
     <section class="store-department">
         <div class="container">
+
+
+
             <div class="jumbotron">
+
                 <p class="dept-title">Browse Departments</p>
 
 
                 <div class="department-cards">
 
-                    <div class="card" style="width: 15rem;">
-                        <div class="card-body">
-                            <h4 class="card-title">Special title treatment</h4>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="/store/rainbow-grocery/departments/pantry">Pantry</a>
+                    <a href="#" class="dept-link">
+                        <div class="dept-img">
+                            <img src="{{ asset('images/pantry.jpg')}}" alt="pantry" style="height: 120px;">
                         </div>
-                    </div>
-                    <div class="card" style="width: 15rem;">
-                        <div class="card-body">
-                            <h4 class="card-title">Special title treatment</h4>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="">Toiletries</a>
+                        <div class="dept-name">Pantry</div>
+                    </a>
+
+                    <a href="#" class="dept-link">
+                        <div class="dept-img">
+                            <img src="{{ asset('images/pantry.jpg')}}" alt="pantry" style="height: 120px;">
                         </div>
-                    </div>
-                    <div class="card" style="width: 15rem;">
-                        <div class="card-body">
-                            <h4 class="card-title">Special title treatment</h4>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="">Beverages</a>
+                        <div class="dept-name">Eggs & Diaries</div>
+                    </a>
+
+                    <a href="#" class="dept-link">
+                        <div class="dept-img">
+                            <img src="{{ asset('images/pantry.jpg')}}" alt="pantry" style="height: 120px;">
                         </div>
-                    </div>
-                    <div class="card" style="width: 15rem;">
-                        <div class="card-body">
-                            <h4 class="card-title">Special title treatment</h4>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="">Deli</a>
+                        <div class="dept-name">Produce</div>
+                    </a>
+
+                    <a href="#" class="dept-link">
+                        <div class="dept-img">
+                            <img src="{{ asset('images/pantry.jpg')}}" alt="pantry" style="height: 120px;">
                         </div>
-                    </div>
-                    <div class="card" style="width: 15rem;">
-                        <div class="card-body">
-                            <h4 class="card-title">Special title treatment</h4>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="">Frozen</a>
+                        <div class="dept-name">Canned Foods</div>
+                    </a>
+
+                    <a href="#" class="dept-link">
+                        <div class="dept-img">
+                            <img src="{{ asset('images/pantry.jpg')}}" alt="pantry" style="height: 120px;">
                         </div>
-                    </div>
-                    <div class="card" style="width: 15rem;">
-                        <div class="card-body">
-                            <h4 class="card-title">Special title treatment</h4>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="">Meat & Seefood</a>
+                        <div class="dept-name">Beverages</div>
+                    </a>
+                    <a href="#" class="dept-link">
+                        <div class="dept-img">
+                            <img src="{{ asset('images/pantry.jpg')}}" alt="pantry" style="height: 120px;">
                         </div>
-                    </div>
-                    <div class="card" style="width: 15rem;">
-                        <div class="card-body">
-                            <h4 class="card-title">Special title treatment</h4>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="">Diary & Egg</a>
+                        <div class="dept-name">Deli</div>
+                    </a>
+                    <a href="#" class="dept-link">
+                        <div class="dept-img">
+                            <img src="{{ asset('images/pantry.jpg')}}" alt="pantry" style="height: 120px;">
                         </div>
-                    </div>
-                    <div class="card" style="width: 15rem;">
-                        <div class="card-body">
-                            <h4 class="card-title">Special title treatment</h4>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="">Go somewhere</a>
-                        </div>
-                    </div>
+                        <div class="dept-name">Deli</div>
+                    </a>
+
 
                 </div>
 
             </div>
+
+
+
+
+
+
         </div>
     </section>
 
