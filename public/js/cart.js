@@ -24,7 +24,7 @@ $(document).ready(function () {
 
 
     
-    $('div.item-add-btn > div.favourite').click(function() {
+    $('div.item-add-btn > div.favourite').click(function () {
        alert("favouriting"); 
     });
 
