@@ -110,7 +110,9 @@
                 <div class="ibox-content">
                     <h2>&nbsp;Products</h2>
                     <a href="#" class="btn btn-primary" data-target="#productModal" data-toggle="modal">
-                        <i class="fa fa-plus"></i>&nbsp; Add product</a>    
+                        <i class="fa fa-plus"></i>&nbsp; Add product</a>
+                    <a href="#" class="btn btn-primary" data-target="#bulkProductModal" data-toggle="modal">
+                        <i class="fa fa-plus"></i>&nbsp; Add bulk products</a>        
                     <p></p>
                      <!-- add product modal -->
                     <div class="modal fade productModal" id="productModal">
@@ -257,6 +259,51 @@
                         </div><!-- /.modal-dialog -->
                     </div>
                     <!--- end product modal-->
+                     
+                     <!-- add bulk products modal -->
+                    <div class="modal fade bulkProductModal" id="bulkProductModal">
+                        <div class="modal-dialog modal-md">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                    <h3 class="modal-title">Upload products file</h3>
+                                </div>
+                                <form action="{{ route('add_bulk_product', ['store' => $store->slug ]) }}" method="post" enctype="multipart/form-data">
+                                    {{ csrf_field() }}
+                                    <input type="hidden" name="store_id" value="{{ $store->id }}">
+                                    <div class="modal-body">
+                                        <div class="row">
+
+                                            <div class="col-lg-6 col-md-6">
+                                               
+                                                <div class="form-group">
+                                                    <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                        <span class="btn btn-default btn-file"><span class="fileinput-new">Select products file</span>
+                                                        <span class="fileinput-exists">Change</span><input type="file" name="products"/></span>
+                                                        <span class="fileinput-filename"></span>
+                                                        <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">×</a>
+                                                    </div> 
+                                                </div>
+                                               
+                                                <div class="form-group">
+                                                        <div>
+                                                            <label> <input type="checkbox" class="i-checks" name="with_options"> Advance upload </label>
+                                                        </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-primary">Upload products</button>
+                                    </div>
+                                </form>
+                            
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div>
+                    <!--- end bulk products modal-->
 
 
                     <div class="row ">

@@ -34,9 +34,10 @@ Route::middleware(['auth'])->group(function () {
         $categories = \App\Category::all();
 
         return view('store.welcome', compact(['stores', 'categories']));
-    });
+    })->name('welcome');
 
     Route::get('user/become_shopper', 'ShopperController@showTerms')->name('become_shopper');
+    // Route::get('store/checkout', 'ShopperController@showCheckoutPage')->name('checkout');
     Route::post('user/become_shopper', 'ShopperController@shopperRequest')->name('shopper_request');
 
     Route::get('/stores/checkout', 'StoreController@checkout')->name('checkout');
@@ -45,6 +46,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/stores/{store}', 'StoreController@show')->name('show_store');
 
     Route::post('/products/{product}/add_to_cart', 'ProductController@addToCart')->name('add_to_cart');
+    Route::post('/products/{product}/details', 'ProductController@details')->name('details');
 
 });
 
@@ -66,6 +68,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::post('/admin/stores/{store}/departments/{department}', 'ShelfController@store')->name('admin_add_store_shelf');    
     
     Route::post('/products', 'ProductController@store')->name('add_product');
+    Route::post('/{store}/products/upload', 'ProductController@storeBulk')->name('add_bulk_product');
 
     
     Route::get('/storeAdmin', 'StoreAdminController@dashboard')->name('storeAdmin_dashboard');

@@ -179,6 +179,7 @@ return [
 
         \Torann\GeoIP\GeoIPServiceProvider::class,
         LukePOLO\LaraCart\LaraCartServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
 
 
     ],
@@ -231,6 +232,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'GeoIP' => \Torann\GeoIP\Facades\GeoIP::class,
         'LaraCart' => LukePOLO\LaraCart\Facades\LaraCart::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
 
     ],
 

@@ -63,11 +63,16 @@
                     <div id="new-arrival" class="owl-carousel owl-theme">
 
                         @foreach($store->products as $product)
-                        <div>
+                        <div id="{{ $product->slug }}" class="product-details">
                             <div class="card" style="width: 12rem;">
                                 <div class="card-img-top">
                                     @if($product->image)
-                                    <img class="item-img" src="{{ asset('storage/' .$product->image) }}" alt="{{$product->name}}">
+                                        @if(starts_with($product->image, 'http://'))        
+                                        <img class="item-img" src="{{ $product->image }}" alt="{{$product->name}}">
+                                        @else
+                                        <img class="item-img" src="{{ asset('storage/' .$product->image) }}" alt="{{$product->name}}">
+                                        @endif
+                                   
                                     @else
                                     <img src="{{ asset('images/sameday.jpg') }}" alt="">
                                     @endif
@@ -85,7 +90,7 @@
 
                                     <h4 class="card-title">{{ '$' .$product->price}}</h4>
                                     <p class="card-text">
-                                        <a role="button" data-toggle ="modal" data-target=".bd-example-modal-lg">{{$product->name }}</a>
+                                        <a class="product-name" role="button" data-toggle ="modal" data-target=".bd-example-modal-lg">{{$product->name }}</a>
                                     </p>
                                     <span class="item-size muted">{{$product->unit}}</span>
 
@@ -113,7 +118,12 @@
                             <div class="card" style="width: 12rem;">
                                 <div class="card-img-top">
                                     @if($product->image)
-                                    <img class="item-img" src="{{ asset('storage/' .$product->image) }}" alt="{{$product->name}}">
+                                        @if(starts_with($product->image, 'http://'))        
+                                        <img class="item-img" src="{{ $product->image }}" alt="{{$product->name}}">
+                                        @else
+                                        <img class="item-img" src="{{ asset('storage/' .$product->image) }}" alt="{{$product->name}}">
+                                        @endif
+                                   
                                     @else
                                     <img src="{{ asset('images/sameday.jpg') }}" alt="">
                                     @endif
