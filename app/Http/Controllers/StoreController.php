@@ -72,11 +72,27 @@ class StoreController extends Controller
     public function show(Store $store)
     {
         // $new_products = Store::with('products')->where('created_at', '<=', now())
+        $newProducts = $store->products->sortByDesc('created_at')->take(15);
         $stores = Store::all();
         $categories = Category::all();
         $cartItems = LaraCart::getItems();
-        $departments = Department::where('store_id', $store->id)->get();
-        return view('store.show', compact(['store', 'categories', 'stores', 'cartItems', 'departments']));
+        $departments = $store->departments->take(10);
+        return view('store.show', compact(['store', 'categories', 'stores', 'cartItems', 'newProducts', 'departments']));
+    }
+    
+    /**
+     * Display the specified resource departments.
+     *
+     * @param  string  $store
+     * @return \Illuminate\Http\Response
+     */
+    public function departments(Store $store)
+    {
+        $stores = Store::all();
+        $categories = Category::all();
+        $cartItems = LaraCart::getItems();
+        $departments = $store->departments;
+        return view('store.departments', compact(['store', 'categories', 'stores', 'cartItems', 'newProducts', 'departments']));
     }
 
     /**

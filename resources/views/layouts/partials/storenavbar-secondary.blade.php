@@ -3,20 +3,20 @@
 
         <ul class="nav navbar-secondary">
             <li class="navbar-secondary-item">
-                <a class="navbar-secondary-link current" href="{{-- route('storefront', $storename) --}}">Home</a>
+                <a class="navbar-secondary-link {{ isActiveRoute('show_store','current') }}" href="{{ route('show_store', ['store' => $store->slug]) }}">Home</a>
             </li>
             <li class="navbar-secondary-item">
-                <a class="navbar-secondary-link" href="{{-- route('store-department', $storename) --}}">Department</a>
+                <a class="navbar-secondary-link {{ isActiveRoute('show_store_departments','current') }}" href="{{ route('show_store_departments', ['store' => $store->slug]) }}">Department</a>
             </li>
-            <li class="navbar-secondary-item">
+            <!-- <li class="navbar-secondary-item">
                 <a class="navbar-secondary-link" href="#">Coupons</a>
             </li>
             <li class="navbar-secondary-item">
                 <a class="navbar-secondary-link" href="#">Get $50</a>
-            </li>
-            <li class="navbar-secondary-item">
+            </li> -->
+            <!-- <li class="navbar-secondary-item">
                 <a class="navbar-secondary-link" href="#">Your Items</a>
-            </li>
+            </li> -->
         </ul>
 
     </div>

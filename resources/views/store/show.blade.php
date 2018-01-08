@@ -14,187 +14,157 @@
 
 <div class="content">
 
-    <section class="store-ads">
-        <div class="container">
-        
-            <div id="ads-carousel" class="owl-carousel owl-theme">
-                <!-- <div class="ads-container">
-                    <div class="ad-container">
-                        <div class="ad-body">
-                            <div class="ad-content">
-
-                            </div>
-                            <div class="ad-logo"></div>
-                        </div>
-                    </div>
-                </div> -->
-        
-                <div>
-                    <img src="{{ asset('images/recipe.jpg') }}" alt="">
-                </div>
-                <div>
-                    <img src="{{ asset('images/recipe.jpg') }}" alt="">
-                </div>
-                <div>
-                    <img src="{{ asset('images/recipe.jpg') }}" alt="">
-                </div>
-                <div>
-                    <img src="{{ asset('images/recipe.jpg') }}" alt="">
-                </div>
-                <div>
-                    <img src="{{ asset('images/recipe.jpg') }}" alt="">
-                
-                </div>
-                <div>                
-                    <img src="{{ asset('images/recipe.jpg') }}" alt="">
-                </div>
+<section class="store-ads">
+    <div class="container">
+    
+        <!-- <div id="ads-carousel" class="owl-carousel owl-theme">
+            <div>
+                <img src="{{ asset('images/recipe.jpg') }}" alt="">
             </div>
-        </div>
+            <div>
+                <img src="{{ asset('images/recipe.jpg') }}" alt="">
+            </div>
+            <div>
+                <img src="{{ asset('images/recipe.jpg') }}" alt="">
+            </div>
+            <div>
+                <img src="{{ asset('images/recipe.jpg') }}" alt="">
+            </div>
+            <div>
+                <img src="{{ asset('images/recipe.jpg') }}" alt="">
+            
+            </div>
+            <div>                
+                <img src="{{ asset('images/recipe.jpg') }}" alt="">
+            </div>
+        </div> -->
+    </div>
 
-    </section>
+</section>
 
 
 
-    <section class="store-new-arrival">
-        <div class="container">
-            <div class="jumbotron">
-                <p class="new-arrival-title">New Arrivals</p>
-                
-                    <div id="new-arrival" class="owl-carousel owl-theme">
+<section class="store-new-arrival">
+    <div class="container">
+        <div class="jumbotron">
+            <p class="new-arrival-title">New Arrivals</p>
+            
+                <div id="new-arrival" class="owl-carousel owl-theme">
 
-                        @foreach($store->products as $product)
-                        <div id="{{ $product->slug }}" class="product-details">
-                            <div class="card" style="width: 12rem;">
-                                <div class="card-img-top">
-                                    @if($product->image)
-                                        @if(starts_with($product->image, 'http://'))        
-                                        <img class="item-img" src="{{ $product->image }}" alt="{{$product->name}}">
-                                        @else
-                                        <img class="item-img" src="{{ asset('storage/' .$product->image) }}" alt="{{$product->name}}">
-                                        @endif
-                                   
+                    @foreach($newProducts as $product)
+                    <div id="{{ $product->slug }}" class="product-details">
+                        <div class="card" style="width: 12rem;">
+                            <div class="card-img-top">
+                                @if($product->image)
+                                    @if(starts_with($product->image, 'http://'))        
+                                    <img class="item-img" src="{{ $product->image }}" alt="{{$product->name}}">
                                     @else
-                                    <img src="{{ asset('images/sameday.jpg') }}" alt="">
+                                    <img class="item-img" src="{{ asset('storage/' .$product->image) }}" alt="{{$product->name}}">
                                     @endif
-                                </div>
-                                <div class="card-body">
+                                
+                                @else
+                                <img src="{{ asset('images/sameday.jpg') }}" alt="">
+                                @endif
+                            </div>
+                            <div class="card-body">
 
-                                    <div class="item-add-btn">
-                                        <div class="favourite float-left" id="fav-{{ $product->slug }}">
-                                            <i class="fa fa-heart-o fa-lg"></i>
-                                        </div>
-                                        <div class="add-btn float-right">
-                                            <button type="submit" class="btn btn-success" id="{{ $product->slug }}"> <i class="fa fa-plus"></i> Add</button>
-                                        </div>
+                                <div class="item-add-btn">
+                                    <div class="favourite float-left" id="fav-{{ $product->slug }}">
+                                        <i class="fa fa-heart-o fa-lg"></i>
                                     </div>
-
-                                    <h4 class="card-title">{{ '$' .$product->price}}</h4>
-                                    <p class="card-text">
-                                        <a class="product-name" role="button" data-toggle ="modal" data-target=".bd-example-modal-lg">{{$product->name }}</a>
-                                    </p>
-                                    <span class="item-size muted">{{$product->unit}}</span>
-
+                                    <div class="add-btn float-right">
+                                        <button type="submit" class="btn btn-success" id="{{ $product->slug }}"> <i class="fa fa-plus"></i> Add</button>
+                                    </div>
                                 </div>
+
+                                <h4 class="card-title">{{ 'SAR' .$product->price}}</h4>
+                                <p class="card-text">
+                                    <a class="product-name" role="button" data-toggle ="modal" data-target=".bd-example-modal-lg">{{$product->name }}</a>
+                                </p>
+                                <span class="item-size muted">{{$product->unit}}</span>
+
                             </div>
                         </div>
-                        @endforeach
-
                     </div>
-                           
-            </div>
-        </div>
-    </section>
-    <!-- end new arrivals -->
-
-
-    <section class="featured-products">
-        <div class="container">
-            <div class="jumbotron">
-                <p class="featured-products-title">Featured Products</p>
-                
-                    <div id="featured-products" class="owl-carousel owl-theme">
-                        @foreach($store->products as $product)
-                        <div>
-                            <div class="card" style="width: 12rem;">
-                                <div class="card-img-top">
-                                    @if($product->image)
-                                        @if(starts_with($product->image, 'http://'))        
-                                        <img class="item-img" src="{{ $product->image }}" alt="{{$product->name}}">
-                                        @else
-                                        <img class="item-img" src="{{ asset('storage/' .$product->image) }}" alt="{{$product->name}}">
-                                        @endif
-                                   
-                                    @else
-                                    <img src="{{ asset('images/sameday.jpg') }}" alt="">
-                                    @endif
-                                </div>
-                                <div class="card-body">
-
-                                    <div class="item-add-btn">
-                                        <div class="favourite float-left">
-                                            <i class="fa fa-heart-o fa-lg"></i>
-                                        </div>
-                                        <div class="add-btn float-right">
-                                            <button type="submit" class="btn btn-success"> <i class="fa fa-plus"></i> Add</button>
-                                        </div>
-                                    </div>
-
-                                    <h4 class="card-title">{{'$'.$product->price}}</h4>
-                                    <p class="card-text">
-                                        <a role="button" data-toggle ="modal" data-target=".bd-example-modal-lg">{{$product->name }}</a> </p>
-                                    <span class="item-size muted">{{$product->unit}}</span>
-
-                                </div>
-                            </div>
-                        </div>
-                        @endforeach
-                    </div>
-                           
-            </div>
-        </div>
-    </section>
-    <!-- end featured products -->
-
-
-
-
-    <section class="store-department">
-        <div class="container">
-
-
-
-            <div class="jumbotron">
-
-                <p class="dept-title">Browse Departments</p>
-
-
-                <div class="department-cards">
-
-                    @foreach($departments as $dept)
-
-                    <a href="#" class="dept-link" style="max-width: 176px; min-width: 176px; max-height: 176px; min-height: 176px;">
-                        <div class="dept-img">
-                            @if($dept->image)
-                            <img src="{{ asset('storage/' .$dept->image)}}" alt="{{ isset($dept) ? $dept->name : ''}}" srcset="">
-                            @else
-                            <img src="{{ asset('images/pantry.jpg')}}" alt="pantry" style="height: 120px;">
-                            @endif
-                        </div>
-                        <div class="dept-name">{{$dept->name}}</div>
-                    </a>
                     @endforeach
 
                 </div>
-
-            </div>
-
-
-
-
-
-
+                        
         </div>
-    </section>
+    </div>
+</section>
+<!-- end new arrivals -->
+
+
+<section class="featured-products">
+    <div class="container">
+        <div class="jumbotron">
+            <p class="featured-products-title">Featured Products</p>
+            
+                <div id="featured-products" class="owl-carousel owl-theme">
+                    @foreach($store->products as $product)
+                    <div>
+                        <div class="card" style="width: 12rem;">
+                            <div class="card-img-top">
+                                @if($product->image)
+                                    @if(starts_with($product->image, 'http://'))        
+                                    <img class="item-img" src="{{ $product->image }}" alt="{{$product->name}}">
+                                    @else
+                                    <img class="item-img" src="{{ asset('storage/' .$product->image) }}" alt="{{$product->name}}">
+                                    @endif
+                                
+                                @else
+                                <img src="{{ asset('images/sameday.jpg') }}" alt="">
+                                @endif
+                            </div>
+                            <div class="card-body">
+
+                                <div class="item-add-btn">
+                                    <div class="favourite float-left">
+                                        <i class="fa fa-heart-o fa-lg"></i>
+                                    </div>
+                                    <div class="add-btn float-right">
+                                        <button type="submit" class="btn btn-success"> <i class="fa fa-plus"></i> Add</button>
+                                    </div>
+                                </div>
+
+                                <h4 class="card-title">{{'SAR'.$product->price}}</h4>
+                                <p class="card-text">
+                                    <a role="button" data-toggle ="modal" data-target=".bd-example-modal-lg">{{$product->name }}</a> </p>
+                                <span class="item-size muted">{{$product->unit}}</span>
+
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+                        
+        </div>
+    </div>
+</section>
+<!-- end featured products -->
+
+<section class="store-department">
+    <div class="container">
+        <div class="jumbotron">
+            <p class="dept-title">Browse Departments</p>
+            <div class="department-cards">
+                @foreach($departments as $dept)
+                <a href="#" class="dept-link" style="max-width: 176px; min-width: 176px; max-height: 176px; min-height: 176px;">
+                    <div class="dept-img">
+                        @if($dept->image)
+                        <img src="{{ asset('storage/' .$dept->image)}}" alt="{{ isset($dept) ? $dept->name : ''}}" srcset="">
+                        @else
+                        <img src="{{ asset('images/pantry.jpg')}}" alt="pantry" style="height: 120px;">
+                        @endif
+                    </div>
+                    <div class="dept-name">{{$dept->name}}</div>
+                </a>
+                @endforeach                     
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- store department ends -->
 
