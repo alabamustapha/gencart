@@ -79,7 +79,7 @@
 
                                 <h4 class="card-title">{{ 'SAR' .$product->price}}</h4>
                                 <p class="card-text">
-                                    <a class="product-name" role="button" data-toggle ="modal" data-target=".bd-example-modal-lg">{{$product->name }}</a>
+                                    <a class="" role="button" data-toggle ="modal" data-target=".bd-example-modal-lg">{{$product->name }}</a>
                                 </p>
                                 <span class="item-size muted">{{$product->unit}}</span>
 
