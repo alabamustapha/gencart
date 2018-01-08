@@ -172,7 +172,7 @@
 
                     @foreach($departments as $dept)
 
-                    <a href="#" class="dept-link">
+                    <a href="#" class="dept-link" style="max-width: 176px; min-width: 176px; max-height: 176px; min-height: 176px;">
                         <div class="dept-img">
                             @if($dept->image)
                             <img src="{{ asset('storage/' .$dept->image)}}" alt="{{ isset($dept) ? $dept->name : ''}}" srcset="">
@@ -183,47 +183,6 @@
                         <div class="dept-name">{{$dept->name}}</div>
                     </a>
                     @endforeach
-
-                    <!-- <a href="#" class="dept-link">
-                        <div class="dept-img">
-                            <img src="{{ asset('images/pantry.jpg')}}" alt="pantry" style="height: 120px;">
-                        </div>
-                        <div class="dept-name">Eggs & Diaries</div>
-                    </a>
-
-                    <a href="#" class="dept-link">
-                        <div class="dept-img">
-                            <img src="{{ asset('images/pantry.jpg')}}" alt="pantry" style="height: 120px;">
-                        </div>
-                        <div class="dept-name">Produce</div>
-                    </a>
-
-                    <a href="#" class="dept-link">
-                        <div class="dept-img">
-                            <img src="{{ asset('images/pantry.jpg')}}" alt="pantry" style="height: 120px;">
-                        </div>
-                        <div class="dept-name">Canned Foods</div>
-                    </a>
-
-                    <a href="#" class="dept-link">
-                        <div class="dept-img">
-                            <img src="{{ asset('images/pantry.jpg')}}" alt="pantry" style="height: 120px;">
-                        </div>
-                        <div class="dept-name">Beverages</div>
-                    </a>
-                    <a href="#" class="dept-link">
-                        <div class="dept-img">
-                            <img src="{{ asset('images/pantry.jpg')}}" alt="pantry" style="height: 120px;">
-                        </div>
-                        <div class="dept-name">Deli</div>
-                    </a>
-                    <a href="#" class="dept-link">
-                        <div class="dept-img">
-                            <img src="{{ asset('images/pantry.jpg')}}" alt="pantry" style="height: 120px;">
-                        </div>
-                        <div class="dept-name">Deli</div>
-                    </a> -->
-
 
                 </div>
 

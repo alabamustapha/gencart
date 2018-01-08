@@ -664,11 +664,7 @@ input[type="search"]{
     color: rgb(67, 176, 42);
     display: flex; 
     flex-direction: column; 
-    overflow: hidden; 
-    max-width: 176px; 
-    min-width: 176px; 
-    max-height: 176px;
-    min-height: 176px; 
+    overflow: hidden;  
     margin-right: 16px; 
     margin-bottom: 16px; 
     background-color: rgb(255, 255, 255);
