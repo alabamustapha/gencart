@@ -668,6 +668,11 @@ input[type="search"]{
     margin-right: 16px; 
     margin-bottom: 16px; 
     background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+}
+
+.dept-link:hover {
+    color: rgb(67, 176, 42);
 }
 
 .dept-img {
@@ -683,6 +688,24 @@ input[type="search"]{
     color: rgb(66, 66, 66); 
     text-overflow: ellipsis; 
     overflow: hidden;
+}
+
+
+.dept-main .title {
+    width: auto;
+    margin: 0 auto 24px auto;
+}
+
+.dept-sidebar .nav-item {
+    line-height: 26px;
+    text-overflow: ellipsis;
+}
+
+.dept-sidebar .nav-link {
+    display: inline-block;
+    color: rgb(67, 176, 42);
+    padding: 0 0 0 20px;
+    font-weight: 500;
 }
 
 /************************************

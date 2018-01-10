@@ -95,6 +95,15 @@ class StoreController extends Controller
         return view('store.departments', compact(['store', 'categories', 'stores', 'cartItems', 'newProducts', 'departments']));
     }
 
+    public function department(Store $store) {
+        $newProducts = $store->products->sortByDesc('created_at')->take(15);
+        $stores = Store::all();
+        $categories = Category::all();
+        $cartItems = LaraCart::getItems();
+        $departments = $store->departments;
+        return view('store.department', compact(['store', 'categories', 'stores', 'cartItems', 'newProducts', 'departments']));
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
