@@ -29,8 +29,6 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/store/welcome', function(){
 
-        event(new App\Events\AccountCreated(auth()->user()));
-
         $stores = \App\Store::with('categories')->get();
 
         $categories = \App\Category::all();

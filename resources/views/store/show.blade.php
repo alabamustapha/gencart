@@ -153,7 +153,7 @@
                 <a href="#" class="dept-link" style="max-width: 176px; min-width: 176px; max-height: 176px; min-height: 176px;">
                     <div class="dept-img">
                         @if($dept->image)
-                        <img src="{{ asset('storage/' .$dept->image)}}" alt="{{ isset($dept) ? $dept->name : ''}}" srcset="">
+                        <img src="{{ asset('storage/' .$dept->image)}}" alt="{{ isset($dept) ? $dept->name : ''}}" style="height: 120px;">
                         @else
                         <img src="{{ asset('images/pantry.jpg')}}" alt="pantry" style="height: 120px;">
                         @endif
