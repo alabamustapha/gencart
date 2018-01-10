@@ -27,6 +27,6 @@ class SendVerificationCode
     public function handle(AccountCreated $event)
     {
         Twilio::message("+2348095034525", $event->code);
-        info('User login attempt failed.', ['id' => $event->user->phone, 'code' => $event->code ]);
+        info('User registered, verification code.', ['id' => $event->user->phone, 'code' => $event->code ]);
     }
 }

@@ -9,7 +9,13 @@ $(document).ready(function () {
         
         axios.post('/products/' + product + '/add_to_cart', {})
         .then(function (response) {
-            $('.cart-qty-badge').html(response.data.totalItems);
+
+            if($('.cart-qty-badge').length > 0){
+                $('.cart-qty-badge').html(response.data.totalItems);
+            }else{
+                $('button#trigger-cart').append('<span class="cart-qty-badge">' + response.data.totalItems + '</span>')
+            }
+            
             $('span#total-items-in-cart > strong').html(response.data.totalItems);
             $('input#side-item-cart-qty-' + response.data.id).val(response.data.qty);
             $('span.cart-total').html(response.data.total);
