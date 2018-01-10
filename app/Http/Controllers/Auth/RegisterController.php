@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
+use App\Notifications\SendVerificationCode;
+use App\Events\AccountCreated;
 
 class RegisterController extends Controller
 {
@@ -91,6 +93,6 @@ class RegisterController extends Controller
      */
     protected function registered(Request $request, $user)
     {
-
+        event(new App\Events\AccountCreated($user));
     }
 }
