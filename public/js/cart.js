@@ -10,6 +10,29 @@ $(document).ready(function () {
         axios.post('/products/' + product + '/add_to_cart', {})
         .then(function (response) {
 
+            console.log(response.data);
+            
+            $('table.shoping-cart-table tbody').append(
+                "<tr id='side-cart-product-" + response.data.id + "'>" +
+                    "<td width='90' > " +
+                        "<div class='cart-product-imitation'>" +
+                            "<img src='" + response.data.image + "' alt='image' width='80px'>" +
+                        "</div>" +
+                    "</td >" +
+                    "<td class='desc'>" +
+                        "<h3><a href='#' class='text-navy'>" + response.data.name + "</a></h3>" +
+                        "<div class='m-t-sm'>" +
+                            "<a href='#' class='text-muted'><i class='fa fa-edit'></i> instructions</a>" +
+                            "<a href='#' class='text-muted'><i class='fa fa-trash'></i> Remove</a>" +
+                        "</div>" +
+                    "</td>" +
+                    "<td width='65'>" +
+                        "<input name='qty' type='text' class='form-control' value='" + response.data.qty + "' id='side-item-cart-qty-" + response.data.id + "'>" +
+                    "</td>" +
+                    "<td>" + response.data.price + "</td>" +
+                "</tr>"
+            );
+
             if($('.cart-qty-badge').length > 0){
                 $('.cart-qty-badge').html(response.data.totalItems);
             }else{

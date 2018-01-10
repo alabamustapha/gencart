@@ -189,15 +189,18 @@ class ProductController extends Controller
 
         $qty = $request->has('qty') ? $request->qty : 1;
         $instruction = $request->has('instruction') ? $request->description . '<br> Additional Instruction: ' . $request->instruction : $request->description;
-        $item = LaraCart::add($product->id, $product->name, $qty, $product->price, ['description' => $product->description]);
+        $item = LaraCart::add($product->id, $product->name, $qty, $product->price, ['description' => $product->description, 'image' => $product->image]);
 
         $totalItems = count(LaraCart::getItems());
         $total      = LaraCart::total();
         $itemQty    = $item->qty;
         $itemPrice  = $item->price($formatted = true);
         $itemID     = $item->id;
-
-        return json_encode(['id' => $itemID, 'price' => $itemPrice, 'qty' => $itemQty, 'total' => $total, 'totalItems' => $totalItems]);
+        
+        if(!str_is('http*', $product->image)){
+            $product->image = 'storage/' . $product->image;
+        }
+        return json_encode(['id' => $itemID, 'price' => $itemPrice, 'qty' => $itemQty, 'total' => $total, 'totalItems' => $totalItems, 'image' => $product->image, 'name' => $product->name]);
     }
 
     public function details(Product $product){

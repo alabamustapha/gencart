@@ -34,10 +34,12 @@
                         <table class="table shoping-cart-table">
 
                             <tbody>
+                            
                             @foreach($cartItems as $item)
                             <tr id="side-cart-product-{{$item->id}}">
                                 <td width="90">
                                     <div class="cart-product-imitation">
+                                        <img src="{{ $item->image }}" alt="image" width="80px">
                                     </div>
                                 </td>
                                 <td class="desc">
@@ -61,9 +63,6 @@
                                     </div>
                                 </td>
 
-                                <!-- <td>
-                                    $1.90
-                                </td> -->
                                 <td width="65">
                                     <input name="qty" type="text" class="form-control" value="{{ $item->qty }}" id="side-item-cart-qty-{{ $item->id }}">
                                 </td>
