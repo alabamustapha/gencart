@@ -7,6 +7,7 @@ use App\Http\Requests;
 use App\Store;
 use App\Category;
 use App\Product;
+use App\Department;
 use LukePOLO\LaraCart\Facades\LaraCart;
 
 class StoreController extends Controller

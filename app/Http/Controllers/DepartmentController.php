@@ -39,6 +39,14 @@ class DepartmentController extends Controller
     {
         $department = Department::create($request->all());
 
+        if($department) {
+            if($request->hasFile('image') && $request->file('image')->isValid()) {
+                $path = $request->image->store('public/departments');
+                $department->image = str_replace('public/', '', $path);
+				$department->save(); 
+            }
+        }
+
         return back()->with('message', $department->name . ' department created');
     }
 

@@ -31,7 +31,8 @@ class CreateDepartmentRequest extends FormRequest
 
             'name' => "required|min:3|unique:departments,name,NULL,id,store_id," . $request->store_id,
             'description' => "nullable|min:10",
-            'store_id' => "required|exists:stores,id"
+            'store_id' => "required|exists:stores,id",
+            'image' =>  "nullable|image|mimes:jpeg,png,jpg,svg|max:1024"
         ];
     }
 }
