@@ -22,25 +22,18 @@
 
 
                 <div class="department-cards">
-                   @foreach($departments as $department)                         
-                    <div class="card" style="width: 176px; height:176px;">
-                        <img class="card-img" src="{{ asset('images/pantry.jpg') }}" alt="Card image">                    
-                        <div class="card-img-overlay" style="padding-top: 80%">
-                            <h6 class="card-title">{{ $department->name }}</h6>
-                            <!-- <a href="#" class="text-muted"><h4 class="card-title">{{ $department->name }}</h4></a> -->
-                            
+                  @foreach($departments as $dept)
+                    <a href="#" class="dept-link" style="max-width: 176px; min-width: 176px; max-height: 176px; min-height: 176px;">
+                        <div class="dept-img">
+                            @if($dept->image)
+                            <img src="{{ asset('storage/' .$dept->image)}}" alt="{{ isset($dept) ? $dept->name : ''}}" srcset="">
+                            @else
+                            <img src="{{ asset('images/pantry.jpg')}}" alt="pantry" style="height: 120px;">
+                            @endif
                         </div>
-                    </div>
-
-                    <!-- <div class="card bg-dark text-white">
-                        <img class="card-img" src="..." alt="Card image">
-                        <div class="card-img-overlay">
-                            <h5 class="card-title">{{ $department->name }}</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text">Last updated 3 mins ago</p>
-                        </div>
-                    </div> -->
-                    @endforeach                        
+                        <div class="dept-name">{{ ucfirst($dept->name) }}</div>
+                    </a>
+                @endforeach                       
                 </div>
 
             </div>

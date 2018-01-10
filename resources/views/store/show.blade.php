@@ -79,7 +79,7 @@
 
                                 <h4 class="card-title">{{ 'SAR' .$product->price}}</h4>
                                 <p class="card-text">
-                                    <a class="product-name" role="button" data-toggle ="modal" data-target=".bd-example-modal-lg">{{$product->name }}</a>
+                                    <a class="" role="button" data-toggle ="modal" data-target=".bd-example-modal-lg">{{ $product->name }}</a>
                                 </p>
                                 <span class="item-size muted">{{$product->unit}}</span>
 
@@ -150,7 +150,7 @@
             <p class="dept-title">Browse Departments</p>
             <div class="department-cards">
                 @foreach($departments as $dept)
-                <a href="#" class="dept-link" style="max-width: 176px; min-width: 176px; max-height: 176px; min-height: 176px;">
+                <a href="{{ route('show_store_department', ['store' => $store->slug, 'department' => $dept->id]) }}" class="dept-link" style="max-width: 176px; min-width: 176px; max-height: 176px; min-height: 176px;">
                     <div class="dept-img">
                         @if($dept->image)
                         <img src="{{ asset('storage/' .$dept->image)}}" alt="{{ isset($dept) ? $dept->name : ''}}" style="height: 120px;">
@@ -158,7 +158,7 @@
                         <img src="{{ asset('images/pantry.jpg')}}" alt="pantry" style="height: 120px;">
                         @endif
                     </div>
-                    <div class="dept-name">{{$dept->name}}</div>
+                    <div class="dept-name">{{ ucfirst($dept->name) }}</div>
                 </a>
                 @endforeach                     
             </div>

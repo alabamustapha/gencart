@@ -8,15 +8,6 @@
             <li class="navbar-secondary-item">
                 <a class="navbar-secondary-link {{ isActiveRoute('show_store_departments','current') }}" href="{{ route('show_store_departments', ['store' => $store->slug]) }}">Department</a>
             </li>
-            <!-- <li class="navbar-secondary-item">
-                <a class="navbar-secondary-link" href="#">Coupons</a>
-            </li>
-            <li class="navbar-secondary-item">
-                <a class="navbar-secondary-link" href="#">Get $50</a>
-            </li> -->
-            <!-- <li class="navbar-secondary-item">
-                <a class="navbar-secondary-link" href="#">Your Items</a>
-            </li> -->
         </ul>
 
     </div>

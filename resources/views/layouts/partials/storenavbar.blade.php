@@ -11,10 +11,6 @@
 
             <li class="nav-item">
 
-            <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Store<span class="sr-only">(Store)</span>
-            </a> -->
-
                 <a id="store-modal" class="nav-link" data-toggle="modal" data-target="#modalSidePaneLeft" role="button">
                  Cart <i class="fa fa-chevron-down"></i>                  
                     <span class="sr-only">lists of stores</span>
@@ -79,8 +75,6 @@
             </li>
 
         </ul>
-        
-        <!-- <form class="form-inline my-2 my-lg-0">         -->
             <!-- button to trigger cart modal -->
             <button type="button" class="btn btn-success my-2 my-sm-0" data-toggle="modal" data-target="#modalSidePaneRight" id="trigger-cart">
                 <i class="fa fa-shopping-cart fa-lg"></i> Cart
@@ -89,7 +83,5 @@
                     @endif
                     <span class="sr-only">cart items</span>
             </button>
-
-        <!-- </form> -->
     </div>
 </nav> 

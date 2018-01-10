@@ -17,7 +17,6 @@
 
 
      <!-- admin style for shopping cart -->
-
     <link rel="stylesheet" href="{{asset('/css/admin/style.css')}}" >
 
 
@@ -72,6 +71,9 @@
             </div>
 
         </header>
+
+
+        
 
 
         @include('layouts.partials.storenavbar-secondary')

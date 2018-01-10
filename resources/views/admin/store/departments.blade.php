@@ -55,6 +55,7 @@
                                         <div class="fileinput fileinput-new" data-provides="fileinput">
                                             <span class="btn btn-default btn-file"><span class="fileinput-new ">Select department background</span>
                                             <span class="fileinput-exists">Change</span><input type="file" name="image" id="image"></span>
+                                            <span class="text-muted">max image width: 176px by 176px</span>
                                             <span class="fileinput-filename"></span>
                                             <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">×</a>
                                         </div> 

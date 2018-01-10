@@ -45,6 +45,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/stores/{store}', 'StoreController@show')->name('show_store');
     Route::get('/stores/{store}/departments', 'StoreController@departments')->name('show_store_departments');
+    Route::get('/stores/{store}/departments/{department}', 'StoreController@department')->name('show_store_department');
 
     Route::post('/products/{product}/add_to_cart', 'ProductController@addToCart')->name('add_to_cart');
     Route::post('/products/{product}/remove_from_cart', 'ProductController@removeFromCart')->name('remove_from_cart');
