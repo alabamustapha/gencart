@@ -22,7 +22,7 @@ $(document).ready(function () {
                     "<td class='desc'>" +
                         "<h3><a href='#' class='text-navy'>" + response.data.name + "</a></h3>" +
                         "<div class='m-t-sm'>" +
-                            "<a href='#' class='text-muted'><i class='fa fa-edit'></i> instructions</a>" +
+                            "<a href='#' class='text-muted'><i class='fa fa-edit'></i> instructions</a> " +
                             "<a href='#' class='text-muted'><i class='fa fa-trash'></i> Remove</a>" +
                         "</div>" +
                     "</td>" +

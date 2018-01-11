@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Store;
+use App\Shelf;
 use App\Category;
 use App\Product;
 use App\Department;
@@ -95,13 +96,24 @@ class StoreController extends Controller
         return view('store.departments', compact(['store', 'categories', 'stores', 'cartItems', 'newProducts', 'departments']));
     }
 
-    public function department(Store $store) {
+    public function department(Store $store, $department) {
         $newProducts = $store->products->sortByDesc('created_at')->take(15);
         $stores = Store::all();
         $categories = Category::all();
         $cartItems = LaraCart::getItems();
         $departments = $store->departments;
-        return view('store.department', compact(['store', 'categories', 'stores', 'cartItems', 'newProducts', 'departments']));
+        $department = Department::where('id', $department)->first();
+        $shelves = $department->shelves;
+        return view('store.department', compact([
+            'store',
+            'categories',
+            'stores', 
+            'cartItems', 
+            'newProducts', 
+            'departments',  
+            'department',  
+            'shelves'])
+            );
     }
 
     /**

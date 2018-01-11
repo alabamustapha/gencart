@@ -26,6 +26,13 @@ class Shelf extends Model
             ]
         ];
     }
+
+    public function department() {
+        return $this->belongsTo('App\Department');
+    }
+    public function store() {
+        return $this->belongsTo('App\Store');
+    }
     
     public function getRouteKeyName()
     {

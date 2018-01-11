@@ -54,14 +54,14 @@
 
                     <div class="dept-sidebar" style="grid-column: span 2 !important;">
                         <h6 style="font-weight: 700;">Department</h6>
-                        <p style="font-size: 15px; font-weight: 600; color: rgb(67, 176, 42);">{{ $store->name}}</p>
+                        <p style="font-size: 15px; font-weight: 600; color: rgb(67, 176, 42);">{{ ucfirst($department->name) }}</p>
 
                         <ul class="nav flex-column">
-                            @foreach($store->departments as $department)
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">{{ $department->name }}</a>
-                            </li>
-                            @endforeach
+                                @foreach($shelves as $shelf)
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">{{ $shelf->name }}</a>
+                                    </li>
+                                @endforeach
                         </ul>
                     </div>
 
@@ -71,7 +71,7 @@
                             <div class="plain-header header">
                                 <div style="color: rgb(0, 0, 0);">
                                     <div class="module-wrapper" style="position: relative;">
-                                        <h1 class="ic-text-truncate" style="color: rgb(0, 0, 0); font-size: 44px; font-weight: 600;">Breakfast</h1>
+                                        <h1 class="" style="color: rgb(0, 0, 0); font-size: 44px; font-weight: 600;">{{ ucfirst($department->name) }}</h1>
                                     </div>
                                 </div>
                             </div>
