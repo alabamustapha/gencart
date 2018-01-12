@@ -81,7 +81,7 @@
                         <section class="featured-products">
                             <div class="container">
                                 <div class="jumbotron">
-                                    <p class="featured-products-title">Featured Products</p>
+                                    <p class="featured-products-title">{{ $department->name }}</p>
                                     
                                         <div id="featured-products" class="owl-carousel owl-theme">
                                             @foreach($store->products as $product)
